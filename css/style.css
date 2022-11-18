@@ -235,7 +235,7 @@ body.active {
     transition: 0.15s ease;
 }
 
-.navbar-link,:is(:hover, :focus) {
+.navbar-link:is(:hover, :focus) {
     color: #FFC500;
 }
 
@@ -460,7 +460,7 @@ body.active {
 /*#FOOTER*/
 
 .footer-top {
-    background: url("../images/footer-bg.jpg") no-repeat;
+/*    background: url("../images/footer-bg.jpg") no-repeat;*/
     background-size: cover;
     background-position: center;
     padding-block: 80px 50px;
@@ -491,7 +491,7 @@ body.active {
     transition: var(--transition-1);
 }
 
-:is(.footer-link, .quicklink-link, .social-link):is(:hover, :focus) {
+.footer-link:is(:hover, :focus), .quicklink-link:is(:hover, :focus), .social-link:is(:hover, :focus) {
     color: #FFC500;
 }
 

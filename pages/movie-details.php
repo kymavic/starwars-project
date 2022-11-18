@@ -132,15 +132,15 @@
         </div>
     </header>
     <!--main Content-->
-    
-
-            <section class="movies">
-                <div class="container">
 
 
-                </div>
-                </section>
-     
+    <section class="movies">
+        <div class="container">
+
+
+        </div>
+    </section>
+
     <!--  - #FOOTER -->
 
     <footer class="footer">
@@ -275,32 +275,13 @@
     <a href="#top" class="go-top" data-go-top>
         <ion-icon name="chevron-up"></ion-icon>
     </a>
-
-
-
-    <!--Javacript-->
-    <script src="../js/script.js"></script>
     <!-- 
-- ionicon link
--->
+    - ionicon link
+    -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script>
-        /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(e) {
-            if (!e.target.matches('.dropbtn')) {
-                var myDropdown = document.getElementById("myDropdown");
-                if (myDropdown.classList.contains('show')) {
-                    myDropdown.classList.remove('show');
-                }
-            }
-        }
+    <!--Javacript-->
+    <script src="../js/script.js"></script>
     </script>
 </body>
 

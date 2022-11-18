@@ -74,20 +74,20 @@
                     <li>
                         <a href="./pages/characters.php" class="navbar-link">Characters</a>
                     </li>
-                        <div class="dropdown">
-                            <button class="dropbtn" onclick="myFunction()">Categories
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                            <div class="dropdown-content" id="myDropdown">
-                                <li> <a href="#" class="navbar-link">Ships</a></li>
-                                <li> <a href="#" class="navbar-link">Planets</a></li>
-                                <li> <a href="#" class="navbar-link">Force</a></li>
-                                <li> <a href="#" class="navbar-link">Jedi</a></li>
-                                <li> <a href="#" class="navbar-link">Sith</a></li>
-                                <li> <a href="#" class="navbar-link">Aliens</a></li>
-                            </div>
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="myFunction()">Categories
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <li> <a href="#" class="navbar-link">Ships</a></li>
+                            <li> <a href="#" class="navbar-link">Planets</a></li>
+                            <li> <a href="#" class="navbar-link">Force</a></li>
+                            <li> <a href="#" class="navbar-link">Jedi</a></li>
+                            <li> <a href="#" class="navbar-link">Sith</a></li>
+                            <li> <a href="#" class="navbar-link">Aliens</a></li>
                         </div>
-                   
+                    </div>
+
                     <li>
                         <a href="#" class="navbar-link">Forums</a>
                     </li>
@@ -260,55 +260,27 @@
 
         <div class="footer-bottom">
             <div class="container">
-
                 <p class="copyright">
                     &copy; 2022 <a href="#">Star Wars</a>. All Rights Reserved
                 </p>
-
-
             </div>
         </div>
-
     </footer>
-
-
-
-
 
     <!-- 
 - #GO TO TOP
 -->
-
     <a href="#top" class="go-top" data-go-top>
         <ion-icon name="chevron-up"></ion-icon>
     </a>
 
-
-
-    <!--Javacript-->
-    <script src="./js/script.js"></script>
     <!-- 
     - ionicon link
   -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(e) {
-            if (!e.target.matches('.dropbtn')) {
-                var myDropdown = document.getElementById("myDropdown");
-                if (myDropdown.classList.contains('show')) {
-                    myDropdown.classList.remove('show');
-                }
-            }
-        }
-    </script>
+    <!--Javacript-->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

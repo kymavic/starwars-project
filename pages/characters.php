@@ -28,7 +28,7 @@
 
       <div class="overlay" data-overlay></div>
 
-      <a href="index.php" class="logo">
+      <a href="../index.php" class="logo">
         <img src="../images/logo.svg" alt="Star Wars logo">
       </a>
 
@@ -76,18 +76,18 @@
             <a href="characters.php" class="navbar-link">Characters</a>
           </li>
           <div class="dropdown">
-                            <button class="dropbtn" onclick="myFunction()">Categories
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                            <div class="dropdown-content" id="myDropdown">
-                                <li> <a href="#" class="navbar-link">Ships</a></li>
-                                <li> <a href="#" class="navbar-link">Planets</a></li>
-                                <li> <a href="#" class="navbar-link">Force</a></li>
-                                <li> <a href="#" class="navbar-link">Jedi</a></li>
-                                <li> <a href="#" class="navbar-link">Sith</a></li>
-                                <li> <a href="#" class="navbar-link">Aliens</a></li>
-                            </div>
-                        </div>
+            <button class="dropbtn" onclick="myFunction()">Categories
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+              <li> <a href="#" class="navbar-link">Ships</a></li>
+              <li> <a href="#" class="navbar-link">Planets</a></li>
+              <li> <a href="#" class="navbar-link">Force</a></li>
+              <li> <a href="#" class="navbar-link">Jedi</a></li>
+              <li> <a href="#" class="navbar-link">Sith</a></li>
+              <li> <a href="#" class="navbar-link">Aliens</a></li>
+            </div>
+          </div>
           <li>
             <a href="#" class="navbar-link">Forums</a>
           </li>
@@ -139,15 +139,15 @@
       -->
 
   <section class="characters-detail">
-  <h2 class="h2 section-title">Prymary Characters</h2>
+    <h2 class="h2 section-title">Prymary Characters</h2>
     <div class="container">
-   
+
       <figure class="characters-detail-banner">
         <img src="../images/hero1.jpg" alt="LUKE">
       </figure>
       <p class="detail-subtitle">Name1</p>
       <p class="storyline">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
       </p>
     </div>
     <div class="container">
@@ -156,7 +156,7 @@
       </figure>
       <p class="detail-subtitle">Name2</p>
       <p class="storyline">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
       </p>
     </div>
     <div class="container">
@@ -165,7 +165,7 @@
       </figure>
       <p class="detail-subtitle">Name3</p>
       <p class="storyline">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
       </p>
     </div>
     <div class="container">
@@ -174,7 +174,7 @@
       </figure>
       <p class="detail-subtitle">Name4</p>
       <p class="storyline">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
       </p>
     </div>
     <div class="container">
@@ -183,7 +183,7 @@
       </figure>
       <p class="detail-subtitle">Name5</p>
       <p class="storyline">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
       </p>
     </div>
     <div class="container">
@@ -192,7 +192,7 @@
       </figure>
       <p class="detail-subtitle">Name6</p>
       <p class="storyline">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
       </p>
     </div>
     <div class="container">
@@ -201,10 +201,10 @@
       </figure>
       <p class="detail-subtitle">Name7</p>
       <p class="storyline">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
       </p>
     </div>
-  
+
   </section>
 
 
@@ -217,7 +217,7 @@
 
         <div class="footer-brand-wrapper">
 
-          <a href="index.php" class="logo">
+          <a href="../index.php" class="logo">
             <img src="../images/logo.svg" alt="Star Wars Logo">
           </a>
 
@@ -352,23 +352,8 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(e) {
-            if (!e.target.matches('.dropbtn')) {
-                var myDropdown = document.getElementById("myDropdown");
-                if (myDropdown.classList.contains('show')) {
-                    myDropdown.classList.remove('show');
-                }
-            }
-        }
-    </script>
+  <!--Javacript-->
+  <script src="../js/script.js"></script>
 </body>
 
 </html>
