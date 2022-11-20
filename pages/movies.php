@@ -4,6 +4,100 @@ session_start();
 if($_SESSION['user'] == null){
     header("Location: login.php");
 }*/
+
+$movie1 = Array(
+"id" => "1",
+"img" => "./images/series-1.png",
+"name" => "Movie 1",
+"year" => "1988",
+"meta" => "2K",
+"duration" => "60 min.",
+"durationf" => "PT60M",
+"rating" => "9.2");
+$movie2 = Array(
+"id" => "2",
+"img" => "./images/series-2.png",
+"name" => "Movie 2",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+$movie3 = Array(
+"id" => "3",
+"img" => "./images/series-3.png",
+"name" => "Movie 3",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+$movie4 = Array(
+"id" => "4",
+"img" => "./images/series-4.png",
+"name" => "Movie 4",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+$movie5 = Array(
+"id" => "5",
+"img" => "./images/series-5.png",
+"name" => "Movie 5",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+$movie6 = Array(
+"id" => "6",
+"img" => "./images/series-6.png",
+"name" => "Movie 6",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+$movie7 = Array(
+"id" => "7",
+"img" => "./images/series-7.png",
+"name" => "Movie 7",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+$movie8 = Array(
+"id" => "8",
+"img" => "./images/series-8.png",
+"name" => "Movie 8",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+$movie9 = Array(
+"id" => "9",
+"img" => "./images/series-9.png",
+"name" => "Movie 9",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+$movie10 = Array(
+"id" => "10",
+"img" => "./images/series-10.png",
+"name" => "Movie 10",
+"year" => "2022",
+"meta" => "2K",
+"duration" => "47 min.",
+"durationf" => "PT47M",
+"rating" => "8.5");
+
+global $movies;
+$movies = Array($movie1,$movie2,$movie3,$movie4,$movie5,$movie6,$movie7,$movie8,$movie9,$movie10);
 ?>
 
 <!DOCTYPE html>
@@ -150,288 +244,48 @@ if($_SESSION['user'] == null){
 
       <ul class="movies-list">
 
-        <li>
+        <?php 
+        foreach ($movies as $movie) {
+          echo '
+          <li>
           <div class="movie-card">
 
-            <a href="../pages/movie-details.php">
+            <a href="../pages/movie-details.php?id='.$movie['id'].'">
               <figure class="card-banner">
-                <img src="./assets/images/series-1.png" alt="Movie 1">
+                <img src="'.$movie['img'].'" alt="'.$movie['name'].'">
               </figure>
             </a>
 
             <div class="title-wrapper">
               <a href="#">
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
+                <h3 class="card-title">'.$movie['name'].'</h3>
               </a>
 
-              <time datetime="2022">2022</time>
+              <time datetime="'.$movie['year'].'">'.$movie['year'].'</time>
             </div>
 
             <div class="card-meta">
-              <div class="badge badge-outline">2K</div>
+              <div class="badge badge-outline">'.$movie['meta'].'</div>
 
               <div class="duration">
                 <ion-icon name="time-outline"></ion-icon>
 
-                <time datetime="PT47M">47 min</time>
+                <time datetime="'.$movie['durationf'].'">'.$movie['duration'].'</time>
               </div>
 
               <div class="rating">
                 <ion-icon name="star"></ion-icon>
 
-                <data>8.6</data>
+                <data>'.$movie['rating'].'</data>
               </div>
             </div>
 
           </div>
         </li>
-
-        <li>
-          <div class="movie-card">
-
-            <a href="../pages/movie-details.php">
-              <figure class="card-banner">
-                <img src="./assets/images/series-1.png" alt="Movie 2">
-              </figure>
-            </a>
-
-            <div class="title-wrapper">
-              <a href="#">
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-              </a>
-
-              <time datetime="2022">2022</time>
-            </div>
-
-            <div class="card-meta">
-              <div class="badge badge-outline">2K</div>
-
-              <div class="duration">
-                <ion-icon name="time-outline"></ion-icon>
-
-                <time datetime="PT47M">47 min</time>
-              </div>
-
-              <div class="rating">
-                <ion-icon name="star"></ion-icon>
-
-                <data>8.6</data>
-              </div>
-            </div>
-
-          </div>
-        </li>
-
-        <li>
-          <div class="movie-card">
-
-            <a href="../pages/movie-details.php">
-              <figure class="card-banner">
-                <img src="./assets/images/series-1.png" alt="Movie 3">
-              </figure>
-            </a>
-
-            <div class="title-wrapper">
-              <a href="#">
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-              </a>
-
-              <time datetime="2022">2022</time>
-            </div>
-
-            <div class="card-meta">
-              <div class="badge badge-outline">2K</div>
-
-              <div class="duration">
-                <ion-icon name="time-outline"></ion-icon>
-
-                <time datetime="PT47M">47 min</time>
-              </div>
-
-              <div class="rating">
-                <ion-icon name="star"></ion-icon>
-
-                <data>8.6</data>
-              </div>
-            </div>
-
-          </div>
-        </li>
-        <li>
-          <div class="movie-card">
-
-            <a href="../pages/movie-details.php">
-              <figure class="card-banner">
-                <img src="./assets/images/series-1.png" alt="Movie 4">
-              </figure>
-            </a>
-
-            <div class="title-wrapper">
-              <a href="#">
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-              </a>
-
-              <time datetime="2022">2022</time>
-            </div>
-
-            <div class="card-meta">
-              <div class="badge badge-outline">2K</div>
-
-              <div class="duration">
-                <ion-icon name="time-outline"></ion-icon>
-
-                <time datetime="PT47M">47 min</time>
-              </div>
-
-              <div class="rating">
-                <ion-icon name="star"></ion-icon>
-
-                <data>8.6</data>
-              </div>
-            </div>
-
-          </div>
-        </li>
-        <li>
-          <div class="movie-card">
-
-            <a href="../pages/movie-details.php">
-              <figure class="card-banner">
-                <img src="./assets/images/series-1.png" alt="Movie 5">
-              </figure>
-            </a>
-
-            <div class="title-wrapper">
-              <a href="#">
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-              </a>
-
-              <time datetime="2022">2022</time>
-            </div>
-
-            <div class="card-meta">
-              <div class="badge badge-outline">2K</div>
-
-              <div class="duration">
-                <ion-icon name="time-outline"></ion-icon>
-
-                <time datetime="PT47M">47 min</time>
-              </div>
-
-              <div class="rating">
-                <ion-icon name="star"></ion-icon>
-
-                <data>8.6</data>
-              </div>
-            </div>
-
-          </div>
-        </li>
-        <li>
-          <div class="movie-card">
-
-            <a href="../pages/movie-details.php">
-              <figure class="card-banner">
-                <img src="./assets/images/series-1.png" alt="Movie 6">
-              </figure>
-            </a>
-
-            <div class="title-wrapper">
-              <a href="#">
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-              </a>
-
-              <time datetime="2022">2022</time>
-            </div>
-
-            <div class="card-meta">
-              <div class="badge badge-outline">2K</div>
-
-              <div class="duration">
-                <ion-icon name="time-outline"></ion-icon>
-
-                <time datetime="PT47M">47 min</time>
-              </div>
-
-              <div class="rating">
-                <ion-icon name="star"></ion-icon>
-
-                <data>8.6</data>
-              </div>
-            </div>
-
-          </div>
-        </li>
-        <li>
-          <div class="movie-card">
-
-            <a href="../pages/movie-details.php">
-              <figure class="card-banner">
-                <img src="./assets/images/series-1.png" alt="Movie 7">
-              </figure>
-            </a>
-
-            <div class="title-wrapper">
-              <a href="#">
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-              </a>
-
-              <time datetime="2022">2022</time>
-            </div>
-
-            <div class="card-meta">
-              <div class="badge badge-outline">2K</div>
-
-              <div class="duration">
-                <ion-icon name="time-outline"></ion-icon>
-
-                <time datetime="PT47M">47 min</time>
-              </div>
-
-              <div class="rating">
-                <ion-icon name="star"></ion-icon>
-
-                <data>8.6</data>
-              </div>
-            </div>
-
-          </div>
-        </li>
-        <li>
-          <div class="movie-card">
-
-            <a href="../pages/movie-details.php">
-              <figure class="card-banner">
-                <img src="./assets/images/series-1.png" alt="Movie 8">
-              </figure>
-            </a>
-
-            <div class="title-wrapper">
-              <a href="#">
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-              </a>
-
-              <time datetime="2022">2022</time>
-            </div>
-
-            <div class="card-meta">
-              <div class="badge badge-outline">2K</div>
-
-              <div class="duration">
-                <ion-icon name="time-outline"></ion-icon>
-
-                <time datetime="PT47M">47 min</time>
-              </div>
-
-              <div class="rating">
-                <ion-icon name="star"></ion-icon>
-
-                <data>8.6</data>
-              </div>
-            </div>
-
-          </div>
-        </li>
+          ';
+        }
+        
+        ?>
       </ul>
 
     </div>
