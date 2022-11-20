@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!array_key_exists('user', $_SESSION)){
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,9 +46,12 @@
                 <div class="lang-wrapper">
 
                 </div>
-
-                <button class="btn btn-primary">Sign in</button>
-
+                <?php if(!array_key_exists('user', $_SESSION)){
+                    echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
+                }else{
+                    echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
+                  } ?>
+          
             </div>
 
             <button class="menu-open-btn" data-menu-open-btn>

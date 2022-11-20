@@ -1,9 +1,24 @@
 <?php
 session_start();
-/*
-if($_SESSION['user'] == null){
-    header("Location: login.php");
-}*/
+global $msg;
+
+if(array_key_exists('username', $_POST) && array_key_exists('password', $_POST)){
+    /*
+    $_SESSION['user'] = validateLogin($_POST['username'],$_POST['password']);
+    if($_SESSION['user']){
+        header("Location: dashboard.php");
+    }else{
+        $msg=("<br>Username or password incorrect!</br>");
+    }
+    */
+    if($_POST['username']=='admin' && $_POST['password']=='admin'){
+        $_SESSION['user'] = Array('name' => 'admin');
+        header("Location: dashboard.php");
+    }else{
+        $_SESSION['user'] = null;
+        $msg="<br>Username or password incorrect!</br>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,11 +30,11 @@ if($_SESSION['user'] == null){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start Wars</title>
     <!--favicon-->
-    <link rel="shortcut icon" href="./faicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="../faicon.svg" type="image/svg+xml">
     <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!--
         Google fronts links
     -->
@@ -27,6 +42,7 @@ if($_SESSION['user'] == null){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -35,8 +51,8 @@ if($_SESSION['user'] == null){
 
             <div class="overlay" data-overlay></div>
 
-            <a href="index.php" class="logo">
-                <img src="./images/logo.svg" alt="Star Wars logo">
+            <a href="../index.php" class="logo">
+                <img src="../images/logo.svg" alt="Star Wars logo">
             </a>
 
             <div class="header-actions">
@@ -47,12 +63,7 @@ if($_SESSION['user'] == null){
 
                 </div>
 
-                <?php if(!array_key_exists('user', $_SESSION)){
-            echo '<a class="btn btn-primary" href="./pages/login.php">Sign in</a>';
-        }else{
-            echo '<a class="btn btn-primary" href="./pages/logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-          } ?>
-  
+                <a class="btn btn-primary" href="./signup.php">Sign up</a>
 
             </div>
 
@@ -65,7 +76,7 @@ if($_SESSION['user'] == null){
                 <div class="navbar-top">
 
                     <a href="index.php" class="logo">
-                        <img src="./images/logo.svg" alt="Star Wars Logo">
+                        <img src="../images/logo.svg" alt="Star Wars Logo">
                     </a>
 
                     <button class="menu-close-btn" data-menu-close-btn>
@@ -77,15 +88,15 @@ if($_SESSION['user'] == null){
                 <ul class="navbar-list">
 
                     <li>
-                        <a href="index.php" class="navbar-link">Home</a>
+                        <a href="../index.php" class="navbar-link">Home</a>
                     </li>
 
                     <li>
-                        <a href="./pages/movies.php" class="navbar-link">Movies</a>
+                        <a href="movies.php" class="navbar-link">Movies</a>
                     </li>
 
                     <li>
-                        <a href="./pages/characters.php" class="navbar-link">Characters</a>
+                        <a href="characters.php" class="navbar-link">Characters</a>
                     </li>
                     <div class="dropdown">
                         <button class="dropbtn" onclick="myFunction()">Categories
@@ -100,7 +111,6 @@ if($_SESSION['user'] == null){
                             <li> <a href="#" class="navbar-link">Aliens</a></li>
                         </div>
                     </div>
-
                     <li>
                         <a href="#" class="navbar-link">Forums</a>
                     </li>
@@ -145,22 +155,31 @@ if($_SESSION['user'] == null){
         </div>
     </header>
     <!--main Content-->
-    <main>
-        <article>
-            <!-- HERO-->
-
-            <section class="hero">
-                <div class="container">
-
-                    <div class="hero-content">
 
 
-                    </div>
+    <section class="movies">
+        <div class="container">
+            <div class="login">
+                <form id="login" method="post" action="login.php">
+                    <label><b>User Name
+                        </b>
+                    </label>
+                    <input type="text" class="login-input" name="username" id="username" placeholder="Username" />
+                    <br><br>
+                    <label><b>Password
+                        </b>
+                    </label>
+                    <input type="Password" class="login-input" name="password" id="password" placeholder="Password" />
+                    <br><br>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit" value="login">Login</button>
+                    <br>
+                    <?php echo $msg; ?>
+                </form>
+            </div>
 
-                </div>
-            </section>
-        </article>
-    </main>
+        </div>
+    </section>
+
     <!--  - #FOOTER -->
 
     <footer class="footer">
@@ -170,21 +189,21 @@ if($_SESSION['user'] == null){
 
                 <div class="footer-brand-wrapper">
 
-                    <a href="index.php" class="logo">
-                        <img src="./images/logo.svg" alt="Star Wars Logo">
+                    <a href="../index.php" class="logo">
+                        <img src="../images/logo.svg" alt="Star Wars Logo">
                     </a>
 
                     <ul class="footer-list">
 
                         <li>
-                            <a href="index.php" class="footer-link">Home</a>
+                            <a href="../index.php" class="footer-link">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Movies</a></a>
+                            <a href="movies.php" class="footer-link">Movies</a></a>
                         </li>
 
                         <li>
-                            <a href="#" class="footer-link">Characters</a></a>
+                            <a href="characters.php" class="footer-link">Characters</a></a>
                         </li>
 
                         <li>
@@ -273,27 +292,36 @@ if($_SESSION['user'] == null){
 
         <div class="footer-bottom">
             <div class="container">
+
                 <p class="copyright">
                     &copy; 2022 <a href="#">Star Wars</a>. All Rights Reserved
                 </p>
+
+
             </div>
         </div>
+
     </footer>
+
+
+
+
 
     <!-- 
 - #GO TO TOP
 -->
+
     <a href="#top" class="go-top" data-go-top>
         <ion-icon name="chevron-up"></ion-icon>
     </a>
-
     <!-- 
     - ionicon link
-  -->
+    -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!--Javacript-->
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js"></script>
+    </script>
 </body>
 
 </html>

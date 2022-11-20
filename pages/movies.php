@@ -1,3 +1,11 @@
+<?php
+session_start();
+/*
+if($_SESSION['user'] == null){
+    header("Location: login.php");
+}*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +47,12 @@
 
         </div>
 
-        <button class="btn btn-primary">Sign in</button>
+        <?php if(!array_key_exists('user', $_SESSION)){
+            echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
+          }else{
+            echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
+          } ?>
+  
 
       </div>
 

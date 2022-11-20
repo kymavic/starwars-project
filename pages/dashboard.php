@@ -1,9 +1,9 @@
 <?php
 session_start();
-/*
-if($_SESSION['user'] == null){
+
+if(!array_key_exists('user', $_SESSION)){
     header("Location: login.php");
-}*/
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,6 @@ if($_SESSION['user'] == null){
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -50,9 +49,10 @@ if($_SESSION['user'] == null){
 
         <?php if(!array_key_exists('user', $_SESSION)){
             echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
-        }else{
-          echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-        } ?>
+          }else{
+            echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
+          } ?>
+  
 
       </div>
 
@@ -65,7 +65,7 @@ if($_SESSION['user'] == null){
         <div class="navbar-top">
 
           <a href="index.php" class="logo">
-            <img src="../images/logo.svg" alt="Star Wars Logo">
+            <img src="./images/logo.svg" alt="Star Wars Logo">
           </a>
 
           <button class="menu-close-btn" data-menu-close-btn>
@@ -144,79 +144,12 @@ if($_SESSION['user'] == null){
     </div>
   </header>
   <!--main Content-->
+  <section class="movies">
+    <div class="container">
+      <h2 class="h2 section-title">Dashboard</h2>
 
 
-  <!-- 
-        - #CHARACTERS DETAIL
-      -->
-
-  <section class="characters-detail">
-    <h2 class="h2 section-title">Prymary Characters</h2>
-    <div class="container">
-
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name1</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
     </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name2</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name3</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name4</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name5</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name6</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name7</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-
   </section>
 
 
@@ -355,10 +288,6 @@ if($_SESSION['user'] == null){
     <ion-icon name="chevron-up"></ion-icon>
   </a>
 
-
-
-  <!--Javacript-->
-  <script src="../js/script.js"></script>
   <!-- 
     - ionicon link
   -->
