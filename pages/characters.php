@@ -29,8 +29,20 @@ $character4 = Array(
   "name" => "Anakin Skywalker (Darth Vader)",
   "description" => "The character is the central antagonist of the original trilogy and, as Anakin Skywalker, is one of the main protagonists throughout the prequel trilogy."
 );
+$character5 = Array(
+  "id" => "5",
+  "img" => "https://upload.wikimedia.org/wikipedia/en/b/be/Han_Solo_depicted_in_promotional_image_for_Star_Wars_%281977%29.jpg",
+  "name" => "Han Solo",
+  "description" => "Han Solo and his first mate Chewbacca are smugglers who are hired by Ben Kenobi and Luke Skywalker to transport them to Alderaan so they can deliver the stolen plans for the Death Star."
+);
+$character6 = Array(
+  "id" => "6",
+  "img" => "https://upload.wikimedia.org/wikipedia/en/1/12/Chewbaca_%28Peter_Mayhew%29.png",
+  "name" => "Chewbacca",
+  "description" => "He is a Wookiee, a tall, hirsute, bipedal, intelligent species originating from the fictional planet of Kashyyyk. Chewbacca is the loyal friend and first mate of Han Solo, and serves as co-pilot on Solo's spaceship, the Millennium Falcon; together they help the Rebel Alliance defeat the Galactic Empire and restore freedom to the galaxy."
+);
 global $characters;
-$characters = Array($character1,$character2,$character3,$character4);
+$characters = Array($character1,$character2,$character3,$character4,$character5,$character6);
 
 ?>
 
