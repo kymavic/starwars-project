@@ -360,8 +360,6 @@ if($_SESSION['user'] == null){
 
 
 
-  <!--Javacript-->
-  <script src="../js/script.js"></script>
   <!-- 
     - ionicon link
   -->
