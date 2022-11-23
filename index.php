@@ -47,12 +47,14 @@ if($_SESSION['user'] == null){
 
                 </div>
 
-                <?php if(!array_key_exists('user', $_SESSION)){
-            echo '<a class="btn btn-primary" href="./pages/login.php">Sign in</a>';
-        }else{
-            echo '<a class="btn btn-primary" href="./pages/logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-          } ?>
-  
+                <?php if (!array_key_exists('user', $_SESSION)) {
+                    echo '<a class="btn btn-primary" href="../pages/login.php">Sign in</a>';
+                } else {
+                    echo '<a class="btn btn-primary" href="../pages/logout.php">' . $_SESSION['user']['name'] . ' - Log out</a>';
+                    echo '<li><a href="../pages/dashboard.php" class="navbar-link">[Dashboard]</a>
+                    </li>';
+                } ?>
+
 
             </div>
 
@@ -92,12 +94,12 @@ if($_SESSION['user'] == null){
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <div class="dropdown-content" id="myDropdown">
-                            <li> <a href="#" class="navbar-link">Ships</a></li>
-                            <li> <a href="#" class="navbar-link">Planets</a></li>
-                            <li> <a href="#" class="navbar-link">Force</a></li>
-                            <li> <a href="#" class="navbar-link">Jedi</a></li>
-                            <li> <a href="#" class="navbar-link">Sith</a></li>
-                            <li> <a href="#" class="navbar-link">Aliens</a></li>
+                            <li> <a href="./pages/ships.php" class="navbar-link">Ships</a></li>
+                            <li> <a href="./pages/planets.php" class="navbar-link">Planets</a></li>
+                            <li> <a href="./pages/force.php" class="navbar-link">Force</a></li>
+                            <li> <a href="./pages/jedi.php" class="navbar-link">Jedi</a></li>
+                            <li> <a href="./pages/sith.php" class="navbar-link">Sith</a></li>
+                            <li> <a href="./pages/alien_races.php" class="navbar-link">Aliens</a></li>
                         </div>
                     </div>
 
@@ -180,32 +182,32 @@ if($_SESSION['user'] == null){
                             <a href="index.php" class="footer-link">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Movies</a></a>
+                            <a href="./pages/movies.php" class="footer-link">Movies</a></a>
                         </li>
 
                         <li>
-                            <a href="#" class="footer-link">Characters</a></a>
+                            <a href="./pages/characters.php" class="footer-link">Characters</a></a>
                         </li>
 
                         <li>
-                            <a href="#" class="footer-link">Ships</a>
+                            <a href="./pages/ships.php" class="footer-link">Ships</a>
                         </li>
 
                         <li>
-                            <a href="#" class="footer-link">Planets</a>
+                            <a href="./pages/planets.php" class="footer-link">Planets</a>
                         </li>
 
                         <li>
                             <a href="#" class="footer-link">Force</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Jedi</a>
+                            <a href="./pages/jedi.php" class="footer-link">Jedi</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Sith</a>
+                            <a href="./pages/sith.php" class="footer-link">Sith</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Aliens</a>
+                            <a href="./pages/alien_races.php" class="footer-link">Aliens</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link">Forums</a>

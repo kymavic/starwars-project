@@ -1,9 +1,9 @@
 <?php
 session_start();
-
-if(!array_key_exists('user', $_SESSION)){
+/*
+if($_SESSION['user'] == null){
     header("Location: login.php");
-}
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +27,7 @@ if(!array_key_exists('user', $_SESSION)){
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -51,9 +52,9 @@ if(!array_key_exists('user', $_SESSION)){
             echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
           }else{
             echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-           
+            echo'<li><a href="dashboard.php" class="navbar-link">[Dashboard]</a>
+          </li>';
           } ?>
-  
 
       </div>
 
@@ -93,12 +94,12 @@ if(!array_key_exists('user', $_SESSION)){
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" id="myDropdown">
-              <li> <a href="./ships.php" class="navbar-link">Ships</a></li>
-              <li> <a href="./planets.php" class="navbar-link">Planets</a></li>
-              <li> <a href="./force.php" class="navbar-link">Force</a></li>
-              <li> <a href="./jedi.php" class="navbar-link">Jedi</a></li>
-              <li> <a href="./sith.php" class="navbar-link">Sith</a></li>
-              <li> <a href="./alien_races.php" class="navbar-link">Aliens</a></li>
+              <li> <a href="ships.php" class="navbar-link">Ships</a></li>
+              <li> <a href="planets.php" class="navbar-link">Planets</a></li>
+              <li> <a href="force.php" class="navbar-link">Force</a></li>
+              <li> <a href="jedi.php" class="navbar-link">Jedi</a></li>
+              <li> <a href="sith.php" class="navbar-link">Sith</a></li>
+              <li> <a href="alien_races.php" class="navbar-link">Aliens</a></li>
             </div>
           </div>
           <li>
@@ -133,8 +134,7 @@ if(!array_key_exists('user', $_SESSION)){
 
           <li>
             <a href="#" class="navbar-social-link">
-              <ion-icon name="logo-youtube"></ion-icon>\
-              
+              <ion-icon name="logo-youtube"></ion-icon>
             </a>
           </li>
 
@@ -146,16 +146,79 @@ if(!array_key_exists('user', $_SESSION)){
     </div>
   </header>
   <!--main Content-->
-  <section class="movies">
+
+
+  <!-- 
+        - #CHARACTERS DETAIL
+      -->
+
+  <section class="characters-detail">
+    <h2 class="h2 section-title">Alient Race</h2>
     <div class="container">
-      <h2 class="h2 section-title">Dashboard</h2>
-      <li> <a href="add_movie.php" class="quicklink-link">Add movie</a></li>
-      <li> <a href="add_character.php" class="quicklink-link">Add Characters</a></li>
-      <li> <a href="add_planets.php" class="quicklink-link">Add Planets</a></li>
-      <li> <a href="add_ships.php" class="quicklink-link">Add Ships</a></li>
-      <li> <a href="add_alien.php" class="quicklink-link">Add Alien Race</a></li>
-      <li> <a href="add_force.php" class="quicklink-link">Add Force</a></li>
+
+      <figure class="characters-detail-banner">
+        <img src="../images/hero1.jpg" alt="LUKE">
+      </figure>
+      <p class="detail-subtitle">Name1</p>
+      <p class="storyline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+      </p>
     </div>
+    <div class="container">
+      <figure class="characters-detail-banner">
+        <img src="../images/hero1.jpg" alt="LUKE">
+      </figure>
+      <p class="detail-subtitle">Name2</p>
+      <p class="storyline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+      </p>
+    </div>
+    <div class="container">
+      <figure class="characters-detail-banner">
+        <img src="../images/hero1.jpg" alt="LUKE">
+      </figure>
+      <p class="detail-subtitle">Name3</p>
+      <p class="storyline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+      </p>
+    </div>
+    <div class="container">
+      <figure class="characters-detail-banner">
+        <img src="../images/hero1.jpg" alt="LUKE">
+      </figure>
+      <p class="detail-subtitle">Name4</p>
+      <p class="storyline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+      </p>
+    </div>
+    <div class="container">
+      <figure class="characters-detail-banner">
+        <img src="../images/hero1.jpg" alt="LUKE">
+      </figure>
+      <p class="detail-subtitle">Name5</p>
+      <p class="storyline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+      </p>
+    </div>
+    <div class="container">
+      <figure class="characters-detail-banner">
+        <img src="../images/hero1.jpg" alt="LUKE">
+      </figure>
+      <p class="detail-subtitle">Name6</p>
+      <p class="storyline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+      </p>
+    </div>
+    <div class="container">
+      <figure class="characters-detail-banner">
+        <img src="../images/hero1.jpg" alt="LUKE">
+      </figure>
+      <p class="detail-subtitle">Name7</p>
+      <p class="storyline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
+      </p>
+    </div>
+
   </section>
 
 
@@ -209,7 +272,6 @@ if(!array_key_exists('user', $_SESSION)){
               <a href="#" class="footer-link">Forums</a>
             </li>
           </ul>
-
 
 
         </div>
@@ -296,6 +358,10 @@ if(!array_key_exists('user', $_SESSION)){
     <ion-icon name="chevron-up"></ion-icon>
   </a>
 
+
+
+  <!--Javacript-->
+  <script src="../js/script.js"></script>
   <!-- 
     - ionicon link
   -->

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!array_key_exists('user', $_SESSION)){
+if (!array_key_exists('user', $_SESSION)) {
     header("Location: login.php");
 }
 ?>
@@ -47,11 +47,13 @@ if(!array_key_exists('user', $_SESSION)){
 
                 </div>
                 <?php if(!array_key_exists('user', $_SESSION)){
-                    echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
-                }else{
-                    echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-                  } ?>
-          
+            echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
+          }else{
+            echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
+            echo'<li><a href="dashboard.php" class="navbar-link">[Dashboard]</a>
+          </li>';
+          } ?>
+
             </div>
 
             <button class="menu-open-btn" data-menu-open-btn>
@@ -90,12 +92,12 @@ if(!array_key_exists('user', $_SESSION)){
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <div class="dropdown-content" id="myDropdown">
-                            <li> <a href="#" class="navbar-link">Ships</a></li>
-                            <li> <a href="#" class="navbar-link">Planets</a></li>
-                            <li> <a href="#" class="navbar-link">Force</a></li>
-                            <li> <a href="#" class="navbar-link">Jedi</a></li>
-                            <li> <a href="#" class="navbar-link">Sith</a></li>
-                            <li> <a href="#" class="navbar-link">Aliens</a></li>
+                            <li> <a href="ships.php" class="navbar-link">Ships</a></li>
+                            <li> <a href="planets.php" class="navbar-link">Planets</a></li>
+                            <li> <a href="force.php" class="navbar-link">Force</a></li>
+                            <li> <a href="jedi.php" class="navbar-link">Jedi</a></li>
+                            <li> <a href="sith.php" class="navbar-link">Sith</a></li>
+                            <li> <a href="alien_races.php" class="navbar-link">Aliens</a></li>
                         </div>
                     </div>
                     <li>
@@ -177,30 +179,31 @@ if(!array_key_exists('user', $_SESSION)){
                             <a href="characters.php" class="footer-link">Characters</a></a>
                         </li>
 
-                        <li>
-                            <a href="#" class="footer-link">Ships</a>
-                        </li>
+                        <<li>
+                            <a href="ships.php" class="footer-link">Ships</a>
+                            </li>
 
-                        <li>
-                            <a href="#" class="footer-link">Planets</a>
-                        </li>
+                            <li>
+                                <a href="planets.php" class="footer-link">Planets</a>
+                            </li>
 
-                        <li>
-                            <a href="#" class="footer-link">Force</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link">Jedi</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link">Sith</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link">Aliens</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link">Forums</a>
-                        </li>
+                            <li>
+                                <a href="force.php" class="footer-link">Force</a>
+                            </li>
+                            <li>
+                                <a href="jedi.php" class="footer-link">Jedi</a>
+                            </li>
+                            <li>
+                                <a href="sith.php" class="footer-link">Sith</a>
+                            </li>
+                            <li>
+                                <a href="alien_races.php" class="footer-link">Aliens</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Forums</a>
+                            </li>
                     </ul>
+
 
                 </div>
 

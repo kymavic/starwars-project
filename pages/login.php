@@ -2,7 +2,7 @@
 session_start();
 global $msg;
 
-if(array_key_exists('username', $_POST) && array_key_exists('password', $_POST)){
+if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)) {
     /*
     $_SESSION['user'] = validateLogin($_POST['username'],$_POST['password']);
     if($_SESSION['user']){
@@ -11,12 +11,12 @@ if(array_key_exists('username', $_POST) && array_key_exists('password', $_POST))
         $msg=("<br>Username or password incorrect!</br>");
     }
     */
-    if($_POST['username']=='admin' && $_POST['password']=='admin'){
-        $_SESSION['user'] = Array('name' => 'admin');
+    if ($_POST['username'] == 'admin' && $_POST['password'] == 'admin') {
+        $_SESSION['user'] = array('name' => 'admin');
         header("Location: dashboard.php");
-    }else{
+    } else {
         $_SESSION['user'] = null;
-        $msg="<br>Username or password incorrect!</br>";
+        $msg = "<br>Username or password incorrect!</br>";
     }
 }
 ?>
@@ -103,12 +103,12 @@ if(array_key_exists('username', $_POST) && array_key_exists('password', $_POST))
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <div class="dropdown-content" id="myDropdown">
-                            <li> <a href="#" class="navbar-link">Ships</a></li>
-                            <li> <a href="#" class="navbar-link">Planets</a></li>
-                            <li> <a href="#" class="navbar-link">Force</a></li>
-                            <li> <a href="#" class="navbar-link">Jedi</a></li>
-                            <li> <a href="#" class="navbar-link">Sith</a></li>
-                            <li> <a href="#" class="navbar-link">Aliens</a></li>
+                            <li> <a href="ships.php" class="navbar-link">Ships</a></li>
+                            <li> <a href="planets.php" class="navbar-link">Planets</a></li>
+                            <li> <a href="force.php" class="navbar-link">Force</a></li>
+                            <li> <a href="jedi.php" class="navbar-link">Jedi</a></li>
+                            <li> <a href="sith.php" class="navbar-link">Sith</a></li>
+                            <li> <a href="alien_races.php" class="navbar-link">Aliens</a></li>
                         </div>
                     </div>
                     <li>
@@ -207,29 +207,30 @@ if(array_key_exists('username', $_POST) && array_key_exists('password', $_POST))
                         </li>
 
                         <li>
-                            <a href="#" class="footer-link">Ships</a>
+                            <a href="ships.php" class="footer-link">Ships</a>
                         </li>
 
                         <li>
-                            <a href="#" class="footer-link">Planets</a>
+                            <a href="planets.php" class="footer-link">Planets</a>
                         </li>
 
                         <li>
-                            <a href="#" class="footer-link">Force</a>
+                            <a href="force.php" class="footer-link">Force</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Jedi</a>
+                            <a href="jedi.php" class="footer-link">Jedi</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Sith</a>
+                            <a href="sith.php" class="footer-link">Sith</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Aliens</a>
+                            <a href="alien_races.php" class="footer-link">Aliens</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link">Forums</a>
                         </li>
                     </ul>
+
 
                 </div>
 

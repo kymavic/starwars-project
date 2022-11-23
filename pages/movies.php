@@ -145,6 +145,8 @@ $movies = Array($movie1,$movie2,$movie3,$movie4,$movie5,$movie6,$movie7,$movie8,
             echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
           }else{
             echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
+            echo'<li><a href="dashboard.php" class="navbar-link">[Dashboard]</a>
+          </li>';
           } ?>
   
 
@@ -159,7 +161,7 @@ $movies = Array($movie1,$movie2,$movie3,$movie4,$movie5,$movie6,$movie7,$movie8,
         <div class="navbar-top">
 
           <a href="index.php" class="logo">
-            <img src="./images/logo.svg" alt="Star Wars Logo">
+            <img src="../images/logo.svg" alt="Star Wars Logo">
           </a>
 
           <button class="menu-close-btn" data-menu-close-btn>
@@ -186,12 +188,12 @@ $movies = Array($movie1,$movie2,$movie3,$movie4,$movie5,$movie6,$movie7,$movie8,
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" id="myDropdown">
-              <li> <a href="#" class="navbar-link">Ships</a></li>
-              <li> <a href="#" class="navbar-link">Planets</a></li>
-              <li> <a href="#" class="navbar-link">Force</a></li>
-              <li> <a href="#" class="navbar-link">Jedi</a></li>
-              <li> <a href="#" class="navbar-link">Sith</a></li>
-              <li> <a href="#" class="navbar-link">Aliens</a></li>
+              <li> <a href="ships.php" class="navbar-link">Ships</a></li>
+              <li> <a href="planets.php" class="navbar-link">Planets</a></li>
+              <li> <a href="force.php" class="navbar-link">Force</a></li>
+              <li> <a href="jedi.php" class="navbar-link">Jedi</a></li>
+              <li> <a href="sith.php" class="navbar-link">Sith</a></li>
+              <li> <a href="alien_races.php" class="navbar-link">Aliens</a></li>
             </div>
           </div>
           <li>
@@ -319,29 +321,30 @@ $movies = Array($movie1,$movie2,$movie3,$movie4,$movie5,$movie6,$movie7,$movie8,
             </li>
 
             <li>
-              <a href="#" class="footer-link">Ships</a>
+              <a href="ships.php" class="footer-link">Ships</a>
             </li>
 
             <li>
-              <a href="#" class="footer-link">Planets</a>
+              <a href="planets.php" class="footer-link">Planets</a>
             </li>
 
             <li>
-              <a href="#" class="footer-link">Force</a>
+              <a href="force.php" class="footer-link">Force</a>
             </li>
             <li>
-              <a href="#" class="footer-link">Jedi</a>
+              <a href="jedi.php" class="footer-link">Jedi</a>
             </li>
             <li>
-              <a href="#" class="footer-link">Sith</a>
+              <a href="sith.php" class="footer-link">Sith</a>
             </li>
             <li>
-              <a href="#" class="footer-link">Aliens</a>
+              <a href="alien_races.php" class="footer-link">Aliens</a>
             </li>
             <li>
               <a href="#" class="footer-link">Forums</a>
             </li>
           </ul>
+
 
         </div>
 
