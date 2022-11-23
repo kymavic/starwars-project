@@ -187,10 +187,10 @@ $characters = Array($character1,$character2,$character3,$character4);
         foreach ($characters as $character) {
           echo '
             <div class="container">
+              <p class="detail-subtitle">'.$character['name'].'</p>
               <figure class="characters-detail-banner">
                 <img src="'.$character['img'].'" alt="'.$character['name'].'">
               </figure>
-              <p class="detail-subtitle">'.$character['name'].'</p>
               <p class="storyline">'.$character['description'].'</p>
             </div>
     ';

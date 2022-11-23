@@ -602,6 +602,11 @@ body.active {
     padding-bottom: 100px;
 }
 
+.characters-detail > .container > .detail-subtitle {
+    text-align: center;
+    padding: 10px 0;
+}
+
 .characters-detail-banner {
     position: relative;
     background: hsl(229, 15%, 21%);
