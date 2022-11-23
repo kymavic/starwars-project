@@ -114,6 +114,9 @@ if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)
                     <li>
                         <a href="#" class="navbar-link">Forums</a>
                     </li>
+                    <?php if (array_key_exists('user', $_SESSION)) {
+                        echo '<li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>';
+                    } ?>
                 </ul>
                 <ul class="navbar-social-list">
 

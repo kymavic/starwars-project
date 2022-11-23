@@ -50,8 +50,6 @@ if (!array_key_exists('user', $_SESSION)) {
             echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
           }else{
             echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-            echo'<li><a href="dashboard.php" class="navbar-link">[Dashboard]</a>
-          </li>';
           } ?>
 
             </div>
@@ -103,6 +101,9 @@ if (!array_key_exists('user', $_SESSION)) {
                     <li>
                         <a href="#" class="navbar-link">Forums</a>
                     </li>
+                    <?php if (array_key_exists('user', $_SESSION)) {
+                        echo '<li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>';
+                    } ?>
                 </ul>
                 <ul class="navbar-social-list">
 

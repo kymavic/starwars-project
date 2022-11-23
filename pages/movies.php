@@ -144,9 +144,7 @@ $movies = Array($movie1,$movie2,$movie3,$movie4,$movie5,$movie6,$movie7,$movie8,
         <?php if(!array_key_exists('user', $_SESSION)){
             echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
           }else{
-            echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-            echo'<li><a href="dashboard.php" class="navbar-link">[Dashboard]</a>
-          </li>';
+            echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';sssssssss
           } ?>
   
 
@@ -199,6 +197,9 @@ $movies = Array($movie1,$movie2,$movie3,$movie4,$movie5,$movie6,$movie7,$movie8,
           <li>
             <a href="#" class="navbar-link">Forums</a>
           </li>
+          <?php if (array_key_exists('user', $_SESSION)) {
+              echo '<li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>';
+          } ?>
         </ul>
         <ul class="navbar-social-list">
 

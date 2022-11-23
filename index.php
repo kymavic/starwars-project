@@ -51,8 +51,6 @@ if($_SESSION['user'] == null){
                     echo '<a class="btn btn-primary" href="../pages/login.php">Sign in</a>';
                 } else {
                     echo '<a class="btn btn-primary" href="../pages/logout.php">' . $_SESSION['user']['name'] . ' - Log out</a>';
-                    echo '<li><a href="../pages/dashboard.php" class="navbar-link">[Dashboard]</a>
-                    </li>';
                 } ?>
 
 
@@ -106,6 +104,10 @@ if($_SESSION['user'] == null){
                     <li>
                         <a href="#" class="navbar-link">Forums</a>
                     </li>
+
+                    <?php if (array_key_exists('user', $_SESSION)) {
+                        echo '<li><a href="../pages/dashboard.php" class="navbar-link">Dashboard</a></li>';
+                    } ?>
                 </ul>
                 <ul class="navbar-social-list">
 
