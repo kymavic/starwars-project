@@ -79,7 +79,13 @@ if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)
                         <img src="../images/logo.svg" alt="Star Wars Logo">
                     </a>
 
-                    <button class="menu-close-btn" data-menu-close-btn>
+                    <?php if (!array_key_exists('user', $_SESSION)) {
+            echo '<a  class="menu-close-btn" href="./login.php"> <ion-icon name="log-in-outline"></ion-icon></a>';
+          } else {
+            echo '<a  class="menu-close-btn" href="./logout.php"> <ion-icon name="log-out-outline"></ion-icon></a>';
+          } ?>
+
+          <button class="menu-close-btn" data-menu-close-btn>
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
 
@@ -161,25 +167,20 @@ if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)
 
 
     <section class="movies">
-        <div class="container">
-            <div class="login">
-                <form id="login" method="post" action="login.php">
-                    <label><b>User Name
-                        </b>
-                    </label>
-                    <input type="text" class="login-input" name="username" id="username" placeholder="Username" />
-                    <br><br>
-                    <label><b>Password
-                        </b>
-                    </label>
-                    <input type="Password" class="login-input" name="password" id="password" placeholder="Password" />
-                    <br><br>
+        <div class="container content-center">
+            <form id="login" method="post" class="form-content" action="login.php">
+                <label class="detail-subtitle">User Name</label>
+                <input type="text" class="login-input" name="username" id="username" placeholder="Username" />
+                <br>
+                <label class="detail-subtitle">Password</label>
+                <input type="Password" class="login-input" name="password" id="password" placeholder="Password" />
+                <br>
+                <div class="inline-center">
                     <button class="w-100 btn btn-lg btn-primary" type="submit" value="login">Login</button>
-                    <br>
-                    <?php echo $msg; ?>
-                </form>
-            </div>
-
+                </div>
+                <br>
+                <?php echo $msg; ?>
+            </form>
         </div>
     </section>
 

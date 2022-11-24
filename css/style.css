@@ -58,7 +58,7 @@ ion-icon {
     display: block;
 }
 
-input {
+input, textarea {
     font: inherit;
     width: 100%;
     border: none;
@@ -136,6 +136,21 @@ body.active {
     text-align: center;
 }
 
+
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.form-content {
+    min-width: 300px;
+}
+
+.inline-center {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
 
 /**
  * BADGE
@@ -496,7 +511,7 @@ body.active {
     font-weight: 700;
     text-transform: uppercase;
     padding: 5px 15px;
-    transition: var(--transition-1);
+    transition:  0.15s ease;
 }
 
 .footer-link:is(:hover, :focus), .quicklink-link:is(:hover, :focus), .social-link:is(:hover, :focus) {
@@ -506,7 +521,7 @@ body.active {
 .divider {
     height: 4px;
     margin-block: 40px;
-    border-top: 1px solid var(--rich-black-fogra-29);
+    border-top: 1px solid  hsl(225, 25%, 9%);
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
@@ -528,9 +543,9 @@ body.active {
 }
 
 .social-link {
-    background: var(--rich-black-fogra-29);
-    color: var(--gray-x);
-    font-size: 14px;
+    background: hsl(225, 25%, 9%);
+    color: whitesmoke;
+    font-size: 16px;
     width: 35px;
     height: 35px;
     display: grid;
@@ -757,23 +772,9 @@ body.active {
      * CUSTOM PROPERTY
      */
 
-    :root {
-
-        /**
-       * typography
-       */
-
-        font-size: 42px;
-
-    }
-
     /**
    * MOVIE DETAIL
    */
-
-    .detail-subtitle {
-        font-size: 22px;
-    }
 
     .detail-title {
         font-size: 46px;
@@ -824,16 +825,6 @@ body.active {
     /**
      * CUSTOM PROPERTY
      */
-
-    :root {
-
-        /**
-       * typography
-       */
-
-        font-size: 36px;
-
-    }
 
 
 
@@ -892,7 +883,7 @@ body.active {
     }
 
     .lang-wrapper label {
-        color: var(--citrine);
+        color: #FFC500;
         font-size: 20px;
     }
 
@@ -909,8 +900,6 @@ body.active {
  /**
    * MOVIE DETAIL
    */
-
-   .detail-subtitle { font-size:  26px; }
 
    .detail-title { font-size:  50px; }
  
@@ -1147,7 +1136,7 @@ body.active {
    * MOVIE DETAIL
    */
 
-   .characters-detail { padding-bottom: var(--section-padding); }
+   .characters-detail { padding-bottom: 100px }
 
    .characters-detail-content { max-width: 620px; }
  

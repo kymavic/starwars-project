@@ -68,6 +68,12 @@ if(!array_key_exists('user', $_SESSION)){
             <img src="../images/logo.svg" alt="Star Wars Logo">
           </a>
 
+          <?php if (!array_key_exists('user', $_SESSION)) {
+            echo '<a  class="menu-close-btn" href="./login.php"> <ion-icon name="log-in-outline"></ion-icon></a>';
+          } else {
+            echo '<a  class="menu-close-btn" href="./logout.php"> <ion-icon name="log-out-outline"></ion-icon></a>';
+          } ?>
+
           <button class="menu-close-btn" data-menu-close-btn>
             <ion-icon name="close-outline"></ion-icon>
           </button>
@@ -151,12 +157,12 @@ if(!array_key_exists('user', $_SESSION)){
   <section class="movies">
     <div class="container">
       <h2 class="h2 section-title">Dashboard</h2>
-      <li> <a href="add_movie.php" class="quicklink-link">Add movie</a></li>
-      <li> <a href="add_character.php" class="quicklink-link">Add Characters</a></li>
-      <li> <a href="add_planets.php" class="quicklink-link">Add Planets</a></li>
-      <li> <a href="add_ships.php" class="quicklink-link">Add Ships</a></li>
-      <li> <a href="add_alien.php" class="quicklink-link">Add Alien Race</a></li>
-      <li> <a href="add_force.php" class="quicklink-link">Add Force</a></li>
+      <li> <a href="movie_mg.php" class="footer-link">Movie management</a></li>
+      <li> <a href="characters_mg.php" class="footer-link">Characters management</a></li>
+      <li> <a href="planets_mg.php" class="footer-link">Planets management</a></li>
+      <li> <a href="ships_mg.php" class="footer-link">Ships management</a></li>
+      <li> <a href="alien_mg.php" class="footer-link">Alien Race management</a></li>
+      <li> <a href="force_mg.php" class="footer-link">Force management</a></li>
     </div>
   </section>
 

@@ -68,7 +68,13 @@ if($_SESSION['user'] == null){
                         <img src="./images/logo.svg" alt="Star Wars Logo">
                     </a>
 
-                    <button class="menu-close-btn" data-menu-close-btn>
+                    <?php if (!array_key_exists('user', $_SESSION)) {
+            echo '<a  class="menu-close-btn" href="../pages/login.php"> <ion-icon name="log-in-outline"></ion-icon></a>';
+          } else {
+            echo '<a  class="menu-close-btn" href="../pages/logout.php"> <ion-icon name="log-out-outline"></ion-icon></a>';
+          } ?>
+
+          <button class="menu-close-btn" data-menu-close-btn>
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
 

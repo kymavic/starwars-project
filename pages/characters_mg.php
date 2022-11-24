@@ -1,9 +1,10 @@
 <?php
 session_start();
-/*
-if($_SESSION['user'] == null){
-    header("Location: login.php");
-}*/
+
+if ($_SESSION['user'] == null) {
+  header("Location: login.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -48,11 +49,11 @@ if($_SESSION['user'] == null){
 
         </div>
 
-        <?php if(!array_key_exists('user', $_SESSION)){
-            echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
-          }else{
-            echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-          } ?>
+        <?php if (!array_key_exists('user', $_SESSION)) {
+          echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
+        } else {
+          echo '<a class="btn btn-primary" href="./logout.php">' . $_SESSION['user']['name'] . ' - Log out</a>';
+        } ?>
 
       </div>
 
@@ -110,8 +111,8 @@ if($_SESSION['user'] == null){
             <a href="#" class="navbar-link">Forums</a>
           </li>
           <?php if (array_key_exists('user', $_SESSION)) {
-                        echo '<li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>';
-                    } ?>
+            echo '<li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>';
+          } ?>
         </ul>
         <ul class="navbar-social-list">
 
@@ -160,74 +161,113 @@ if($_SESSION['user'] == null){
       -->
 
   <section class="characters-detail">
-    <h2 class="h2 section-title">Ships</h2>
-    <div class="container">
+    <h2 class="h2 section-title">Primary characters</h2>
+    <br />
+    <div class="container content-center">
+      <form class="form-content">
+        <label class="detail-subtitle" for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <br>
+        <label class="detail-subtitle" for="image">Image URL</label>
+        <input type="text" name="image" id="image" placeholder="Image" />
+        <br>
+        <label class="detail-subtitle" for="description">Description</label>
+        <br>
+        <textarea name="description" id="description" placeholder="Description"></textarea>
+        <br>
+        <br>
+        <div class="inline-center">
+          <button class="w-100 btn btn-lg btn-primary" type="submit" value="new">New</button>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" value="save">Save</button>
+        </div>
+        <br>
+        <br>
+      </form>
+    </div>
+    <hr>
+    <br>
+    <table class="content-center">
+      <tbody>
+        <tr>
+          <td class="detail-subtitle">Luke Skywalker</td>
+          <td>
+            <a href="characters.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
 
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name1</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name2</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name3</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name4</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name5</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name6</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
-    <div class="container">
-      <figure class="characters-detail-banner">
-        <img src="../images/hero1.jpg" alt="LUKE">
-      </figure>
-      <p class="detail-subtitle">Name7</p>
-      <p class="storyline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum officiis quod repellat nisi illum suscipit mollitia dicta corrupti.
-      </p>
-    </div>
+        <tr>
+          <td class="detail-subtitle">Leia Skywalker</td>
+          <td>
+            <a href="characters.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
 
+        <tr>
+          <td class="detail-subtitle">Yoda</td>
+          <td>
+            <a href="characters.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="detail-subtitle">Darth Vader</td>
+          <td>
+            <a href="characters.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="detail-subtitle">Han Solo</td>
+          <td>
+            <a href="characters.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="detail-subtitle">Chewbacca</td>
+          <td>
+            <a href="characters.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </section>
-
 
   <!--  - #FOOTER -->
 
@@ -278,6 +318,7 @@ if($_SESSION['user'] == null){
             <li>
               <a href="#" class="footer-link">Forums</a>
             </li>
+
           </ul>
 
         </div>

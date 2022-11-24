@@ -162,6 +162,12 @@ $movies = Array($movie1,$movie2,$movie3,$movie4,$movie5,$movie6,$movie7,$movie8,
             <img src="../images/logo.svg" alt="Star Wars Logo">
           </a>
 
+          <?php if (!array_key_exists('user', $_SESSION)) {
+            echo '<a  class="menu-close-btn" href="./login.php"> <ion-icon name="log-in-outline"></ion-icon></a>';
+          } else {
+            echo '<a  class="menu-close-btn" href="./logout.php"> <ion-icon name="log-out-outline"></ion-icon></a>';
+          } ?>
+
           <button class="menu-close-btn" data-menu-close-btn>
             <ion-icon name="close-outline"></ion-icon>
           </button>
