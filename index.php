@@ -69,12 +69,12 @@ if($_SESSION['user'] == null){
                     </a>
 
                     <?php if (!array_key_exists('user', $_SESSION)) {
-            echo '<a  class="menu-close-btn" href="../pages/login.php"> <ion-icon name="log-in-outline"></ion-icon></a>';
-          } else {
-            echo '<a  class="menu-close-btn" href="../pages/logout.php"> <ion-icon name="log-out-outline"></ion-icon></a>';
-          } ?>
+                        echo '<a  class="menu-close-btn" href="../pages/login.php"> <ion-icon name="log-in-outline"></ion-icon></a>';
+                    } else {
+                        echo '<a  class="menu-close-btn" href="../pages/logout.php"> <ion-icon name="log-out-outline"></ion-icon></a>';
+                    } ?>
 
-          <button class="menu-close-btn" data-menu-close-btn>
+                    <button class="menu-close-btn" data-menu-close-btn>
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
 
@@ -163,8 +163,14 @@ if($_SESSION['user'] == null){
                 <div class="container">
 
                     <div class="hero-content">
+                        <h1 class="h1 hero-title">
+                            Unlimited <strong>Movie</strong>, TVs Shows, & More.
+                        </h1>
+                        <button class="btn btn-primary">
+                            <ion-icon name="play"></ion-icon>
 
-
+                            <span>Watch now</span>
+                        </button>
                     </div>
 
                 </div>
