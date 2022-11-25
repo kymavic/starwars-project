@@ -669,6 +669,37 @@ body.active {
     height: 100%;
     object-fit: cover;
 }
+
+.ships-detail {
+    background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
+    url("../images/back2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 100px;
+}
+
+.ships-detail > .container > .detail-subtitle {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.ships-detail-banner {
+    position: relative;
+    background: hsl(229, 15%, 21%);
+    max-width: 200px;
+    margin-inline: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.ships-detail-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .meta-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -714,6 +745,9 @@ body.active {
     margin-bottom: 30px;
 }
 
+.ships-detail .meta-wrapper {
+    margin-bottom: 30px;
+}
 .storyline {
     color: hsl(0, 0%, 74%);
     font-size: 14px;
@@ -1088,8 +1122,7 @@ body.active {
      gap: 50px;
    }
  
-   .characters-detail-banner { margin: 7px; }
-   
+   .characters-detail-banner { margin: 7px; }   
 
    .planets-detail { padding-bottom: 200px; }
 
@@ -1101,6 +1134,17 @@ body.active {
    }
  
    .planets-detail-banner { margin: 7px; }
+
+   .ships-detail { padding-bottom: 200px; }
+
+   .ships-detail .container {
+     position: relative;
+     display: flex;
+     align-items: center;
+     gap: 50px;
+   }
+ 
+   .ships-detail-banner { margin: 7px; }
 
    .details-actions { margin: 0; }
    .download-btn {
@@ -1187,6 +1231,10 @@ body.active {
    .planets-detail { padding-bottom: 100px }
 
    .planets-detail-content { max-width: 620px; }
+
+   .ships-detail { padding-bottom: 100px }
+
+   .ships-detail-content { max-width: 620px; }
  
    .detail-title { --fs-1: 60px; }
  
