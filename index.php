@@ -18,6 +18,7 @@ if($_SESSION['user'] == null){
 </head>
 
 <body>
+
     <!--Header-->
     <?php include('./pages/sections/header.php'); ?>
     <!--main Content-->
@@ -27,6 +28,14 @@ if($_SESSION['user'] == null){
             <section class="hero">
                 <div class="container">
                     <div class="hero-content">
+                        <h1 class="h1 hero-title">
+                            Unlimited <strong>Movie</strong>, TVs Shows, & More.
+                        </h1>
+                        <button class="btn btn-primary">
+                            <ion-icon name="play"></ion-icon>
+
+                            <span>Watch now</span>
+                        </button>
                     </div>
                 </div>
             </section>

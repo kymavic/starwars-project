@@ -326,6 +326,12 @@ body.active {
 
 .hero-title {
     margin-bottom: 30px;
+    
+}
+.hero-title h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .hero-title>strong {
