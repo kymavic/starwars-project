@@ -13,6 +13,7 @@ li {
 a {
     text-decoration: none;
 }
+
 /*.dropbtn{
     color: hsl(0, 100%, 100%);
     font-size: 15px;
@@ -29,26 +30,27 @@ a {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-  }
-  
-  .dropdown-content a:hover {
+}
+
+.dropdown-content a:hover {
     background-color: #ddd;
-  }
-  
-  .show {
+}
+
+.show {
     display: block;
-  }
+}
+
 a,
 img,
 span,
@@ -58,7 +60,8 @@ ion-icon {
     display: block;
 }
 
-input, textarea {
+input,
+textarea {
     font: inherit;
     width: 100%;
     border: none;
@@ -116,7 +119,7 @@ body.active {
 
 .login {
     max-width: 500px;
-    color:#fff;
+    color: #fff;
     font-size: 15px;
     font-weight: 500;
     text-align: center;
@@ -266,6 +269,7 @@ body.active {
 .dropbtn:is(:hover, :focus) {
     color: #FFC500;
 }
+
 .navbar-social-list {
     display: flex;
     justify-content: center;
@@ -327,12 +331,16 @@ body.active {
 
 .hero-title {
     margin-bottom: 30px;
-    
+    font-family: fantasy;
+    -webkit-text-stroke: 0.5px hsl(0deg 0% 100% / 75%);
+    color: #00000080;
 }
-.hero-title h1{
+
+.hero-title h1 {
     font-size: 50px;
     text-transform: uppercase;
     font-weight: bold;
+
 }
 
 .hero-title>strong {
@@ -377,11 +385,11 @@ body.active {
     align-items: center;
 }
 
-.section-container div{
+.section-container div {
     text-align: center;
 }
 
-.section-container div .storyline{
+.section-container div .storyline {
     text-align: justify;
     max-width: 450px;
 }
@@ -390,7 +398,7 @@ body.active {
 
 .movies {
     background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-    url("../images/back2.jpg");
+        url("../images/back2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -500,12 +508,10 @@ body.active {
 }
 
 
-
-
 /*#FOOTER*/
 
 .footer-top {
-/*    background: url("../images/footer-bg.jpg") no-repeat;*/
+    /*    background: url("../images/footer-bg.jpg") no-repeat;*/
     background-size: cover;
     background-position: center;
     padding-block: 80px 50px;
@@ -533,17 +539,19 @@ body.active {
     font-weight: 700;
     text-transform: uppercase;
     padding: 5px 15px;
-    transition:  0.15s ease;
+    transition: 0.15s ease;
 }
 
-.footer-link:is(:hover, :focus), .quicklink-link:is(:hover, :focus), .social-link:is(:hover, :focus) {
+.footer-link:is(:hover, :focus),
+.quicklink-link:is(:hover, :focus),
+.social-link:is(:hover, :focus) {
     color: #FFC500;
 }
 
 .divider {
     height: 4px;
     margin-block: 40px;
-    border-top: 1px solid  hsl(225, 25%, 9%);
+    border-top: 1px solid hsl(225, 25%, 9%);
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
@@ -647,7 +655,7 @@ body.active {
 
 .movies-detail {
     background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-    url("../images/back2.jpg");
+        url("../images/back2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -655,7 +663,7 @@ body.active {
     padding-bottom: 100px;
 }
 
-.movies-detail > .container > .detail-subtitle {
+.movies-detail>.container>.detail-subtitle {
     text-align: center;
     padding: 10px 0;
 }
@@ -680,7 +688,7 @@ body.active {
 
 .characters-detail {
     background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-    url("../images/back2.jpg");
+        url("../images/back2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -688,7 +696,7 @@ body.active {
     padding-bottom: 100px;
 }
 
-.characters-detail > .container > .detail-subtitle {
+.characters-detail>.container>.detail-subtitle {
     text-align: center;
     padding: 10px 0;
 }
@@ -708,11 +716,12 @@ body.active {
     height: 100%;
     object-fit: cover;
 }
+
 /*#PLANET DETAIL */
 
 .planets-detail {
     background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-    url("../images/back2.jpg");
+        url("../images/back2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -720,7 +729,7 @@ body.active {
     padding-bottom: 100px;
 }
 
-.planets-detail > .container > .detail-subtitle {
+.planets-detail>.container>.detail-subtitle {
     text-align: center;
     padding: 10px 0;
 }
@@ -743,7 +752,7 @@ body.active {
 
 .ships-detail {
     background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-    url("../images/back2.jpg");
+        url("../images/back2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -751,7 +760,7 @@ body.active {
     padding-bottom: 100px;
 }
 
-.ships-detail > .container > .detail-subtitle {
+.ships-detail>.container>.detail-subtitle {
     text-align: center;
     padding: 10px 0;
 }
@@ -771,6 +780,7 @@ body.active {
     height: 100%;
     object-fit: cover;
 }
+
 .meta-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -778,7 +788,8 @@ body.active {
     align-items: center;
     gap: 15px 25px;
     margin-bottom: 50px;
-  }
+}
+
 .play-btn {
     position: absolute;
     inset: 0;
@@ -823,6 +834,7 @@ body.active {
 .ships-detail .meta-wrapper {
     margin-bottom: 30px;
 }
+
 .storyline {
     color: hsl(0, 0%, 74%);
     font-size: 14px;
@@ -901,8 +913,6 @@ body.active {
 }
 
 
-
-
 /*-----------------------------------*\
  * #MEDIA QUERIES
 \*-----------------------------------*/
@@ -927,8 +937,6 @@ body.active {
 
 }
 
-
-
 /**
      * REUSED STYLE
      */
@@ -937,10 +945,6 @@ body.active {
     max-width: 540px;
     margin-inline: auto;
 }
-
-
-
-
 
 /**
      * HERO
@@ -954,12 +958,16 @@ body.active {
     margin-top: 20px;
 }
 
+@media (max-width: 992px) {
 
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-
-
-
-
+}
 
 /**
    * responsive for large than 768px screen
@@ -980,9 +988,7 @@ body.active {
     .container {
         max-width: 720px;
     }
-
-
-
+    
     /**
      * HEADER
      */
@@ -1042,15 +1048,15 @@ body.active {
         color: hsl(0, 0%, 0%);
     }
 
- /**
+    /**
    * MOVIE DETAIL
    */
 
-   .detail-title { font-size:  50px; }
- 
- 
- 
+    .detail-title {
+        font-size: 50px;
+    }
 
+    
     /**
      * HERO
      */
@@ -1059,9 +1065,7 @@ body.active {
         margin-top: 90px;
     }
 
-
-
-
+    
     /**
      * FOOTER
      */
@@ -1090,14 +1094,8 @@ body.active {
         margin-inline: 0;
     }
 
-
-
-
+    
 }
-
-
-
-
 
 /**
    * responsive for large than 992px screen
@@ -1119,9 +1117,7 @@ body.active {
         grid-template-columns: repeat(3, 1fr);
     }
 
-
-
-
+    
     /**
      * HEADER
      */
@@ -1165,9 +1161,7 @@ body.active {
     .overlay {
         display: none;
     }
-
-
-
+    
     /**
      * HERO
      */
@@ -1183,57 +1177,66 @@ body.active {
     .hero-content {
         margin-top: 100px;
         max-width: 600px;
+        margin-left: 30px;
     }
- /**
+
+    /**
    * MOVIE DETAIL
    */
-   .movies-detail { padding-bottom: 200px; }
+    .movies-detail {
+        padding-bottom: 200px;
+    }
 
-   .movies-detail .container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-  } 
+    .movies-detail .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
 
-   .characters-detail { padding-bottom: 200px; }
+    .characters-detail {
+        padding-bottom: 200px;
+    }
 
-   .characters-detail .container {
-     position: relative;
-     display: flex;
-     align-items: center;
-     gap: 50px;
-   } 
+    .characters-detail .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
 
-   .planets-detail { padding-bottom: 200px; }
+    .planets-detail {
+        padding-bottom: 200px;
+    }
 
-   .planets-detail .container {
-     position: relative;
-     display: flex;
-     align-items: center;
-     gap: 50px;
-   }
+    .planets-detail .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
 
-   .ships-detail { padding-bottom: 200px; }
+    .ships-detail {
+        padding-bottom: 200px;
+    }
 
-   .ships-detail .container {
-     position: relative;
-     display: flex;
-     align-items: center;
-     gap: 50px;
-   }
+    .ships-detail .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
 
-   .details-actions { margin: 0; }
-   .download-btn {
-     position: absolute;
-     left: 15px;
-     bottom: -80px;
-   }
+    .details-actions {
+        margin: 0;
+    }
+
+    .download-btn {
+        position: absolute;
+        left: 15px;
+        bottom: -80px;
+    }
 }
-
-
-
-
 
 /**
    * responsive for large than 1200px screen
@@ -1264,9 +1267,7 @@ body.active {
         max-width: 1320px;
     }
 
-
-
-
+    
     /**
      * HEADER
      */
@@ -1281,9 +1282,7 @@ body.active {
         padding: 10px 35px;
         letter-spacing: 1px;
     }
-
-
-
+    
     /**
      * HERO
      */
@@ -1297,44 +1296,60 @@ body.active {
     .movies-list {
         grid-template-columns: repeat(4, 1fr);
     }
-/**
+
+    /**
    * MOVIE DETAIL
    */
 
-   .movies-detail { padding-bottom: 100px }
+    .movies-detail {
+        padding-bottom: 100px
+    }
 
-   .movies-detail-content { max-width: 620px; }
+    .movies-detail-content {
+        max-width: 620px;
+    }
 
-   .characters-detail { padding-bottom: 100px }
+    .characters-detail {
+        padding-bottom: 100px
+    }
 
-   .characters-detail-content { max-width: 620px; }
+    .characters-detail-content {
+        max-width: 620px;
+    }
 
-   .planets-detail { padding-bottom: 100px }
+    .planets-detail {
+        padding-bottom: 100px
+    }
 
-   .planets-detail-content { max-width: 620px; }
+    .planets-detail-content {
+        max-width: 620px;
+    }
 
-   .ships-detail { padding-bottom: 100px }
+    .ships-detail {
+        padding-bottom: 100px
+    }
 
-   .ships-detail-content { max-width: 620px; }
- 
-   .detail-title { --fs-1: 60px; }
- 
-   .download-btn {
-     left: auto;
-     right: 15px;
-     bottom: 0;
-     transform: rotate(0.25turn) translateY(100%);
-     transform-origin: bottom right;
-     padding: 40px 50px;
-   }
- 
-   .download-btn ion-icon {
-     font-size: 30px;
-     transform: rotate(-0.25turn);
-   }
+    .ships-detail-content {
+        max-width: 620px;
+    }
+
+    .detail-title {
+        --fs-1: 60px;
+    }
+
+    .download-btn {
+        left: auto;
+        right: 15px;
+        bottom: 0;
+        transform: rotate(0.25turn) translateY(100%);
+        transform-origin: bottom right;
+        padding: 40px 50px;
+    }
+
+    .download-btn ion-icon {
+        font-size: 30px;
+        transform: rotate(-0.25turn);
+    }
 
 
 }
-
-
-

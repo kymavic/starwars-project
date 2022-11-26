@@ -29,12 +29,11 @@ if($_SESSION['user'] == null){
                 <div class="container">
                     <div class="hero-content">
                         <h1 class="h1 hero-title">
-                            Unlimited <strong>Movie</strong>, TVs Shows, & More.
+                        MAY THE FORCE BE WITH YOU
                         </h1>
                         <button class="btn btn-primary">
                             <ion-icon name="play"></ion-icon>
-
-                            <span>Watch now</span>
+                            <span>Sign in</span>
                         </button>
                     </div>
                 </div>
