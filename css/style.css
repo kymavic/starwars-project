@@ -134,6 +134,7 @@ body.active {
 
 .section-title {
     text-align: center;
+    padding-bottom: 15px;
 }
 
 
@@ -368,6 +369,21 @@ body.active {
 .btn-primary:is(:hover, :focus) {
     background: #FFC500;
     color: hsl(253, 21%, 13%);
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-container div{
+    text-align: center;
+}
+
+.section-container div .storyline{
+    text-align: justify;
+    max-width: 450px;
 }
 
 /*Characters*/
@@ -1126,9 +1142,7 @@ body.active {
      display: flex;
      align-items: center;
      gap: 50px;
-   }
- 
-   .characters-detail-banner { margin: 7px; }   
+   } 
 
    .planets-detail { padding-bottom: 200px; }
 
@@ -1138,8 +1152,6 @@ body.active {
      align-items: center;
      gap: 50px;
    }
- 
-   .planets-detail-banner { margin: 7px; }
 
    .ships-detail { padding-bottom: 200px; }
 
@@ -1149,8 +1161,6 @@ body.active {
      align-items: center;
      gap: 50px;
    }
- 
-   .ships-detail-banner { margin: 7px; }
 
    .details-actions { margin: 0; }
    .download-btn {
