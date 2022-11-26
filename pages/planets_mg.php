@@ -1,9 +1,10 @@
 <?php
 session_start();
-/*
-if($_SESSION['user'] == null){
-    header("Location: login.php");
-}*/
+
+if ($_SESSION['user'] == null) {
+  header("Location: login.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -48,11 +49,11 @@ if($_SESSION['user'] == null){
 
         </div>
 
-        <?php if(!array_key_exists('user', $_SESSION)){
-            echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
-          }else{
-            echo '<a class="btn btn-primary" href="./logout.php">'.$_SESSION['user']['name'].' - Log out</a>';
-          } ?>
+        <?php if (!array_key_exists('user', $_SESSION)) {
+          echo '<a class="btn btn-primary" href="./login.php">Sign in</a>';
+        } else {
+          echo '<a class="btn btn-primary" href="./logout.php">' . $_SESSION['user']['name'] . ' - Log out</a>';
+        } ?>
 
       </div>
 
@@ -110,8 +111,8 @@ if($_SESSION['user'] == null){
             <a href="#" class="navbar-link">Forums</a>
           </li>
           <?php if (array_key_exists('user', $_SESSION)) {
-                        echo '<li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>';
-                    } ?>
+            echo '<li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>';
+          } ?>
         </ul>
         <ul class="navbar-social-list">
 
@@ -161,85 +162,167 @@ if($_SESSION['user'] == null){
 
   <section class="planets-detail">
     <h2 class="h2 section-title">Planets</h2>
-    <div class="container">
-      <p class="detail-subtitle">Abafar</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Abafar">
-      </figure>
-      <p class="storyline">A desert planet located in the Outer Rim with a completely white surface. Known as The Void, the planet is barely populated but is home to massive amounts of rhydonium, a scarce and volatile fuel.</p>
+    <br />
+    <div class="container content-center">
+      <form class="form-content">
+        <label class="detail-subtitle" for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <br>
+        <label class="detail-subtitle" for="image">Image URL</label>
+        <input type="text" name="image" id="image" placeholder="Image" />
+        <br>
+        <label class="detail-subtitle" for="description">Description</label>
+        <br>
+        <textarea name="description" id="description" placeholder="Description"></textarea>
+        <br>
+        <br>
+        <div class="inline-center">
+          <button class="w-100 btn btn-lg btn-primary" type="submit" value="new">New</button>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" value="save">Save</button>
+        </div>
+        <br>
+        <br>
+      </form>
     </div>
-    <div class="container">
-      <p class="detail-subtitle">Agamar</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Agamar">
-      </figure>
-      <p class="storyline">A barren, rocky planet in the Outer Rim. Site of a still-active reserve of Separatist droids that became known for surviving the Clone Wars.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Ahch-To</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Ahch-To">
-      </figure>
-      <p class="storyline">Largely oceanic planet on which Luke Skywalker has been hiding for several years, and the location of the first Jedi Temple and the Tree Library of sacred Jedi texts. Porgs, Lanai and thala-sirens are among the native species.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Ajan Kloss</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Ajan Kloss">
-      </figure>
-      <p class="storyline">A jungle moon which serves as a new base of operations for the Resistance. Years before, Leia and Luke were training there. Leia Organa dies here after using the last of her energy to reach out to her son through the Force.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Akiva</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Akiva">
-      </figure>
-      <p class="storyline">Jungle planet and home of Norra and Temmin Wexley, and a primary setting in Aftermath.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Alderaan</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Alderaan">
-      </figure>
-      <p class="storyline">Forests, mountains; home planet of Princess Leia and the House of Organa. Destroyed by the first Death Star as punishment for involvement in the Rebel Alliance and also as a demonstration of power.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Aaleen</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Aaleen">
-      </figure>
-      <p class="storyline">A subterranean world located in the Mid Rim. The native species include, the surface dwelling beings called the Aleena and sentient tree-like beings called Kindalo.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Alzoc III</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Alzoc III">
-      </figure>
-      <p class="storyline">Ice planet, with many glaciers, and in its surface lies a crashed separatist carrier, with an anti-gravitational device.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Anaxes</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Anaxes">
-      </figure>
-      <p class="storyline">A rocky planet located in the Azure sector of the galaxy's Core Worlds region. A majority of its surface was covered with tall, red plant-like life. In the early years of the Imperial Era, the planet was destroyed in a cataclysm, with the remains becoming the Anaxes asteroid belt.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Ando</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Ando">
-      </figure>
-      <p class="storyline">A water-covered planet located in the Outer Rim, it is home to the amphibious Aqualish species and endures great turmoil during the Separatist Crisis.</p>
-    </div>
-    <div class="container">
-      <p class="detail-subtitle">Anoat</p>
-      <figure class="planets-detail-banner">
-        <img src="../images/planet1.jpg" alt="Anoat">
-      </figure>
-      <p class="storyline">Polluted; A nearly inhospitable planet used by the Empire.</p>
-    </div>
+    <hr>
+    <br>
+    <table class="content-center">
+      <tbody>
+        <tr>
+          <td class="detail-subtitle">Abafar</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Agamar</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Ahch-To</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Ajan Kloss</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Akiva</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Alderaan</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Aaleen</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Alzoc III</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Anaxes</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Ando</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="detail-subtitle">Anoat</td>
+          <td>
+            <a href="planets.php" class="footer-link">View details</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Update</a>
+          </td>
+          <td>
+            <a href="#" class="footer-link">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </section>
-
 
   <!--  - #FOOTER -->
 
@@ -264,7 +347,7 @@ if($_SESSION['user'] == null){
             </li>
 
             <li>
-              <a href="characters.php" class="footer-link">Characters</a></a>
+              <a href="planets.php" class="footer-link">Characters</a></a>
             </li>
 
             <li>
@@ -290,6 +373,7 @@ if($_SESSION['user'] == null){
             <li>
               <a href="#" class="footer-link">Forums</a>
             </li>
+
           </ul>
 
         </div>
