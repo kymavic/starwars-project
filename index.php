@@ -33,7 +33,7 @@ if($_SESSION['user'] == null){
                         </h1>
                         <button class="btn btn-primary">
                             <ion-icon name="play"></ion-icon>
-                            <span>Sign in</span>
+                            <span>Sign up</span>
                         </button>
                     </div>
                 </div>
