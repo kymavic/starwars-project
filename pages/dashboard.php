@@ -27,11 +27,11 @@ if($_SESSION['user'] == null){
       <section class="movies">
         <div class="container">
           <h2 class="h2 section-title">Dashboard</h2>
-          <li> <a href="movie_mg.php" class="footer-link">Movie management</a></li>
+          <li> <a href="movies_mg.php" class="footer-link">Movies management</a></li>
           <li> <a href="characters_mg.php" class="footer-link">Characters management</a></li>
           <li> <a href="planets_mg.php" class="footer-link">Planets management</a></li>
           <li> <a href="ships_mg.php" class="footer-link">Ships management</a></li>
-          <li> <a href="alien_mg.php" class="footer-link">Alien Race management</a></li>
+          <li> <a href="aliens_mg.php" class="footer-link">Aliens Race management</a></li>
           <li> <a href="force_mg.php" class="footer-link">Force management</a></li>
         </div>
       </section>
