@@ -4,8 +4,8 @@ session_start();
 if ($_SESSION['user'] == null) {
   header("Location: login.php");
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,9 +24,9 @@ if ($_SESSION['user'] == null) {
   <!--main Content-->
   <main>
     <article>
-      <!--#SHIPS DETAIL-->
+      <!--#DETAIL-->
       <section class="default-detail">
-        <h2 class="h2 section-title">Ships</h2>
+        <h2 class="h2 section-title">Jedis</h2>
         <br />
         <div class="container content-center">
           <form class="form-content">
@@ -54,9 +54,9 @@ if ($_SESSION['user'] == null) {
         <table class="content-center">
           <tbody>
             <tr>
-              <td class="detail-subtitle">Death Star</td>
+              <td class="detail-subtitle">Yoda</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -65,10 +65,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Executor (Super Star Destroyer)</td>
+              <td class="detail-subtitle">Mace Windu</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -77,10 +78,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Home One (Mon Calamari cruiser)</td>
+              <td class="detail-subtitle">Plo Koon</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -89,10 +91,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Imperial landing craft (Sentinel-class landing craft)</td>
+              <td class="detail-subtitle">Kit Fisto</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -101,10 +104,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Imperial shuttle (Lambda-class shuttle)</td>
+              <td class="detail-subtitle">Count Dooku</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -113,10 +117,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Imperial Star Destroyer</td>
+              <td class="detail-subtitle">Qui-Gon Jinn</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -125,10 +130,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Millennium Falcon (YT-1300 light freighter)</td>
+              <td class="detail-subtitle">Obi-Wan Kenobi</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -137,10 +143,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Rebel Medical Frigate (Nebulon-B frigate)</td>
+              <td class="detail-subtitle">Anakin Skywalker</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -149,10 +156,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Rebel Transport (GR-75 medium transport)</td>
+              <td class="detail-subtitle">Ahsoka Tano</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -161,10 +169,11 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Slave I (Firespray-31)</td>
+              <td class="detail-subtitle">Cal Kestis</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -173,10 +182,89 @@ if ($_SESSION['user'] == null) {
                 <a href="#" class="footer-link">Delete</a>
               </td>
             </tr>
+
             <tr>
-              <td class="detail-subtitle">Tantive IV (Rebel Blockade Runner)</td>
+              <td class="detail-subtitle">Kanan Jarrus</td>
               <td>
-                <a href="ships.php" class="footer-link">View details</a>
+                <a href="jedis.php" class="footer-link">View details</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Update</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Delete</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="detail-subtitle">Ezra Bridger</td>
+              <td>
+                <a href="jedis.php" class="footer-link">View details</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Update</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Delete</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="detail-subtitle">Luke Skywalker</td>
+              <td>
+                <a href="jedis.php" class="footer-link">View details</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Update</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Delete</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="detail-subtitle">Leia Organa</td>
+              <td>
+                <a href="jedis.php" class="footer-link">View details</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Update</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Delete</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="detail-subtitle">Grogu</td>
+              <td>
+                <a href="jedis.php" class="footer-link">View details</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Update</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Delete</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="detail-subtitle">Ben Solo</td>
+              <td>
+                <a href="jedis.php" class="footer-link">View details</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Update</a>
+              </td>
+              <td>
+                <a href="#" class="footer-link">Delete</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="detail-subtitle">Rey</td>
+              <td>
+                <a href="jedis.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>

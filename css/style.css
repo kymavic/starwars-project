@@ -651,9 +651,7 @@ body.active {
     text-align: left;
 }
 
-/*#MOVIES DETAIL */
-
-.movies-detail {
+.default-detail {
     background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
         url("../images/back2.jpg");
     background-repeat: no-repeat;
@@ -663,111 +661,12 @@ body.active {
     padding-bottom: 100px;
 }
 
-.movies-detail>.container>.detail-subtitle {
+.default-detail>.container>.detail-subtitle {
     text-align: center;
     padding: 10px 0;
 }
 
-.movies-detail-banner {
-    position: relative;
-    background: hsl(229, 15%, 21%);
-    max-width: 300px;
-    margin-inline: auto;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 50px;
-}
-
-.movies-detail-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*#ALIENS DETAIL */
-
-.aliens-detail {
-    background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-        url("../images/back2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 160px;
-    padding-bottom: 100px;
-}
-
-.aliens-detail>.container>.detail-subtitle {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.aliens-detail-banner {
-    position: relative;
-    background: hsl(229, 15%, 21%);
-    max-width: 300px;
-    margin-inline: auto;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 50px;
-}
-
-.aliens-detail-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*#CHARACTES DETAIL */
-
-.characters-detail {
-    background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-        url("../images/back2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 160px;
-    padding-bottom: 100px;
-}
-
-.characters-detail>.container>.detail-subtitle {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.characters-detail-banner {
-    position: relative;
-    background: hsl(229, 15%, 21%);
-    max-width: 300px;
-    margin-inline: auto;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 50px;
-}
-
-.characters-detail-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*#PLANET DETAIL */
-
-.planets-detail {
-    background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-        url("../images/back2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 160px;
-    padding-bottom: 100px;
-}
-
-.planets-detail>.container>.detail-subtitle {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.planets-detail-banner {
+.default-detail-banner {
     position: relative;
     background: hsl(229, 15%, 21%);
     max-width: 200px;
@@ -777,42 +676,12 @@ body.active {
     margin-bottom: 50px;
 }
 
-.planets-detail-banner img {
+.default-detail-banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.ships-detail {
-    background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
-        url("../images/back2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 160px;
-    padding-bottom: 100px;
-}
-
-.ships-detail>.container>.detail-subtitle {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.ships-detail-banner {
-    position: relative;
-    background: hsl(229, 15%, 21%);
-    max-width: 200px;
-    margin-inline: auto;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 50px;
-}
-
-.ships-detail-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .meta-wrapper {
     display: flex;
@@ -852,23 +721,7 @@ body.active {
     color: #FFC500;
 }
 
-.movies-detail .meta-wrapper {
-    margin-bottom: 30px;
-}
-
-.aliens-detail .meta-wrapper {
-    margin-bottom: 30px;
-}
-
-.characters-detail .meta-wrapper {
-    margin-bottom: 30px;
-}
-
-.planets-detail .meta-wrapper {
-    margin-bottom: 30px;
-}
-
-.ships-detail .meta-wrapper {
+.default-detail .meta-wrapper {
     margin-bottom: 30px;
 }
 
@@ -1217,59 +1070,11 @@ body.active {
         margin-left: 30px;
     }
 
-    /**
-   * MOVIE DETAIL
-   */
-    .movies-detail {
+    .default-detail {
         padding-bottom: 200px;
     }
 
-    .movies-detail .container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 50px;
-    }
-
-    .characters-detail {
-        padding-bottom: 200px;
-    }
-
-    .characters-detail .container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 50px;
-    }
-
-    .aliens-detail {
-        padding-bottom: 200px;
-    }
-
-    .aliens-detail .container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 50px;
-    }
-
-
-    .planets-detail {
-        padding-bottom: 200px;
-    }
-
-    .planets-detail .container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 50px;
-    }
-
-    .ships-detail {
-        padding-bottom: 200px;
-    }
-
-    .ships-detail .container {
+    .default-detail .container {
         position: relative;
         display: flex;
         align-items: center;
@@ -1346,48 +1151,11 @@ body.active {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    /**
-   * MOVIE DETAIL
-   */
-
-    .movies-detail {
+    .default-detail {
         padding-bottom: 100px
     }
 
-    .movies-detail-content {
-        max-width: 620px;
-    }
-
-    .characters-detail {
-        padding-bottom: 100px
-    }
-
-    .characters-detail-content {
-        max-width: 620px;
-    }
-
-
-    .aliens-detail {
-        padding-bottom: 100px
-    }
-
-    .aliens-detail-content {
-        max-width: 620px;
-    }
-
-    .planets-detail {
-        padding-bottom: 100px
-    }
-
-    .planets-detail-content {
-        max-width: 620px;
-    }
-
-    .ships-detail {
-        padding-bottom: 100px
-    }
-
-    .ships-detail-content {
+    .default-detail-content {
         max-width: 620px;
     }
 

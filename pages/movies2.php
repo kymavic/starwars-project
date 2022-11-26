@@ -27,12 +27,12 @@ if($_SESSION['user'] == null){
       <!-- 
         - #MOVIES DETAIL
       -->
-      <section class="movies-detail">
+      <section class="default-detail">
       <div class="section-container">
         <h2 class="h2 section-title">Movies</h2>
         <div>
           <p class="detail-subtitle">Moviex</p>
-          <figure class="movies-detail-banner">
+          <figure class="default-detail-banner">
             <img src="../images/moviex.jpg" alt="Moviex">
           </figure>
           <p class="text-content">2002</p>
@@ -42,7 +42,7 @@ if($_SESSION['user'] == null){
         </div>
         <div>
           <p class="detail-subtitle">Moviex</p>
-          <figure class="movies-detail-banner">
+          <figure class="default-detail-banner">
             <img src="../images/moviex.jpg" alt="Moviex">
           </figure>
           <p class="text-content">2002</p>
@@ -52,7 +52,7 @@ if($_SESSION['user'] == null){
         </div>
         <div>
           <p class="detail-subtitle">Moviex</p>
-          <figure class="movies-detail-banner">
+          <figure class="default-detail-banner">
             <img src="../images/moviex.jpg" alt="Moviex">
           </figure>
           <p class="text-content">2002</p>
@@ -62,7 +62,7 @@ if($_SESSION['user'] == null){
         </div>
         <div>
           <p class="detail-subtitle">Moviex</p>
-          <figure class="movies-detail-banner">
+          <figure class="default-detail-banner">
             <img src="../images/moviex.jpg" alt="Moviex">
           </figure>
           <p class="text-content">2002</p>
@@ -72,7 +72,7 @@ if($_SESSION['user'] == null){
         </div>
         <div>
           <p class="detail-subtitle">Moviex</p>
-          <figure class="movies-detail-banner">
+          <figure class="default-detail-banner">
             <img src="../images/moviex.jpg" alt="Moviex">
           </figure>
           <p class="text-content">2002</p>

@@ -27,10 +27,10 @@
                         <a href="#" class="footer-link">Force</a>
                     </li>
                     <li>
-                        <a href="jedi.php" class="footer-link">Jedi</a>
+                        <a href="jedis.php" class="footer-link">Jedi</a>
                     </li>
                     <li>
-                        <a href="sith.php" class="footer-link">Sith</a>
+                        <a href="siths.php" class="footer-link">Sith</a>
                     </li>
                     <li>
                         <a href="aliens.php" class="footer-link">Aliens</a>

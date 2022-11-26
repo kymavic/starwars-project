@@ -29,6 +29,8 @@ if($_SESSION['user'] == null){
           <h2 class="h2 section-title">Dashboard</h2>
           <li> <a href="movies_mg.php" class="footer-link">Movies management</a></li>
           <li> <a href="characters_mg.php" class="footer-link">Characters management</a></li>
+          <li> <a href="siths_mg.php" class="footer-link">Siths management</a></li>
+          <li> <a href="jedis_mg.php" class="footer-link">Jedis management</a></li>
           <li> <a href="planets_mg.php" class="footer-link">Planets management</a></li>
           <li> <a href="ships_mg.php" class="footer-link">Ships management</a></li>
           <li> <a href="aliens_mg.php" class="footer-link">Alien Races management</a></li>

@@ -26,7 +26,7 @@ if ($_SESSION['user'] == null) {
     <article>
       <!--#DETAIL-->
       <section class="default-detail">
-        <h2 class="h2 section-title">Alien Races</h2>
+        <h2 class="h2 section-title">Siths</h2>
         <br />
         <div class="container content-center">
           <form class="form-content">
@@ -54,9 +54,9 @@ if ($_SESSION['user'] == null) {
         <table class="content-center">
           <tbody>
             <tr>
-              <td class="detail-subtitle">Falleen</td>
+              <td class="detail-subtitle">Darth Sidious</td>
               <td>
-                <a href="aliens.php" class="footer-link">View details</a>
+                <a href="siths.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -67,9 +67,9 @@ if ($_SESSION['user'] == null) {
             </tr>
 
             <tr>
-              <td class="detail-subtitle">Far-Outsiders</td>
+              <td class="detail-subtitle">Darth Maul</td>
               <td>
-                <a href="aliens.php" class="footer-link">View details</a>
+                <a href="siths.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -80,9 +80,9 @@ if ($_SESSION['user'] == null) {
             </tr>
 
             <tr>
-              <td class="detail-subtitle">Feeorin</td>
+              <td class="detail-subtitle">Darth Tyranus</td>
               <td>
-                <a href="aliens.php" class="footer-link">View details</a>
+                <a href="siths.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -93,9 +93,9 @@ if ($_SESSION['user'] == null) {
             </tr>
 
             <tr>
-              <td class="detail-subtitle">Ferroans</td>
+              <td class="detail-subtitle">Darth Vader</td>
               <td>
-                <a href="aliens.php" class="footer-link">View details</a>
+                <a href="siths.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -106,9 +106,9 @@ if ($_SESSION['user'] == null) {
             </tr>
 
             <tr>
-              <td class="detail-subtitle">Firrerreo</td>
+              <td class="detail-subtitle">Darth Plagueis</td>
               <td>
-                <a href="aliens.php" class="footer-link">View details</a>
+                <a href="siths.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -119,9 +119,9 @@ if ($_SESSION['user'] == null) {
             </tr>
 
             <tr>
-              <td class="detail-subtitle">Fosh</td>
+              <td class="detail-subtitle">Darth Bane</td>
               <td>
-                <a href="aliens.php" class="footer-link">View details</a>
+                <a href="siths.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -132,34 +132,9 @@ if ($_SESSION['user'] == null) {
             </tr>
 
             <tr>
-              <td class="detail-subtitle">Frozian</td>
+              <td class="detail-subtitle">Darth Momin</td>
               <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Gado</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Gamorrean</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
+                <a href="siths.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>

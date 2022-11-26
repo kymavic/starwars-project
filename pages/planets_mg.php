@@ -25,7 +25,7 @@ if($_SESSION['user'] == null){
   <main>
     <article>
       <!--#DETAIL-->
-      <section class="planets-detail">
+      <section class="default-detail">
         <h2 class="h2 section-title">Planets</h2>
         <br />
         <div class="container content-center">

@@ -101,8 +101,8 @@ if($_SESSION['user'] == null){
               <li> <a href="ships.php" class="navbar-link">Ships</a></li>
               <li> <a href="planets.php" class="navbar-link">Planets</a></li>
               <li> <a href="force.php" class="navbar-link">Force</a></li>
-              <li> <a href="jedi.php" class="navbar-link">Jedi</a></li>
-              <li> <a href="sith.php" class="navbar-link">Sith</a></li>
+              <li> <a href="jedis.php" class="navbar-link">Jedi</a></li>
+              <li> <a href="siths.php" class="navbar-link">Sith</a></li>
               <li> <a href="alien_races.php" class="navbar-link">Aliens</a></li>
             </div>
           </div>
@@ -159,11 +159,11 @@ if($_SESSION['user'] == null){
         - #CHARACTERS DETAIL
       -->
 
-  <section class="characters-detail">
+  <section class="default-detail">
     <h2 class="h2 section-title">The Force</h2>
     <div class="container">
 
-      <figure class="characters-detail-banner">
+      <figure class="default-detail-banner">
         <img src="../images/hero1.jpg" alt="LUKE">
       </figure>
       <p class="detail-subtitle">Name1</p>
@@ -172,7 +172,7 @@ if($_SESSION['user'] == null){
       </p>
     </div>
     <div class="container">
-      <figure class="characters-detail-banner">
+      <figure class="default-detail-banner">
         <img src="../images/hero1.jpg" alt="LUKE">
       </figure>
       <p class="detail-subtitle">Name2</p>
@@ -181,7 +181,7 @@ if($_SESSION['user'] == null){
       </p>
     </div>
     <div class="container">
-      <figure class="characters-detail-banner">
+      <figure class="default-detail-banner">
         <img src="../images/hero1.jpg" alt="LUKE">
       </figure>
       <p class="detail-subtitle">Name3</p>
@@ -190,7 +190,7 @@ if($_SESSION['user'] == null){
       </p>
     </div>
     <div class="container">
-      <figure class="characters-detail-banner">
+      <figure class="default-detail-banner">
         <img src="../images/hero1.jpg" alt="LUKE">
       </figure>
       <p class="detail-subtitle">Name4</p>
@@ -199,7 +199,7 @@ if($_SESSION['user'] == null){
       </p>
     </div>
     <div class="container">
-      <figure class="characters-detail-banner">
+      <figure class="default-detail-banner">
         <img src="../images/hero1.jpg" alt="LUKE">
       </figure>
       <p class="detail-subtitle">Name5</p>
@@ -208,7 +208,7 @@ if($_SESSION['user'] == null){
       </p>
     </div>
     <div class="container">
-      <figure class="characters-detail-banner">
+      <figure class="default-detail-banner">
         <img src="../images/hero1.jpg" alt="LUKE">
       </figure>
       <p class="detail-subtitle">Name6</p>
@@ -217,7 +217,7 @@ if($_SESSION['user'] == null){
       </p>
     </div>
     <div class="container">
-      <figure class="characters-detail-banner">
+      <figure class="default-detail-banner">
         <img src="../images/hero1.jpg" alt="LUKE">
       </figure>
       <p class="detail-subtitle">Name7</p>
@@ -267,10 +267,10 @@ if($_SESSION['user'] == null){
               <a href="force.php" class="footer-link">Force</a>
             </li>
             <li>
-              <a href="jedi.php" class="footer-link">Jedi</a>
+              <a href="jedis.php" class="footer-link">Jedi</a>
             </li>
             <li>
-              <a href="sith.php" class="footer-link">Sith</a>
+              <a href="siths.php" class="footer-link">Sith</a>
             </li>
             <li>
               <a href="alien_races.php" class="footer-link">Aliens</a>
