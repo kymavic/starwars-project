@@ -31,7 +31,7 @@ if($_SESSION['user'] == null){
           <li> <a href="characters_mg.php" class="footer-link">Characters management</a></li>
           <li> <a href="planets_mg.php" class="footer-link">Planets management</a></li>
           <li> <a href="ships_mg.php" class="footer-link">Ships management</a></li>
-          <li> <a href="aliens_mg.php" class="footer-link">Aliens Race management</a></li>
+          <li> <a href="aliens_mg.php" class="footer-link">Alien Races management</a></li>
           <li> <a href="force_mg.php" class="footer-link">Force management</a></li>
         </div>
       </section>

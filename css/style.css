@@ -684,6 +684,39 @@ body.active {
     object-fit: cover;
 }
 
+/*#ALIENS DETAIL */
+
+.aliens-detail {
+    background: linear-gradient(rgba(60, 57, 57, 0.7), rgba(12, 5, 0, 0.7)),
+        url("../images/back2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 100px;
+}
+
+.aliens-detail>.container>.detail-subtitle {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.aliens-detail-banner {
+    position: relative;
+    background: hsl(229, 15%, 21%);
+    max-width: 300px;
+    margin-inline: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.aliens-detail-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /*#CHARACTES DETAIL */
 
 .characters-detail {
@@ -820,6 +853,10 @@ body.active {
 }
 
 .movies-detail .meta-wrapper {
+    margin-bottom: 30px;
+}
+
+.aliens-detail .meta-wrapper {
     margin-bottom: 30px;
 }
 
@@ -1205,6 +1242,18 @@ body.active {
         gap: 50px;
     }
 
+    .aliens-detail {
+        padding-bottom: 200px;
+    }
+
+    .aliens-detail .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+
     .planets-detail {
         padding-bottom: 200px;
     }
@@ -1314,6 +1363,15 @@ body.active {
     }
 
     .characters-detail-content {
+        max-width: 620px;
+    }
+
+
+    .aliens-detail {
+        padding-bottom: 100px
+    }
+
+    .aliens-detail-content {
         max-width: 620px;
     }
 

@@ -51,7 +51,7 @@
                         <li> <a href="../../pages/force.php" class="navbar-link">Force</a></li>
                         <li> <a href="../../pages/jedi.php" class="navbar-link">Jedi</a></li>
                         <li> <a href="../../pages/sith.php" class="navbar-link">Sith</a></li>
-                        <li> <a href="../../pages/alien_races.php" class="navbar-link">Aliens</a></li>
+                        <li> <a href="../../pages/aliens.php" class="navbar-link">Aliens</a></li>
                     </div>
                 </div>
                 <li>

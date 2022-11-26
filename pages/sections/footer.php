@@ -33,7 +33,7 @@
                         <a href="sith.php" class="footer-link">Sith</a>
                     </li>
                     <li>
-                        <a href="alien_races.php" class="footer-link">Aliens</a>
+                        <a href="aliens.php" class="footer-link">Aliens</a>
                     </li>
                     <li>
                         <a href="#" class="footer-link">Forums</a>
