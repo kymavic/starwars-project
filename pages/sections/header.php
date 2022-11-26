@@ -48,7 +48,7 @@
                     <div class="dropdown-content" id="myDropdown">
                         <li> <a href="../../pages/ships.php" class="navbar-link">Ships</a></li>
                         <li> <a href="../../pages/planets.php" class="navbar-link">Planets</a></li>
-                        <li> <a href="../../pages/force.php" class="navbar-link">Force</a></li>
+                        <li> <a href="../../pages/forces.php" class="navbar-link">Force</a></li>
                         <li> <a href="../../pages/jedis.php" class="navbar-link">Jedi</a></li>
                         <li> <a href="../../pages/siths.php" class="navbar-link">Sith</a></li>
                         <li> <a href="../../pages/aliens.php" class="navbar-link">Aliens</a></li>
