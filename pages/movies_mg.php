@@ -26,7 +26,7 @@ if($_SESSION['user'] == null){
     <article>
       <!--#DETAIL-->
       <section class="default-detail">
-        <h2 class="h2 section-title">Primary characters</h2>
+        <h2 class="h2 section-title">Movies Summary</h2>
         <br />
         <div class="container content-center">
           <form class="form-content">
@@ -65,7 +65,7 @@ if($_SESSION['user'] == null){
             <tr>
               <td class="detail-subtitle">Movie 1</td>
               <td>
-                <a href="characters.php" class="footer-link">View details</a>
+                <a href="movies.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -77,7 +77,7 @@ if($_SESSION['user'] == null){
             <tr>
               <td class="detail-subtitle">Movie 2</td>
               <td>
-                <a href="characters.php" class="footer-link">View details</a>
+              <a href="movies.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -89,7 +89,7 @@ if($_SESSION['user'] == null){
             <tr>
               <td class="detail-subtitle">Movie 3</td>
               <td>
-                <a href="characters.php" class="footer-link">View details</a>
+              <a href="movies.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -101,7 +101,7 @@ if($_SESSION['user'] == null){
             <tr>
               <td class="detail-subtitle">Movie 4</td>
               <td>
-                <a href="characters.php" class="footer-link">View details</a>
+              <a href="movies.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -113,7 +113,7 @@ if($_SESSION['user'] == null){
             <tr>
               <td class="detail-subtitle">Movie 5</td>
               <td>
-                <a href="characters.php" class="footer-link">View details</a>
+              <a href="movies.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -125,7 +125,7 @@ if($_SESSION['user'] == null){
             <tr>
               <td class="detail-subtitle">Movie 6</td>
               <td>
-                <a href="characters.php" class="footer-link">View details</a>
+                <a href="movies.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -137,7 +137,7 @@ if($_SESSION['user'] == null){
             <tr>
               <td class="detail-subtitle">Movie 7</td>
               <td>
-                <a href="characters.php" class="footer-link">View details</a>
+              <a href="movies.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
@@ -149,7 +149,7 @@ if($_SESSION['user'] == null){
             <tr>
               <td class="detail-subtitle">Movie 8</td>
               <td>
-                <a href="characters.php" class="footer-link">View details</a>
+              <a href="movies.php" class="footer-link">View details</a>
               </td>
               <td>
                 <a href="#" class="footer-link">Update</a>
