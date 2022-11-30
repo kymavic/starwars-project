@@ -156,6 +156,11 @@ body.active {
     justify-content: space-around;
 }
 
+.error-msg {
+    color:red;
+    font-weight: bold;
+}
+
 /**
  * BADGE
  */

@@ -1,12 +1,11 @@
 <?php
 session_start();
-include_once('../functions/function.php');
-    $dbConnect = dbLink();
-    if($dbConnect) echo '<!-- Connection Stablished -->';
-    
-if ($_SESSION['user'] == null) {
+if ($_SESSION['validate']!=true) {
   header("Location: login.php");
 }
+include_once('../functions/function.php');
+$dbConnect = dbLink();
+if($dbConnect) echo '<!-- Connection Stablished -->';
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +56,7 @@ if ($_SESSION['user'] == null) {
         <table class="content-center">
           <tbody>
             <tr>
-              <td class="detail-subtitle">Telekinesis</td>
+              <td class="detail-subtitle">The Force</td>
               <td>
                 <a href="forces.php" class="footer-link">View details</a>
               </td>
@@ -70,7 +69,7 @@ if ($_SESSION['user'] == null) {
             </tr>
 
             <tr>
-              <td class="detail-subtitle">Mind Tricks</td>
+              <td class="detail-subtitle">Jedi</td>
               <td>
                 <a href="forces.php" class="footer-link">View details</a>
               </td>
@@ -83,7 +82,7 @@ if ($_SESSION['user'] == null) {
             </tr>
 
             <tr>
-              <td class="detail-subtitle">Force Lightning</td>
+              <td class="detail-subtitle">Sith</td>
               <td>
                 <a href="forces.php" class="footer-link">View details</a>
               </td>
@@ -95,96 +94,6 @@ if ($_SESSION['user'] == null) {
               </td>
             </tr>
 
-            <tr>
-              <td class="detail-subtitle">Force Drain</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Force Sense</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Force Projection</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Mind Probe</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Transfer Essence</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">The Creation Of Life</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Thought Bomb</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
           </tbody>
         </table>
       </section>

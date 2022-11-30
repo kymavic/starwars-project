@@ -1,9 +1,8 @@
 <?php
 session_start();
-/*
-if($_SESSION['user'] == null){
-    header("Location: login.php");
-}*/
+include_once('../functions/function.php');
+$dbConnect = dbLink();
+if($dbConnect) echo '<!-- Connection Stablished -->';
 ?>
 
 <!DOCTYPE html>

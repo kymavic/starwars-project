@@ -24,12 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alien_race`
+-- Table structure for table `alien_races`
 --
 
-CREATE TABLE `alien_race` (
+CREATE TABLE `alien_races` (
   `id` int(11) NOT NULL,
-  `alien_race` varchar(200) NOT NULL,
+  `alien_races` varchar(200) NOT NULL,
   `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -105,10 +105,10 @@ CREATE TABLE `ships` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `the_force`
+-- Table structure for table `forces`
 --
 
-CREATE TABLE `the_force` (
+CREATE TABLE `forces` (
   `id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `description` text NOT NULL
@@ -117,10 +117,10 @@ CREATE TABLE `the_force` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -128,10 +128,10 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `type`) VALUES
+INSERT INTO `users` (`id`, `username`, `password`, `type`) VALUES
 (1, 'admin', '1234', 'admin');
 
 --
@@ -139,9 +139,9 @@ INSERT INTO `user` (`id`, `username`, `password`, `type`) VALUES
 --
 
 --
--- Indexes for table `alien_race`
+-- Indexes for table `alien_races`
 --
-ALTER TABLE `alien_race`
+ALTER TABLE `alien_races`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -175,15 +175,15 @@ ALTER TABLE `ships`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `the_force`
+-- Indexes for table `forces`
 --
-ALTER TABLE `the_force`
+ALTER TABLE `forces`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Indexes for table `users`
 --
-ALTER TABLE `user`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -191,9 +191,9 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `alien_race`
+-- AUTO_INCREMENT for table `alien_races`
 --
-ALTER TABLE `alien_race`
+ALTER TABLE `alien_races`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -227,9 +227,9 @@ ALTER TABLE `ships`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `the_force`
+-- AUTO_INCREMENT for table `forces`
 --
-ALTER TABLE `the_force`
+ALTER TABLE `forces`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

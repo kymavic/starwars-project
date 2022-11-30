@@ -2,7 +2,8 @@
 
 function dbLink(){
     $db = 'star_war';
-    $db_host = 'localhost';
+    //$db_host = 'localhost';
+    $db_host = 'mysql-service';
     $db_user = 'mri';
     $db_pass = 'password';
     try{
@@ -14,6 +15,24 @@ function dbLink(){
    error_reporting(0);
     return $db;
 }
+
+function validate($dbConnect,$username,$password){
+    $sql = 'SELECT * FROM users';
+    foreach ($dbConnect->query($sql) as $row)
+    {
+        if(($row['username'] == $username) && ($row['password'] == $password)){
+            $_SESSION['validate'] = true;
+            $_SESSION['uid'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
+            return true;
+        }
+    }
+    $_SESSION['validate'] = false;
+    $_SESSION['uid'] = null;
+    $_SESSION['username'] = null;
+    return false;
+}
+
 /*
 //Create
 function '<function_name>'($dbConnect, $title){
@@ -48,3 +67,4 @@ function '<function name>'($dbConnect,$id){
     $stmt->bindParam(':id',$id);
     $stmt->execute();
 }*/
+?>

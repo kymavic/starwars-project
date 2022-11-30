@@ -2,21 +2,18 @@
 session_start();
 global $msg;
 
-if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)) {
-    /*
-    $_SESSION['user'] = validateLogin($_POST['username'],$_POST['password']);
-    if($_SESSION['user']){
-        header("Location: dashboard.php");
-    }else{
-        $msg=("<br>Username or password incorrect!</br>");
-    }
-    */
-    if ($_POST['username'] == 'admin' && $_POST['password'] == 'admin') {
-        $_SESSION['user'] = array('name' => 'admin');
-        header("Location: dashboard.php");
-    } else {
-        $_SESSION['user'] = null;
-        $msg = "<br>Username or password incorrect!</br>";
+if ($_SESSION['validate']) {
+    header("Location: dashboard.php");
+} else {
+    if ($_POST['username'] && $_POST['password']) {
+        include_once('../functions/function.php');
+        $dbConnect = dbLink();
+        //if ($dbConnect) echo '<!-- Connection Stablished -->';
+        if (!validate($dbConnect, $_POST['username'], $_POST['password'])) {
+            $msg = ("<p class='error-msg'>Username or password incorrect!</p>");
+        }else{
+            header("Location: login.php");
+        }
     }
 }
 ?>

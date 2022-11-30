@@ -7,10 +7,10 @@
         <div class="header-actions">
             <div class="lang-wrapper">
             </div>
-            <?php if (!array_key_exists('user', $_SESSION)) {
+            <?php if (!$_SESSION['validate']) {
                 echo '<a class="btn btn-primary" href="../../pages/login.php">Sign in</a>';
             } else {
-                echo '<a class="btn btn-primary" href="../../pages/logout.php">' . $_SESSION['user']['name'] . ' - Log out</a>';
+                echo '<a class="btn btn-primary" href="../../pages/logout.php">' . $_SESSION['username'] . ' - Log out</a>';
             } ?>
         </div>
         <button class="menu-open-btn" data-menu-open-btn>
@@ -21,7 +21,7 @@
                 <a href="../../index.php" class="logo">
                     <img src="../images/logo.svg" alt="Star Wars Logo">
                 </a>
-                <?php if (!array_key_exists('user', $_SESSION)) {
+                <?php if (!$_SESSION['validate']) {
                     echo '<a class="menu-close-btn" href="../../pages/login.php"><ion-icon name="log-in-outline"></ion-icon></a>';
                 } else {
                     echo '<a class="menu-close-btn" href="../../pages/logout.php"><ion-icon name="log-out-outline"></ion-icon></a>';
@@ -49,15 +49,13 @@
                         <li> <a href="../../pages/ships.php" class="navbar-link">Ships</a></li>
                         <li> <a href="../../pages/planets.php" class="navbar-link">Planets</a></li>
                         <li> <a href="../../pages/forces.php" class="navbar-link">Force</a></li>
-                        <li> <a href="../../pages/jedis.php" class="navbar-link">Jedi</a></li>
-                        <li> <a href="../../pages/siths.php" class="navbar-link">Sith</a></li>
                         <li> <a href="../../pages/aliens.php" class="navbar-link">Aliens</a></li>
                     </div>
                 </div>
                 <li>
                     <a href="#" class="navbar-link">Forums</a>
                 </li>
-                <?php if (array_key_exists('user', $_SESSION)) {
+                <?php if ($_SESSION['validate']) {
                     echo '<li><a href="../../pages/dashboard.php" class="navbar-link">Dashboard</a></li>';
                 } ?>
             </ul>

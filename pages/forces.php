@@ -1,9 +1,8 @@
 <?php
 session_start();
-/*
-if($_SESSION['user'] == null){
-    header("Location: login.php");
-}*/
+include_once('../functions/function.php');
+$dbConnect = dbLink();
+if($dbConnect) echo '<!-- Connection Stablished -->';
 ?>
 
 <!DOCTYPE html>
@@ -29,83 +28,27 @@ if($_SESSION['user'] == null){
         <div class="section-container">
           <h2 class="h2 section-title">Force</h2>
           <div>
-            <p class="detail-subtitle">Telekinesis</p>
+            <p class="detail-subtitle">The Force</p>
             <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Telekinesis">
+              <img src="../images/force1.jpg" alt="The Force">
             </figure>
-            <p class="storyline">Telekinesis is undoubtedly the most commonly used force ability in the Star Wars franchise, with its most iconic depiction seen in Star Wars: The Emperor Strikes Back. While Luke is training, Master Yoda encourages him to lift his X-wing starfighter from beneath the marshy bog water of Dagobah in which it is submerged. He fails to do this and Yoda is forced to do it himself to set an example.</p>
+            <p class="storyline">The Force is a metaphysical and ubiquitous power in the Star Wars fictional universe. "Force-sensitive" characters use the Force throughout the franchise. Heroes like the Jedi seek to "become one with the Force", matching their personal wills with the will of the Force, while the Sith and other villains exploit the Force and try to bend it toward their destructive desires.</p>
           </div>
 
           <div>
-            <p class="detail-subtitle">Mind Tricks</p>
+            <p class="detail-subtitle">Jedi</p>
             <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Mind Tricks">
+              <img src="../images/jedi1.jpg" alt="Jedi">
             </figure>
-            <p class="storyline">Originally used by Obi-Wan Kenobi on a pair of stormtroopers in Star Wars: A New Hope, this ability is ideal for those attempting to talk their way out of situations. Obi-Wan uses this mind trick ability to convince these stormtroopers that C-3PO and R2-D2 are not the droids that the Empire is searching for, getting them out of a tight bind.</p>
+            <p class="storyline">Jedi Knights, or collectively the Jedi Order are the main heroic protagonists of many works of the Star Wars franchise. Working symbiotically alongside the Old Galactic Republic, and later supporting the Rebel Alliance, the Jedi Order is depicted as a monastic, academic, military, and meritocratic peacekeeping organization whose origin dates back thousands of years before the events of the first film released in the franchise.</p>
           </div>
 
           <div>
-            <p class="detail-subtitle">Force Lightning</p>
+            <p class="detail-subtitle">Sith</p>
             <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Force Lightning">
+              <img src="../images/sith1.jpg" alt="Sith">
             </figure>
-            <p class="storyline">First introduced in Star Wars: The Return of the Jedi, force lightning has become a symbol of power and fear throughout the galaxy. It is first seen when the Emperor attempts to kill Luke Skywalker on the Death Star before Darth Vader intervenes. Essentially, it is the ability to conjure electricity in one's hand and project it.</p>
-          </div>
-
-          <div>
-            <p class="detail-subtitle">Force Drain</p>
-            <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Force Drain">
-            </figure>
-            <p class="storyline">Force drain is an ability used only once in the theatrical releases of Star Wars. Emperor Palpatine uses this ability on Rey and Ben Solo during the climax of Star Wars: The Rise of Skywalker. Force drain allows its user to drain the life essence from another, making it an extremely powerful ability in terms of offense and defense.</p>
-          </div>
-
-          <div>
-            <p class="detail-subtitle">Force Sense</p>
-            <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Force Sense">
-            </figure>
-            <p class="storyline">This ability is perhaps the main reason many Jedi and Sith live long enough to tell their tales. Having first been utilized in Star Wars: A New Hope, it has become one of the most popular skills attributed to a force user.</p>
-          </div>
-
-          <div>
-            <p class="detail-subtitle">Force Projection</p>
-            <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Force Projection">
-            </figure>
-            <p class="storyline">The force projection ability was utilized by Luke Skywalker during the Battle of Crait in Star Wars: The Last Jedi. It is an ability that allows its user to convey an image of themselves across the galaxy. It takes tremendous focus to execute but can portray a convincing rendition of its user if done successfully.</p>
-          </div>
-
-          <div>
-            <p class="detail-subtitle">Mind Probe</p>
-            <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Mind Probe">
-            </figure>
-            <p class="storyline">Mind probe is an ability used frequently by Kylo Ren in Star Wars: The Force Awakens. It permits its wielder access into a person's mind, allowing them to take any information they want. It is first witnessed when Ren attempts to access Poe Dameron's mind to uncover the location of BB-8, a droid containing the map to Skywalker.</p>
-          </div>
-
-          <div>
-            <p class="detail-subtitle">Transfer Essence</p>
-            <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Transfer Essence">
-            </figure>
-            <p class="storyline">The transfer essence ability was first utilized in The Mandalorian. Greef Karga becomes injured and Grogu, in response to noticing this, transfers a portion of his life essence over to him to heal his wound. Since healing this wound required only a small amount of life essence, Grogu falls asleep upon the transferal's completion.</p>
-          </div>
-
-          <div>
-            <p class="detail-subtitle">The Creation Of Life</p>
-            <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="The Creation Of Life">
-            </figure>
-            <p class="storyline">Though only briefly touched upon in Star Wars: Revenge of the Sith, the ability to create life is undoubtedly one of the most powerful force abilities to appear in the series. Darth Plaguis the Wise, before his betrayal at the hands of his apprentice Shiv Palpatine, mastered this ability and supposedly used it to create Anakin Skywalker.</p>
-          </div>
-
-          <div>
-            <p class="detail-subtitle">Thought Bomb</p>
-            <figure class="default-detail-banner">
-              <img src="../images/force1.jpg" alt="Thought Bomb">
-            </figure>
-            <p class="storyline">Without question, the most powerful force ability present in Star Wars is the thought bomb. It is created through an ancient Sith ritual where the Sith combine their dark side powers. If done successfully, the thought bomb can destroy all force-sensitive beings unfortunate enough to be within the trajectory of its blast.</p>
+            <p class="storyline">They are the antithesis and ancient enemies of the Jedi. The Sith Order are depicted as an ancient monastic and kraterocratic cultist organization of supernaturally gifted Force-wielders driven by a machiavellian-imperialist agenda of galactic domination and revenge against the Jedi Order. The various antagonistic factions in the franchise, namely the Separatist Alliance, the First Galactic Empire, the Imperial Remnant and the First Order, all originated, either directly or indirectly, from the Sith.</p>
           </div>
 
         </div>

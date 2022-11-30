@@ -24,13 +24,7 @@
                         <a href="planets.php" class="footer-link">Planets</a>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">Force</a>
-                    </li>
-                    <li>
-                        <a href="jedis.php" class="footer-link">Jedi</a>
-                    </li>
-                    <li>
-                        <a href="siths.php" class="footer-link">Sith</a>
+                        <a href="forces.php" class="footer-link">Force</a>
                     </li>
                     <li>
                         <a href="aliens.php" class="footer-link">Aliens</a>
