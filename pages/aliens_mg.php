@@ -55,121 +55,16 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <br>
         <table class="content-center">
           <tbody>
-            <tr>
-              <td class="detail-subtitle">Falleen</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Far-Outsiders</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Feeorin</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Ferroans</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Firrerreo</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Fosh</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Frozian</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Gado</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Gamorrean</td>
-              <td>
-                <a href="aliens.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
+          <?php
+            foreach (readAliens($dbConnect) as $row){
+              echo '<tr>';
+              echo '  <td class="detail-subtitle">'.$row['name'].'</td>';
+              echo '  <td><a href="aliens.php" class="footer-link">View details</a></td>';
+              echo '  <td><a href="#" class="footer-link">Update</a></td>';
+              echo '  <td><a href="#" class="footer-link">Delete</a></td>';
+              echo '</tr>';
+            }
+          ?>
           </tbody>
         </table>
       </section>

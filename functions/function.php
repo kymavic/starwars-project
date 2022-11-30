@@ -57,6 +57,12 @@ function readShips($dbConnect){
     return $dbConnect->query($sql);
 }
 
+//Read aliens
+function readAliens($dbConnect){
+    $sql = 'SELECT * FROM alien_races';
+    return $dbConnect->query($sql);
+}
+
 /*
 //Create
 function '<function_name>'($dbConnect, $title){

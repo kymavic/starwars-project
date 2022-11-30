@@ -33,7 +33,32 @@ CREATE TABLE `alien_races` (
   `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(1, 'Falleen', '../images/alien1.jpg', 'The Falleen are a fictional race of human-like reptilian people who come from a world called Falleen in the Midrim region in the Star Wars universe. They change the color and hue of their skin to convey their emotional states and can also affect the emotional state of others. Males and females of the race have strong pheromones which can easily attract women and men respectively of many humanoid species. The Falleen seldom leave their world due to the belief that their species is superior to all others. A notable Legends villain from this race is Prince Xizor. Another major villain was Darth Karrid of the Old Republic.');
 
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(2, 'Far-Outsiders', '../images/alien1.jpg', 'Far-Outsiders is the cryptic code-name given by the Chiss who inhabit the edges of the galaxy, for the extra-galactic alien force that began assaulting the Unknown Regions in the years during the Galactic Civil War. They are probably the Yuuzhan Vong, who launched a siege on the galaxy from 25-30 ABY (After the Battle of Yavin). The name "Far-Outsiders" is also used by the inhabitants of Zonama Sekot to describe the invaders that attacked their planet. The Far-Outsiders are referred to in the singular, but the Chiss named "Stent" once told Mara Jade that there were "a hundred different threats out there that would freeze your blood if you knew about them. The Ruling Families can''t stop them; neither can any power in the region.", suggesting that the term "Far-Outsiders" may apply to any unknown hostile race originating from outside the galaxy.');
+
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(3, 'Feeorin', '../images/alien1.jpg', 'Nym, a pirate from various Star Wars computer games (including the MMORPG "Star Wars Galaxies") was a Feeorin. It is said that Feeorins only grow stronger with age. Their homeworld was Odryn for a period of time in the Old Republic era, when the oldest and strongest Feeorin was chosen as their leader. The controversial Jedi master Feln was a Feeorin leader. It has been stated in several Star Wars novels and comics that there are only roughly 1 million Feeorins left in the galaxy, suggesting a decline from a larger number.');
+
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(4, 'Ferroans', '../images/alien1.jpg', 'Not a well known species, the only reference is in Force Heretic 1-3 and Rogue Planet. They have icy blue skin, white-toned hair, and live on Zonama Sekot, a living planet. The planet provides them fleshy habitats constructed of its own mass.');
+
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(5, 'Firrerreo', '../images/alien1.jpg', 'The Firrerreo are a species of near-humans from the planet Firrerre. They have two-toned hair and golden skin. In their culture, if someone says a Firrerreo''s name, the Firrerreo would be forced to serve the speaker, as saying a Firrerreo''s name was a form of power.');
+
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(6, 'Fosh', '../images/alien1.jpg', 'The Fosh are a sentient avian species. They are first mentioned in the Star Wars: The New Jedi Order series. The only Fosh mentioned in all the Star Wars books was the Jedi Knight Vergere.');
+
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(7, 'Frozian', '../images/alien1.jpg', 'The Frozian are a species of sentient felines, hailing from the planet Froz. Their most distinctive characteristics are their triple-jointed hands, their double-jointed legs, and their infertility off their homeworld.');
+
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(8, 'Gado', '../images/alien1.jpg', 'Gados are tall, thin, furry sapients with long limbs and a worm-like head. Most of a Gado''s inner organs are stretched out in ribbons that run throughout their body; thus, any injury can be life-threatening to a Gado. Gados are native to the planet of Abregado-rae. They formerly spoke a language called Gados, but now mostly speak Basic.');
+
+INSERT INTO `alien_races` (`id`,`name`, `url_img`, `description`) VALUES
+(9, 'Gamorrean', '../images/alien1.jpg', 'A Gamorrean is a large pig-like humanoid from the fictional Star Wars series. The creatures have little intelligence and are often hired as guards, notably by Jabba the Hutt, who was fond of hiring them due to their low cost. On their home planet, Gamorreans exist in a sort of tribal political system dominated by the female sows. The males train for massive tribal conflicts that take place each year. The first time a space ship landed on Gamorr, the various tribes fought for days over who would win the right to approach it. The winning side eventually battered the vessel to pieces. Entries regarding the Gamorrean homeworld in travel guides simply read "DO NOT GO TO GAMORR!"');
 -- --------------------------------------------------------
 
 --
@@ -268,7 +293,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `alien_races`
 --
 ALTER TABLE `alien_races`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `characters`
