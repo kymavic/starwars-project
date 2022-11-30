@@ -2,8 +2,7 @@
 
 function dbLink(){
     $db = 'star_war';
-    //$db_host = 'localhost';
-    $db_host = 'mysql-service';
+    $db_host = 'localhost';
     $db_user = 'mri';
     $db_pass = 'password';
     try{
