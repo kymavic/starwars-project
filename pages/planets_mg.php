@@ -55,138 +55,16 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <br>
         <table class="content-center">
           <tbody>
-            <tr>
-              <td class="detail-subtitle">Abafar</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Agamar</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Ahch-To</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Ajan Kloss</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Akiva</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Alderaan</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Aaleen</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Alzoc III</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Anaxes</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Ando</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Anoat</td>
-              <td>
-                <a href="planets.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
+          <?php
+            foreach (readPlanets($dbConnect) as $row){
+              echo '<tr>';
+              echo '  <td class="detail-subtitle">'.$row['name'].'</td>';
+              echo '  <td><a href="characters.php" class="footer-link">View details</a></td>';
+              echo '  <td><a href="#" class="footer-link">Update</a></td>';
+              echo '  <td><a href="#" class="footer-link">Delete</a></td>';
+              echo '</tr>';
+            }
+          ?>
           </tbody>
         </table>
       </section>

@@ -3,6 +3,7 @@
 function dbLink(){
     $db = 'star_war';
     $db_host = 'localhost';
+    //$db_host = 'app-mysql';
     $db_user = 'mri';
     $db_pass = 'password';
     try{
@@ -41,6 +42,12 @@ function readTheForce($dbConnect){
 //Read characters
 function readCharacters($dbConnect){
     $sql = 'SELECT * FROM characters';
+    return $dbConnect->query($sql);
+}
+
+//Read planets
+function readPlanets($dbConnect){
+    $sql = 'SELECT * FROM planets';
     return $dbConnect->query($sql);
 }
 

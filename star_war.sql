@@ -107,6 +107,29 @@ CREATE TABLE `planets` (
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(1, 'Abafar', '../images/planet1.jpg', 'A desert planet located in the Outer Rim with a completely white surface. Known as The Void, the planet is barely populated but is home to massive amounts of rhydonium, a scarce and volatile fuel.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(2, 'Agamar', '../images/planet1.jpg', 'A barren, rocky planet in the Outer Rim. Site of a still-active reserve of Separatist droids that became known for surviving the Clone Wars.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(3, 'Ahch-To', '../images/planet1.jpg', 'Largely oceanic planet on which Luke Skywalker has been hiding for several years, and the location of the first Jedi Temple and the Tree Library of sacred Jedi texts. Porgs, Lanai and thala-sirens are among the native species.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(4, 'Ajan Kloss', '../images/planet1.jpg', 'A jungle moon which serves as a new base of operations for the Resistance. Years before, Leia and Luke were training there. Leia Organa dies here after using the last of her energy to reach out to her son through the Force.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(5, 'Akiva', '../images/planet1.jpg', 'Jungle planet and home of Norra and Temmin Wexley, and a primary setting in Aftermath.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(6, 'Alderaan', '../images/planet1.jpg', 'Forests, mountains; home planet of Princess Leia and the House of Organa. Destroyed by the first Death Star as punishment for involvement in the Rebel Alliance and also as a demonstration of power.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(7, 'Aaleen', '../images/planet1.jpg', 'A subterranean world located in the Mid Rim. The native species include, the surface dwelling beings called the Aleena and sentient tree-like beings called Kindalo.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(8, 'Alzoc III', '../images/planet1.jpg', 'Ice planet, with many glaciers, and in its surface lies a crashed separatist carrier, with an anti-gravitational device.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(9, 'Anaxes', '../images/planet1.jpg', 'A rocky planet located in the Azure sector of the galaxy''s Core Worlds region. A majority of its surface was covered with tall, red plant-like life. In the early years of the Imperial Era, the planet was destroyed in a cataclysm, with the remains becoming the Anaxes asteroid belt.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(10, 'Ando', '../images/planet1.jpg', 'A water-covered planet located in the Outer Rim, it is home to the amphibious Aqualish species and endures great turmoil during the Separatist Crisis.');
+INSERT INTO `planets` (`id`,`name`, `url_img`, `description`) VALUES
+(11, 'Anoat', '../images/planet1.jpg', 'Polluted; A nearly inhospitable planet used by the Empire.');
+
 -- --------------------------------------------------------
 
 --
@@ -246,7 +269,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `planets`
 --
 ALTER TABLE `planets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `ships`
