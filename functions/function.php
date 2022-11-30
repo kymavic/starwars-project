@@ -38,6 +38,12 @@ function readTheForce($dbConnect){
     return $dbConnect->query($sql);
 }
 
+//Read characters
+function readCharacters($dbConnect){
+    $sql = 'SELECT * FROM characters';
+    return $dbConnect->query($sql);
+}
+
 /*
 //Create
 function '<function_name>'($dbConnect, $title){

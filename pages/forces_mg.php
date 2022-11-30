@@ -55,45 +55,16 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <br>
         <table class="content-center">
           <tbody>
-            <tr>
-              <td class="detail-subtitle">The Force</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Jedi</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Sith</td>
-              <td>
-                <a href="forces.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
+          <?php
+            foreach (readTheForce($dbConnect) as $row){
+              echo '<tr>';
+              echo '  <td class="detail-subtitle">'.$row['name'].'</td>';
+              echo '  <td><a href="forces.php" class="footer-link">View details</a></td>';
+              echo '  <td><a href="#" class="footer-link">Update</a></td>';
+              echo '  <td><a href="#" class="footer-link">Delete</a></td>';
+              echo '</tr>';
+            }
+          ?>
           </tbody>
         </table>
       </section>

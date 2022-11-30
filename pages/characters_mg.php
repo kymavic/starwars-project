@@ -55,83 +55,16 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <br>
         <table class="content-center">
           <tbody>
-            <tr>
-              <td class="detail-subtitle">Luke Skywalker</td>
-              <td>
-                <a href="characters.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Leia Skywalker</td>
-              <td>
-                <a href="characters.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Yoda</td>
-              <td>
-                <a href="characters.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Darth Vader</td>
-              <td>
-                <a href="characters.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Han Solo</td>
-              <td>
-                <a href="characters.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="detail-subtitle">Chewbacca</td>
-              <td>
-                <a href="characters.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
+          <?php
+            foreach (readCharacters($dbConnect) as $row){
+              echo '<tr>';
+              echo '  <td class="detail-subtitle">'.$row['name'].'</td>';
+              echo '  <td><a href="characters.php" class="footer-link">View details</a></td>';
+              echo '  <td><a href="#" class="footer-link">Update</a></td>';
+              echo '  <td><a href="#" class="footer-link">Delete</a></td>';
+              echo '</tr>';
+            }
+          ?>
           </tbody>
         </table>
       </section>
