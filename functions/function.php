@@ -51,6 +51,12 @@ function readPlanets($dbConnect){
     return $dbConnect->query($sql);
 }
 
+//Read ships
+function readShips($dbConnect){
+    $sql = 'SELECT * FROM ships';
+    return $dbConnect->query($sql);
+}
+
 /*
 //Create
 function '<function_name>'($dbConnect, $title){

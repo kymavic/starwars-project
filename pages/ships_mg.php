@@ -1,11 +1,11 @@
 <?php
 session_start();
-if ($_SESSION['validate']!=true) {
+if ($_SESSION['validate'] != true) {
   header("Location: login.php");
 }
 include_once('../functions/function.php');
 $dbConnect = dbLink();
-if($dbConnect) echo '<!-- Connection Stablished -->';
+if ($dbConnect) echo '<!-- Connection Stablished -->';
 ?>
 
 <!DOCTYPE html>
@@ -55,138 +55,16 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <br>
         <table class="content-center">
           <tbody>
-            <tr>
-              <td class="detail-subtitle">Death Star</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Executor (Super Star Destroyer)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Home One (Mon Calamari cruiser)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Imperial landing craft (Sentinel-class landing craft)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Imperial shuttle (Lambda-class shuttle)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Imperial Star Destroyer</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Millennium Falcon (YT-1300 light freighter)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Rebel Medical Frigate (Nebulon-B frigate)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Rebel Transport (GR-75 medium transport)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Slave I (Firespray-31)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Tantive IV (Rebel Blockade Runner)</td>
-              <td>
-                <a href="ships.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
+            <?php
+            foreach (readShips($dbConnect) as $row) {
+              echo '<tr>';
+              echo '  <td class="detail-subtitle">' . $row['name'] . '</td>';
+              echo '  <td><a href="characters.php" class="footer-link">View details</a></td>';
+              echo '  <td><a href="#" class="footer-link">Update</a></td>';
+              echo '  <td><a href="#" class="footer-link">Delete</a></td>';
+              echo '</tr>';
+            }
+            ?>
           </tbody>
         </table>
       </section>
