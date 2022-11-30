@@ -1,5 +1,8 @@
 <?php
 session_start();
+include_once('../functions/function.php');
+    $dbConnect = dbLink();
+    if($dbConnect) echo '<!-- Connection Stablished -->';
 
 if($_SESSION['user'] == null){
     header("Location: login.php");
