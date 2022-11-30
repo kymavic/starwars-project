@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `alien_races` (
   `id` int(11) NOT NULL,
-  `alien_races` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -42,7 +42,7 @@ CREATE TABLE `alien_races` (
 
 CREATE TABLE `characters` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -84,7 +84,7 @@ CREATE TABLE `movies` (
 
 CREATE TABLE `planets` (
   `id` int(11) NOT NULL,
-  `planet_name` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -97,7 +97,7 @@ CREATE TABLE `planets` (
 
 CREATE TABLE `ships` (
   `id` int(11) NOT NULL,
-  `ship_name` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -111,9 +111,19 @@ CREATE TABLE `ships` (
 CREATE TABLE `forces` (
   `id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
+  `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `forces`
+--
+INSERT INTO `forces` (`id`,`name`, `url_img`, `description`) VALUES
+(1, 'The Force', '../images/force1.jpg', 'The Force is a metaphysical and ubiquitous power in the Star Wars fictional universe. \"Force-sensitive\" characters use the Force throughout the franchise. Heroes like the Jedi seek to \"become one with the Force\", matching their personal wills with the will of the Force, while the Sith and other villains exploit the Force and try to bend it toward their destructive desires.');
+INSERT INTO `forces` (`id`,`name`, `url_img`, `description`) VALUES
+(2, 'Jedi', '../images/jedi1.jpg', 'Jedi Knights, or collectively the Jedi Order are the main heroic protagonists of many works of the Star Wars franchise. Working symbiotically alongside the Old Galactic Republic, and later supporting the Rebel Alliance, the Jedi Order is depicted as a monastic, academic, military, and meritocratic peacekeeping organization whose origin dates back thousands of years before the events of the first film released in the franchise.');
+INSERT INTO `forces` (`id`,`name`, `url_img`, `description`) VALUES
+(3, 'Sith', '../images/sith1.jpg', 'They are the antithesis and ancient enemies of the Jedi. The Sith Order are depicted as an ancient monastic and kraterocratic cultist organization of supernaturally gifted Force-wielders driven by a machiavellian-imperialist agenda of galactic domination and revenge against the Jedi Order. The various antagonistic factions in the franchise, namely the Separatist Alliance, the First Galactic Empire, the Imperial Remnant and the First Order, all originated, either directly or indirectly, from the Sith.');
 -- --------------------------------------------------------
 
 --

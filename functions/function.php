@@ -32,6 +32,12 @@ function validate($dbConnect,$username,$password){
     return false;
 }
 
+//Read the force
+function readTheForce($dbConnect){
+    $sql = 'SELECT * FROM forces';
+    return $dbConnect->query($sql);
+}
+
 /*
 //Create
 function '<function_name>'($dbConnect, $title){

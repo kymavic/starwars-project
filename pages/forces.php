@@ -27,6 +27,19 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
       <section class="default-detail">
         <div class="section-container">
           <h2 class="h2 section-title">Force</h2>
+          <?php
+          foreach (readTheForce($dbConnect) as $row){
+            echo '<div>';
+            echo '  <p class="detail-subtitle">'.$row['name'].'</p>';
+            echo '  <figure class="default-detail-banner">';
+            echo '    <img src="'.$row['url_img'].'" alt="'.$row['name'].'">';
+            echo '  </figure>';
+            echo '  <p class="storyline">'.$row['description'].'</p>';
+            echo '</div>';
+          }
+          ?>
+          <!--
+          
           <div>
             <p class="detail-subtitle">The Force</p>
             <figure class="default-detail-banner">
@@ -50,7 +63,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
             </figure>
             <p class="storyline">They are the antithesis and ancient enemies of the Jedi. The Sith Order are depicted as an ancient monastic and kraterocratic cultist organization of supernaturally gifted Force-wielders driven by a machiavellian-imperialist agenda of galactic domination and revenge against the Jedi Order. The various antagonistic factions in the franchise, namely the Separatist Alliance, the First Galactic Empire, the Imperial Remnant and the First Order, all originated, either directly or indirectly, from the Sith.</p>
           </div>
-
+-->
         </div>
       </section>
     </article>
