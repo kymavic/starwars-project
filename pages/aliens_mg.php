@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['validate']!=true) {
+if (!array_key_exists('validate', $_SESSION) || $_SESSION['validate']!=true) {
   header("Location: login.php");
 }
 include_once('../functions/function.php');

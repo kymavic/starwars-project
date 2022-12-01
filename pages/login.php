@@ -2,10 +2,10 @@
 session_start();
 global $msg;
 
-if ($_SESSION['validate']) {
+if (array_key_exists('validate', $_SESSION) && $_SESSION['validate'] == true) {
     header("Location: dashboard.php");
 } else {
-    if ($_POST['username'] && $_POST['password']) {
+    if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)) {
         include_once('../functions/function.php');
         $dbConnect = dbLink();
         //if ($dbConnect) echo '<!-- Connection Stablished -->';

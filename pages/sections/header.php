@@ -7,7 +7,7 @@
         <div class="header-actions">
             <div class="lang-wrapper">
             </div>
-            <?php if (!$_SESSION['validate']) {
+            <?php if (!array_key_exists('validate', $_SESSION)) {
                 echo '<a class="btn btn-primary" href="../../pages/login.php">Sign in</a>';
             } else {
                 echo '<a class="btn btn-primary" href="../../pages/logout.php">' . $_SESSION['username'] . ' - Log out</a>';
@@ -21,7 +21,7 @@
                 <a href="../../index.php" class="logo">
                     <img src="../images/logo.svg" alt="Star Wars Logo">
                 </a>
-                <?php if (!$_SESSION['validate']) {
+                <?php if (!array_key_exists('validate', $_SESSION)) {
                     echo '<a class="menu-close-btn" href="../../pages/login.php"><ion-icon name="log-in-outline"></ion-icon></a>';
                 } else {
                     echo '<a class="menu-close-btn" href="../../pages/logout.php"><ion-icon name="log-out-outline"></ion-icon></a>';
@@ -55,7 +55,7 @@
                 <li>
                     <a href="#" class="navbar-link">Forums</a>
                 </li>
-                <?php if ($_SESSION['validate']) {
+                <?php if (array_key_exists('validate', $_SESSION) && $_SESSION['validate']) {
                     echo '<li><a href="../../pages/dashboard.php" class="navbar-link">Dashboard</a></li>';
                 } ?>
             </ul>
