@@ -30,8 +30,8 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
       <section class="default-detail">
         <h2 class="h2 section-title">Primary characters</h2>
         <br />
-        <div class="container content-center">
-          <form class="form-content">
+        <div class= "container content-center">
+          <form action ="add_character.php" method ="post"class="form-content">
             <label class="detail-subtitle" for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="Name" />
             <br>

@@ -32,16 +32,18 @@ function validate($dbConnect,$username,$password){
     return false;
 }
 
-/*
+
 //Create
-function '<function_name>'($dbConnect, $title){
-    $q = "INSERT into <database table> (id,<database field>) VALUES(NULL,:mt);";
+function addCharacter($dbConnect, $name,$image,$description){
+    $q = "INSERT INTO characters(id,name,imgLocation,description) VALUES(NULL,:na,:img,:des);";
     $query = $dbConnect->prepare($q);
-    $query->bindParam(":mt",$title);
+    $query->bindParam(":na",$name);
+    $query->bindParam(":img",$image);
+    $query->bindParam(":des",$description);
     $result = $query->execute();
     return $result;
 }
-
+/*
 //Read
 function '<function name>'($dbConnect){
     $sql = 'SELECT * FROM <Database table>';
