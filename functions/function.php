@@ -35,7 +35,7 @@ function validate($dbConnect,$username,$password){
 
 //Create
 function addCharacter($dbConnect, $name,$image,$description){
-    $q = "INSERT INTO characters(id,name,imgLocation,description) VALUES(NULL,:na,:img,:des);";
+    $q = "INSERT INTO characters(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":na",$name);
     $query->bindParam(":img",$image);
@@ -43,6 +43,60 @@ function addCharacter($dbConnect, $name,$image,$description){
     $result = $query->execute();
     return $result;
 }
+
+function addAlien($dbConnect, $name,$image,$description){
+    $q = "INSERT INTO alien_races(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":na",$name);
+    $query->bindParam(":img",$image);
+    $query->bindParam(":des",$description);
+    $result = $query->execute();
+    return $result;
+}
+
+function addForce($dbConnect, $name,$image,$description){
+    $q = "INSERT INTO forces(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":na",$name);
+    $query->bindParam(":img",$image);
+    $query->bindParam(":des",$description);
+    $result = $query->execute();
+    return $result;
+}
+
+function addMovie($dbConnect, $name, $image, $year, $duration, $rating, $description){
+    $q = "INSERT INTO movie(id,movie_title,url_img,year,duration,rate,description) VALUES(NULL,:na,:img,:ye,:dur,:rat,:des);";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":na",$name);
+    $query->bindParam(":img",$image);
+    $query->bindParam(":ye",$year);
+    $query->bindParam(":dur",$duration);
+    $query->bindParam(":rat",$rating);
+    $query->bindParam(":des",$description);
+    $result = $query->execute();
+    return $result;
+}
+
+function addPlanet($dbConnect, $name,$image,$description){
+    $q = "INSERT INTO planet(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":na",$name);
+    $query->bindParam(":img",$image);
+    $query->bindParam(":des",$description);
+    $result = $query->execute();
+    return $result;
+}
+
+function addShip($dbConnect, $name,$image,$description){
+    $q = "INSERT INTO ships(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":na",$name);
+    $query->bindParam(":img",$image);
+    $query->bindParam(":des",$description);
+    $result = $query->execute();
+    return $result;
+}
+
 /*
 //Read
 function '<function name>'($dbConnect){
