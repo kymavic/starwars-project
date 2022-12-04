@@ -97,6 +97,118 @@ function addShip($dbConnect, $name,$image,$description){
     return $result;
 }
 
+//update
+function updateCharacter($dbConnect, $id, $name, $image, $description){
+    $q = "UPDATE characters SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":eid", $id);
+    $query->bindParam(":na", $name);
+    $query->bindParam(":img", $image);
+    $query->bindParam(":des", $description);
+    $result = $query->execute();
+    return $result;
+}
+
+function updateAlien($dbConnect, $id, $name, $image, $description){
+    $q = "UPDATE alien_races SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":eid", $id);
+    $query->bindParam(":na", $name);
+    $query->bindParam(":img", $image);
+    $query->bindParam(":des", $description);
+    $result = $query->execute();
+    return $result;
+}
+
+function updateForce($dbConnect, $id, $name, $image, $description){
+    $q = "UPDATE forces SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":eid", $id);
+    $query->bindParam(":na", $name);
+    $query->bindParam(":img", $image);
+    $query->bindParam(":des", $description);
+    $result = $query->execute();
+    return $result;
+}
+
+function updateMovie($dbConnect, $id, $name, $image, $year, $duration, $rating, $description){
+    $q = "UPDATE movie SET movie_title =:na, url_img=:img, year=:ye, duration=:dur, rate=:rat, description=:des WHERE $id = :eid;";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":eid", $id);
+    $query->bindParam(":na", $name);
+    $query->bindParam(":img", $image);
+    $query->bindParam(":ye", $year);
+    $query->bindParam(":dur", $duration);
+    $query->bindParam(":rat", $rating);
+    $query->bindParam(":des", $description);
+    $result = $query->execute();
+    return $result;
+}
+
+function updatePlanet($dbConnect, $id, $name, $image, $description){
+    $q = "UPDATE planet SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":eid", $id);
+    $query->bindParam(":na", $name);
+    $query->bindParam(":img", $image);
+    $query->bindParam(":des", $description);
+    $result = $query->execute();
+    return $result;
+}
+
+function updateShip($dbConnect, $id, $name, $image, $description){
+    $q = "UPDATE ships SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":eid", $id);
+    $query->bindParam(":na", $name);
+    $query->bindParam(":img", $image);
+    $query->bindParam(":des", $description);
+    $result = $query->execute();
+    return $result;
+}
+
+function deleteCharacter($dbConnect,$id){
+    $sql = "DELETE FROM characters WHERE id = :id";
+    $stmt = $dbConnect->prepare($sql);
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
+}
+
+function deleteAliens($dbConnect,$id){
+    $sql = "DELETE FROM alien_races WHERE id = :id";
+    $stmt = $dbConnect->prepare($sql);
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
+}
+
+function deleteForce($dbConnect,$id){
+    $sql = "DELETE FROM forces WHERE id = :id";
+    $stmt = $dbConnect->prepare($sql);
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
+}
+
+function deleteMovies($dbConnect,$id){
+    $sql = "DELETE FROM movies WHERE id = :id";
+    $stmt = $dbConnect->prepare($sql);
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
+}
+
+function deletePlanet($dbConnect,$id){
+    $sql = "DELETE FROM planets WHERE id = :id";
+    $stmt = $dbConnect->prepare($sql);
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
+}
+
+function deleteShip($dbConnect,$id){
+    $sql = "DELETE FROM ships WHERE id = :id";
+    $stmt = $dbConnect->prepare($sql);
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
+}
+
 /*
 //Read
 function '<function name>'($dbConnect){
@@ -106,20 +218,5 @@ function '<function name>'($dbConnect){
     echo '<br>'.$row['<database field>'];
     }
 }
-
-//Update
-function <function name>($dbConnect,$id,<parameter>){
-    $q = $dbConnect -> prepare("UPDATE `<database table>` SET `<table field>` = :movt WHERE <id field> = :edid");
-    $q->bindValue(':movt',<parameter>);
-    $q->bindValue(':edid',$id);
-    $q->execute();
-}
-
-//Delete
-function '<function name>'($dbConnect,$id){
-    $sql = "DELETE FROM <database table> WHERE id = :id";
-    $stmt = $dbConnect->prepare($sql);
-    $stmt->bindParam(':id',$id);
-    $stmt->execute();
-}*/
+*/
 ?>
