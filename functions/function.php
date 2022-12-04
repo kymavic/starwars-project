@@ -174,7 +174,7 @@ function deleteCharacter($dbConnect,$id){
     $stmt->execute();
 }
 
-function deleteAliens($dbConnect,$id){
+function deleteAlien($dbConnect,$id){
     $sql = "DELETE FROM alien_races WHERE id = :id";
     $stmt = $dbConnect->prepare($sql);
     $stmt->bindParam(':id',$id);
@@ -188,7 +188,7 @@ function deleteForce($dbConnect,$id){
     $stmt->execute();
 }
 
-function deleteMovies($dbConnect,$id){
+function deleteMovie($dbConnect,$id){
     $sql = "DELETE FROM movies WHERE id = :id";
     $stmt = $dbConnect->prepare($sql);
     $stmt->bindParam(':id',$id);
