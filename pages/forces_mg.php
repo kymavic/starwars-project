@@ -31,7 +31,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <h2 class="h2 section-title">Force</h2>
         <br />
         <div class="container content-center">
-          <form class="form-content"  action="post" action="add_force.php">
+          <form class="form-content"  method="post" action="add_force.php">
             <label class="detail-subtitle" for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="Name" />
             <br>

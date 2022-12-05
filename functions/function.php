@@ -35,7 +35,7 @@ function validate($dbConnect,$username,$password){
 
 //Create
 function addCharacter($dbConnect, $name,$image,$description){
-    $q = "INSERT INTO characters(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+    $q = "INSERT INTO characters(id,name,imgLocation,description) VALUES(NULL,:na,:img,:des);";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":na",$name);
     $query->bindParam(":img",$image);
