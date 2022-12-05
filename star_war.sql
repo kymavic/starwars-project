@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2022 at 01:27 PM
+-- Generation Time: Dec 05, 2022 at 01:11 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -43,7 +43,26 @@ CREATE TABLE `alien_races` (
 CREATE TABLE `characters` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `url_img` varchar(255) NOT NULL,
+  `imgLocation` varchar(255) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `characters`
+--
+
+INSERT INTO `characters` (`id`, `name`, `imgLocation`, `description`) VALUES
+(1, 'Luke Skywalker', 'https://upload.wikimedia.org/wikipedia/en/9/9b/Luke_Skywalker.png ', 'Luke is the twin brother of Rebellion leader Princess Leia and eventual brother-in-law of the smuggler Han Solo. Luke trains to be a Jedi under Jedi Masters Obi-Wan Kenobi and Yoda and rebuilds the Jedi Order.\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `forces`
+--
+
+CREATE TABLE `forces` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -89,6 +108,13 @@ CREATE TABLE `planets` (
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `planets`
+--
+
+INSERT INTO `planets` (`id`, `planet_name`, `url_img`, `description`) VALUES
+(1, 'Abafar', 'https://static.wikia.nocookie.net/star-wars-extended-universe/images/0/01/Tatooine.png/revision/latest?cb=20180131124626', 'A desert planet located in the Outer Rim with a completely white surface. Known as The Void, the planet is barely populated but is home to massive amounts of rhydonium, a scarce and volatile fuel.\r\n');
+
 -- --------------------------------------------------------
 
 --
@@ -99,18 +125,6 @@ CREATE TABLE `ships` (
   `id` int(11) NOT NULL,
   `ship_name` varchar(200) NOT NULL,
   `url_img` varchar(255) NOT NULL,
-  `description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `forces`
---
-
-CREATE TABLE `forces` (
-  `id` int(11) NOT NULL,
-  `name` varchar(200) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -151,6 +165,12 @@ ALTER TABLE `characters`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `forces`
+--
+ALTER TABLE `forces`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `forums`
 --
 ALTER TABLE `forums`
@@ -175,12 +195,6 @@ ALTER TABLE `ships`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `forces`
---
-ALTER TABLE `forces`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -200,6 +214,12 @@ ALTER TABLE `alien_races`
 -- AUTO_INCREMENT for table `characters`
 --
 ALTER TABLE `characters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `forces`
+--
+ALTER TABLE `forces`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -218,7 +238,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `planets`
 --
 ALTER TABLE `planets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ships`
@@ -227,13 +247,7 @@ ALTER TABLE `ships`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `forces`
---
-ALTER TABLE `forces`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
