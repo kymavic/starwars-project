@@ -78,7 +78,7 @@ function addMovie($dbConnect, $name, $image, $year, $duration, $rating, $descrip
 }
 
 function addPlanet($dbConnect, $name,$image,$description){
-    $q = "INSERT INTO planet(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+    $q = "INSERT INTO planets(id,planet_name,url_img,description) VALUES(NULL,:na,:img,:des);";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":na",$name);
     $query->bindParam(":img",$image);
