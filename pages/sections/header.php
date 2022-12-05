@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <li>
-                    <a href="#" class="navbar-link">Forums</a>
+                    <a href="../../pages/forum.php" class="navbar-link">Forums</a>
                 </li>
                 <?php if (array_key_exists('validate', $_SESSION) && $_SESSION['validate']) {
                     echo '<li><a href="../../pages/dashboard.php" class="navbar-link">Dashboard</a></li>';

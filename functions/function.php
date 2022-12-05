@@ -32,6 +32,11 @@ function validate($dbConnect,$username,$password){
     return false;
 }
 
+//Read
+function readForumMessages($dbConnect){
+    $sql = 'SELECT * FROM forums';
+    return $dbConnect->query($sql);
+}
 
 //Create
 function addCharacter($dbConnect, $name,$image,$description){
@@ -45,7 +50,7 @@ function addCharacter($dbConnect, $name,$image,$description){
 }
 
 function addAlien($dbConnect, $name,$image,$description){
-    $q = "INSERT INTO alien_races(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+    $q = "INSERT INTO alien_races(id,alien_races,url_img,description) VALUES(NULL,:na,:img,:des);";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":na",$name);
     $query->bindParam(":img",$image);
@@ -54,11 +59,20 @@ function addAlien($dbConnect, $name,$image,$description){
     return $result;
 }
 
-function addForce($dbConnect, $name,$image,$description){
-    $q = "INSERT INTO forces(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+function addForumMessage($dbConnect, $email, $password, $message){
+    $q = "INSERT INTO forums(id,email,password,message) VALUES(NULL,:em,:pass,:msg);";
+    $query = $dbConnect->prepare($q);
+    $query->bindParam(":em",$email);
+    $query->bindParam(":pass",$password);
+    $query->bindParam(":msg",$message);
+    $result = $query->execute();
+    return $result;
+}
+
+function addForce($dbConnect, $name,$description){
+    $q = "INSERT INTO forces(id,name,description) VALUES(NULL,:na,:des);";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":na",$name);
-    $query->bindParam(":img",$image);
     $query->bindParam(":des",$description);
     $result = $query->execute();
     return $result;
@@ -88,7 +102,7 @@ function addPlanet($dbConnect, $name,$image,$description){
 }
 
 function addShip($dbConnect, $name,$image,$description){
-    $q = "INSERT INTO ships(id,name,url_img,description) VALUES(NULL,:na,:img,:des);";
+    $q = "INSERT INTO ships(id,ship_name,url_img,description) VALUES(NULL,:na,:img,:des);";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":na",$name);
     $query->bindParam(":img",$image);
@@ -110,7 +124,7 @@ function updateCharacter($dbConnect, $id, $name, $image, $description){
 }
 
 function updateAlien($dbConnect, $id, $name, $image, $description){
-    $q = "UPDATE alien_races SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+    $q = "UPDATE alien_races SET alien_races=:na, url_img=:img, description=:des WHERE $id = :eid;";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":eid", $id);
     $query->bindParam(":na", $name);
@@ -120,12 +134,11 @@ function updateAlien($dbConnect, $id, $name, $image, $description){
     return $result;
 }
 
-function updateForce($dbConnect, $id, $name, $image, $description){
-    $q = "UPDATE forces SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+function updateForce($dbConnect, $id, $name, $description){
+    $q = "UPDATE forces SET name =:na,description=:des WHERE $id = :eid;";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":eid", $id);
     $query->bindParam(":na", $name);
-    $query->bindParam(":img", $image);
     $query->bindParam(":des", $description);
     $result = $query->execute();
     return $result;
@@ -146,7 +159,7 @@ function updateMovie($dbConnect, $id, $name, $image, $year, $duration, $rating, 
 }
 
 function updatePlanet($dbConnect, $id, $name, $image, $description){
-    $q = "UPDATE planet SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+    $q = "UPDATE planet SET planet_name=:na, url_img=:img, description=:des WHERE $id = :eid;";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":eid", $id);
     $query->bindParam(":na", $name);
@@ -157,7 +170,7 @@ function updatePlanet($dbConnect, $id, $name, $image, $description){
 }
 
 function updateShip($dbConnect, $id, $name, $image, $description){
-    $q = "UPDATE ships SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
+    $q = "UPDATE ships SET ship_name=:na, url_img=:img, description=:des WHERE $id = :eid;";
     $query = $dbConnect->prepare($q);
     $query->bindParam(":eid", $id);
     $query->bindParam(":na", $name);

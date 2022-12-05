@@ -30,7 +30,7 @@
                         <a href="aliens.php" class="footer-link">Aliens</a>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">Forums</a>
+                        <a href="forum.php" class="footer-link">Forums</a>
                     </li>
                 </ul>
             </div>
