@@ -53,7 +53,10 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         </div>
         <hr>
         <br>
-        <table class="content-center">
+        <?php
+         listCharacters($dbConnect);
+        ?>
+       <!-- <table class="content-center">
           <tbody>
             <tr>
               <td class="detail-subtitle">Luke Skywalker</td>
@@ -133,7 +136,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
               </td>
             </tr>
           </tbody>
-        </table>
+        </table>-->
       </section>
     </article>
   </main>

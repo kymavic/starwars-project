@@ -110,18 +110,62 @@ function addShip($dbConnect, $name,$image,$description){
     $result = $query->execute();
     return $result;
 }
+//List records
+function listCharacters($dbConnect)
+{
+    $sql = 'SELECT * FROM characters';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<table class="content-center">';
+        echo  ' <tbody>';
+        echo '<tr>';
+        echo '<td class="detail-subtitle">'. $row['name'] . ' ' . '</td>';
+        echo '<td><a href="details.php?id='. $row['id']. '" class="footer-link">View details</a>
+          </td>';
+        echo '<td><a href="details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
+          </td>';
+          echo '<td><a href="delete_character.php?id='. $row['id'] . '" class="footer-link">Delete</a>
+          </td>';
+        echo '</tr>
+         </tbody>
+         </table>';
+        // echo '<br>'.$row['name'].' ';
+        // echo '<a href= "details.php?id='.$row['id'].'">[View Details]</a>';
 
-//update
-function updateCharacter($dbConnect, $id, $name, $image, $description){
-    $q = "UPDATE characters SET name =:na, url_img=:img, description=:des WHERE $id = :eid;";
-    $query = $dbConnect->prepare($q);
-    $query->bindParam(":eid", $id);
-    $query->bindParam(":na", $name);
-    $query->bindParam(":img", $image);
-    $query->bindParam(":des", $description);
-    $result = $query->execute();
-    return $result;
+    }
 }
+//display
+function charactersDetails($dbConnect, $id)
+{
+    $sql = 'SELECT * FROM  characters';
+    foreach ($dbConnect->query($sql) as $row) {
+        if ($row['id'] == $id) {
+            echo' <div class= "container content-center">';
+            echo '
+            <form class="form-content" method="post" action="update_character.php">
+            <label class="detail-subtitle" for="name">Name</label>
+            <input type="text" name="name" id="name" value="'.$row['name'].'" />
+            <br>
+            <input type="text" name="image" value="'.$row['imgLocation'].'" />
+            <br>
+            <br>
+            <input type="text" name="description"  value="'.$row['description'].'"></textarea>
+            <br>
+            <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
+            <br>
+            <div class="inline-center">
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Update Record">Update Record</button>
+            </form>
+            </div>';
+        }
+    }
+}
+//update
+function updateCharacter($dbConnect,$id,$details,$field){
+    $q = $dbConnect->prepare("UPDATE 'characters' SET $field =:det WHERE id = :edid");
+    $q->bindValue(':det', $details);
+    $q->bindValue(':edid', $id);
+    $q->execute();
+    }
 
 function updateAlien($dbConnect, $id, $name, $image, $description){
     $q = "UPDATE alien_races SET alien_races=:na, url_img=:img, description=:des WHERE $id = :eid;";
