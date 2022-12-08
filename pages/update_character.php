@@ -7,9 +7,9 @@ $name = $_POST['name'];
 $image = $_POST['image'];
 $description = $_POST['description'];
 
-//updateCharacter($dbConnect,$id,$name,'name');
+updateCharacter($dbConnect,$id,$name,'name');
 updateCharacter($dbConnect,$id,$image,'imgLocation');
-//updateCharacter($dbConnect,$id,$description,'description');
+updateCharacter($dbConnect,$id,$description,'description');
 
 header("Location: characters_mg.php");
 ?>

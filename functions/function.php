@@ -161,11 +161,13 @@ function charactersDetails($dbConnect, $id)
 }
 //update
 function updateCharacter($dbConnect,$id,$details,$field){
-    $q = $dbConnect->prepare("UPDATE 'characters' SET $field =:det WHERE id = :edid");
+    $q = $dbConnect->prepare("UPDATE characters SET $field =:det WHERE id = :edid");
     $q->bindValue(':det', $details);
     $q->bindValue(':edid', $id);
-    $q->execute();
+    if(!$q->execute()){
+        print_r($q->errorInfo());
     }
+}
 
 function updateAlien($dbConnect, $id, $name, $image, $description){
     $q = "UPDATE alien_races SET alien_races=:na, url_img=:img, description=:des WHERE $id = :eid;";
