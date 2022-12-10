@@ -62,6 +62,10 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         </div>
         <hr>
         <br>
+        <?php
+         listMovies($dbConnect);
+        ?>
+        <!--
         <table class="content-center">
           <tbody>
             <tr>
@@ -162,6 +166,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
             </tr>
           </tbody>
         </table>
+-->
       </section>
     </article>
   </main>

@@ -126,9 +126,6 @@ function listCharacters($dbConnect)
         echo '</tr>
          </tbody>
          </table>';
-        // echo '<br>'.$row['name'].' ';
-        // echo '<a href= "character_details.php?id='.$row['id'].'">[View Details]</a>';
-
     }
 }
 
@@ -167,6 +164,25 @@ function listForces($dbConnect)
          </table>';
     }
 }
+
+function listMovies($dbConnect)
+{
+    $sql = 'SELECT * FROM movies';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<table class="content-center">';
+        echo '<tbody>';
+        echo '<tr>';
+        echo '<td class="detail-subtitle">'. $row['movie_title'] . ' ' . '</td>';
+        echo '<td><a href="movie_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
+          </td>';
+          echo '<td><a href="delete_movie.php?id='. $row['id'] . '" class="footer-link">Delete</a>
+          </td>';
+        echo '</tr>
+         </tbody>
+         </table>';
+    }
+}
+
 function listPlanets($dbConnect)
 {
     $sql = 'SELECT * FROM planets';
@@ -214,8 +230,10 @@ function charactersDetails($dbConnect, $id)
             <label class="detail-subtitle" for="name">Name</label>
             <input type="text" name="name" id="name" value="'.$row['name'].'" />
             <br>
+            <label class="detail-subtitle" for="image">Image</label>
             <input type="text" name="image" value="'.$row['imgLocation'].'" />
             <br>
+            <label class="detail-subtitle" for="description">Description</label>
             <input type="text" name="description"  value="'.$row['description'].'"></textarea>
             <br>
             <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
@@ -239,8 +257,10 @@ function alienDetails($dbConnect, $id)
             <label class="detail-subtitle" for="name">Name</label>
             <input type="text" name="name" id="name" value="'.$row['alien_races'].'" />
             <br>
+            <label class="detail-subtitle" for="image">Image</label>
             <input type="text" name="image" value="'.$row['url_img'].'" />
             <br>
+            <label class="detail-subtitle" for="description">Description</label>
             <input type="text" name="description"  value="'.$row['description'].'"></textarea>
             <br>
             <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
@@ -264,6 +284,43 @@ function forceDetails($dbConnect, $id)
             <label class="detail-subtitle" for="name">Name</label>
             <input type="text" name="name" id="name" value="'.$row['name'].'" />
             <br>
+            <label class="detail-subtitle" for="description">Description</label>
+            <input type="text" name="description"  value="'.$row['description'].'"></textarea>
+            <br>
+            <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
+            <br>
+            <div class="inline-center">
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Update Record">Update Record</button>
+            </form>
+            </div>';
+        }
+    }
+}
+
+function movieDetails($dbConnect, $id)
+{
+    $sql = 'SELECT * FROM  movies';
+    foreach ($dbConnect->query($sql) as $row) {
+        if ($row['id'] == $id) {
+            echo' <div class= "container content-center">';
+            echo '
+            <form class="form-content" method="post" action="update_movie.php">
+            <label class="detail-subtitle" for="name">Name</label>
+            <input type="text" name="name" id="name" value="'.$row['movie_title'].'" />
+            <br>
+            <label class="detail-subtitle" for="image">Image</label>
+            <input type="text" name="image" value="'.$row['url_img'].'" />
+            <br>
+            <label class="detail-subtitle" for="year">Year</label>
+            <input type="text" name="year" id="year" value="'.$row['year'].'" />
+            <br>
+            <label class="detail-subtitle" for="duration">Duration</label>
+            <input type="text" name="duration" id="duration" value="'.$row['duration'].'" />
+            <br>
+            <label class="detail-subtitle" for="rate">Rate</label>
+            <input type="text" name="rate" id="rate" value="'.$row['rate'].'" />
+            <br>
+            <label class="detail-subtitle" for="description">Description</label>
             <input type="text" name="description"  value="'.$row['description'].'"></textarea>
             <br>
             <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
@@ -287,8 +344,10 @@ function planetDetails($dbConnect, $id)
             <label class="detail-subtitle" for="name">Name</label>
             <input type="text" name="name" id="name" value="'.$row['planet_name'].'" />
             <br>
+            <label class="detail-subtitle" for="image">Image</label>
             <input type="text" name="image" value="'.$row['url_img'].'" />
             <br>
+            <label class="detail-subtitle" for="description">Description</label>
             <input type="text" name="description"  value="'.$row['description'].'"></textarea>
             <br>
             <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
@@ -312,8 +371,10 @@ function shipDetails($dbConnect, $id)
             <label class="detail-subtitle" for="name">Name</label>
             <input type="text" name="name" id="name" value="'.$row['ship_name'].'" />
             <br>
+            <label class="detail-subtitle" for="image">Image</label>
             <input type="text" name="image" value="'.$row['url_img'].'" />
             <br>
+            <label class="detail-subtitle" for="description">Description</label>
             <input type="text" name="description"  value="'.$row['description'].'"></textarea>
             <br>
             <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
