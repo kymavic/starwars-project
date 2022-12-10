@@ -2,10 +2,9 @@
 session_start();
 include_once('../functions/function.php');
 $dbConnect = dbLink();
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-$result = deleteCharacter($dbConnect, $id);
-    if ($result) 
-    header("Location: characters_mg.php");
+ deleteCharacter($dbConnect, $id);
+   header("Location: characters_mg.php");
 ?>
 

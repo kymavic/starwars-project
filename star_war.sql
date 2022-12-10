@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2022 at 01:11 PM
+-- Generation Time: Dec 10, 2022 at 03:13 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -33,6 +33,13 @@ CREATE TABLE `alien_races` (
   `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `alien_races`
+--
+
+INSERT INTO `alien_races` (`id`, `alien_races`, `url_img`, `description`) VALUES
+(1, 'Gamorrean', 'https://lumiere-a.akamaihd.net/v1/images/gamorrean-main_5141bc61.jpeg?region=0%2C0%2C1280%2C721&width=960', 'A Gamorrean is a large pig-like humanoid from the fictional Star Wars series. The creatures have little intelligence and are often hired as guards, notably by Jabba the Hutt, who was fond of hiring them due to their low cost.\r\n');
 
 -- --------------------------------------------------------
 
@@ -66,6 +73,13 @@ CREATE TABLE `forces` (
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `forces`
+--
+
+INSERT INTO `forces` (`id`, `name`, `description`) VALUES
+(1, 'the force\r\n', 'Was an energy field created by all life that connected everything in the universe, and was known by a variety of names throughout galactic history. \r\n');
+
 -- --------------------------------------------------------
 
 --
@@ -78,6 +92,15 @@ CREATE TABLE `forums` (
   `password` varchar(200) NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `forums`
+--
+
+INSERT INTO `forums` (`id`, `email`, `password`, `message`) VALUES
+(1, 'vicky@starwars.com.co\r\n', '1234\r\n', 'Welcome!\r\n'),
+(2, 'jhonny@test.com', '123456', 'Hello world!'),
+(3, 'jhonny2@test.com', '123', 'This is a test 2!');
 
 -- --------------------------------------------------------
 
@@ -94,6 +117,13 @@ CREATE TABLE `movies` (
   `rate` int(1) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `movies`
+--
+
+INSERT INTO `movies` (`id`, `movie_title`, `url_img`, `year`, `duration`, `rate`, `description`) VALUES
+(1, 'Star Wars: Episode IV - A New Hope', 'https://lumiere-a.akamaihd.net/v1/images/Star-Wars-New-Hope-IV-Poster_c217085b.jpeg?region=49%2C43%2C580%2C914&width=480 ', 1977, 121, 4, 'Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire\'s world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.\r\n');
 
 -- --------------------------------------------------------
 
@@ -127,6 +157,13 @@ CREATE TABLE `ships` (
   `url_img` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ships`
+--
+
+INSERT INTO `ships` (`id`, `ship_name`, `url_img`, `description`) VALUES
+(1, 'Death Star', 'https://static.wikia.nocookie.net/starwars/images/8/87/Imperial_Might_RotE.png/revision/latest?cb=20200710034046 ', 'The Death Star is the Empire\'s battle station which has ability to use a kyber-crystal powered laser to destroy entire planets. It appears throughout the Star Wars franchise, particularly the original trilogy.\r\n');
 
 -- --------------------------------------------------------
 
@@ -208,31 +245,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `alien_races`
 --
 ALTER TABLE `alien_races`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `characters`
 --
 ALTER TABLE `characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `forces`
 --
 ALTER TABLE `forces`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `forums`
 --
 ALTER TABLE `forums`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `planets`
@@ -244,7 +281,7 @@ ALTER TABLE `planets`
 -- AUTO_INCREMENT for table `ships`
 --
 ALTER TABLE `ships`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
