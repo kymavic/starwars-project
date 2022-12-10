@@ -2,10 +2,9 @@
 session_start();
 include_once('../functions/function.php');
 $dbConnect = dbLink();
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-$result = deleteMovie($dbConnect, $id);
-    if ($result) 
-    header("Location: movies_mg.php");
+deleteMovie($dbConnect, $id);
+header("Location: movies_mg.php");
 ?>
 

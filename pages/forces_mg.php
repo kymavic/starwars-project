@@ -53,6 +53,10 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         </div>
         <hr>
         <br>
+        <?php
+         listForces($dbConnect);
+        ?>
+        <!--
         <table class="content-center">
           <tbody>
             <tr>
@@ -96,6 +100,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
 
           </tbody>
         </table>
+-->
       </section>
     </article>
   </main>

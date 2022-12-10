@@ -116,12 +116,10 @@ function listCharacters($dbConnect)
     $sql = 'SELECT * FROM characters';
     foreach ($dbConnect->query($sql) as $row) {
         echo '<table class="content-center">';
-        echo  ' <tbody>';
+        echo '<tbody>';
         echo '<tr>';
         echo '<td class="detail-subtitle">'. $row['name'] . ' ' . '</td>';
-        echo '<td><a href="details.php?id='. $row['id']. '" class="footer-link">View details</a>
-          </td>';
-        echo '<td><a href="details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
+        echo '<td><a href="character_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
           </td>';
           echo '<td><a href="delete_character.php?id='. $row['id'] . '" class="footer-link">Delete</a>
           </td>';
@@ -129,8 +127,79 @@ function listCharacters($dbConnect)
          </tbody>
          </table>';
         // echo '<br>'.$row['name'].' ';
-        // echo '<a href= "details.php?id='.$row['id'].'">[View Details]</a>';
+        // echo '<a href= "character_details.php?id='.$row['id'].'">[View Details]</a>';
 
+    }
+}
+
+function listAliens($dbConnect)
+{
+    $sql = 'SELECT * FROM alien_races';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<table class="content-center">';
+        echo '<tbody>';
+        echo '<tr>';
+        echo '<td class="detail-subtitle">'. $row['alien_races'] . ' ' . '</td>';
+        echo '<td><a href="alien_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
+          </td>';
+          echo '<td><a href="delete_alien.php?id='. $row['id'] . '" class="footer-link">Delete</a>
+          </td>';
+        echo '</tr>
+         </tbody>
+         </table>';
+    }
+}
+
+function listForces($dbConnect)
+{
+    $sql = 'SELECT * FROM forces';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<table class="content-center">';
+        echo '<tbody>';
+        echo '<tr>';
+        echo '<td class="detail-subtitle">'. $row['name'] . ' ' . '</td>';
+        echo '<td><a href="force_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
+          </td>';
+          echo '<td><a href="delete_force.php?id='. $row['id'] . '" class="footer-link">Delete</a>
+          </td>';
+        echo '</tr>
+         </tbody>
+         </table>';
+    }
+}
+function listPlanets($dbConnect)
+{
+    $sql = 'SELECT * FROM planets';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<table class="content-center">';
+        echo '<tbody>';
+        echo '<tr>';
+        echo '<td class="detail-subtitle">'. $row['planet_name'] . ' ' . '</td>';
+        echo '<td><a href="planet_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
+          </td>';
+          echo '<td><a href="delete_planet.php?id='. $row['id'] . '" class="footer-link">Delete</a>
+          </td>';
+        echo '</tr>
+         </tbody>
+         </table>';
+    }
+}
+
+function listShips($dbConnect)
+{
+    $sql = 'SELECT * FROM ships';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<table class="content-center">';
+        echo '<tbody>';
+        echo '<tr>';
+        echo '<td class="detail-subtitle">'. $row['ship_name'] . ' ' . '</td>';
+        echo '<td><a href="ship_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
+          </td>';
+          echo '<td><a href="delete_ship.php?id='. $row['id'] . '" class="footer-link">Delete</a>
+          </td>';
+        echo '</tr>
+         </tbody>
+         </table>';
     }
 }
 //display
@@ -147,6 +216,30 @@ function charactersDetails($dbConnect, $id)
             <br>
             <input type="text" name="image" value="'.$row['imgLocation'].'" />
             <br>
+            <input type="text" name="description"  value="'.$row['description'].'"></textarea>
+            <br>
+            <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
+            <br>
+            <div class="inline-center">
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Update Record">Update Record</button>
+            </form>
+            </div>';
+        }
+    }
+}
+
+function alienDetails($dbConnect, $id)
+{
+    $sql = 'SELECT * FROM  alien_races';
+    foreach ($dbConnect->query($sql) as $row) {
+        if ($row['id'] == $id) {
+            echo' <div class= "container content-center">';
+            echo '
+            <form class="form-content" method="post" action="update_alien.php">
+            <label class="detail-subtitle" for="name">Name</label>
+            <input type="text" name="name" id="name" value="'.$row['alien_races'].'" />
+            <br>
+            <input type="text" name="image" value="'.$row['url_img'].'" />
             <br>
             <input type="text" name="description"  value="'.$row['description'].'"></textarea>
             <br>
@@ -159,6 +252,81 @@ function charactersDetails($dbConnect, $id)
         }
     }
 }
+
+function forceDetails($dbConnect, $id)
+{
+    $sql = 'SELECT * FROM  forces';
+    foreach ($dbConnect->query($sql) as $row) {
+        if ($row['id'] == $id) {
+            echo' <div class= "container content-center">';
+            echo '
+            <form class="form-content" method="post" action="update_force.php">
+            <label class="detail-subtitle" for="name">Name</label>
+            <input type="text" name="name" id="name" value="'.$row['name'].'" />
+            <br>
+            <input type="text" name="description"  value="'.$row['description'].'"></textarea>
+            <br>
+            <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
+            <br>
+            <div class="inline-center">
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Update Record">Update Record</button>
+            </form>
+            </div>';
+        }
+    }
+}
+
+function planetDetails($dbConnect, $id)
+{
+    $sql = 'SELECT * FROM  planets';
+    foreach ($dbConnect->query($sql) as $row) {
+        if ($row['id'] == $id) {
+            echo' <div class= "container content-center">';
+            echo '
+            <form class="form-content" method="post" action="update_planet.php">
+            <label class="detail-subtitle" for="name">Name</label>
+            <input type="text" name="name" id="name" value="'.$row['planet_name'].'" />
+            <br>
+            <input type="text" name="image" value="'.$row['url_img'].'" />
+            <br>
+            <input type="text" name="description"  value="'.$row['description'].'"></textarea>
+            <br>
+            <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
+            <br>
+            <div class="inline-center">
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Update Record">Update Record</button>
+            </form>
+            </div>';
+        }
+    }
+}
+
+function shipDetails($dbConnect, $id)
+{
+    $sql = 'SELECT * FROM ships';
+    foreach ($dbConnect->query($sql) as $row) {
+        if ($row['id'] == $id) {
+            echo' <div class= "container content-center">';
+            echo '
+            <form class="form-content" method="post" action="update_ship.php">
+            <label class="detail-subtitle" for="name">Name</label>
+            <input type="text" name="name" id="name" value="'.$row['ship_name'].'" />
+            <br>
+            <input type="text" name="image" value="'.$row['url_img'].'" />
+            <br>
+            <input type="text" name="description"  value="'.$row['description'].'"></textarea>
+            <br>
+            <input type="hidden" name="id" id="id" value="'.$row['id'].'" />
+            <br>
+            <div class="inline-center">
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Update Record">Update Record</button>
+            </form>
+            </div>';
+        }
+    }
+}
+
+
 //update
 function updateCharacter($dbConnect,$id,$details,$field){
     $q = $dbConnect->prepare("UPDATE characters SET $field =:det WHERE id = :edid");
@@ -169,61 +337,50 @@ function updateCharacter($dbConnect,$id,$details,$field){
     }
 }
 
-function updateAlien($dbConnect, $id, $name, $image, $description){
-    $q = "UPDATE alien_races SET alien_races=:na, url_img=:img, description=:des WHERE $id = :eid;";
-    $query = $dbConnect->prepare($q);
-    $query->bindParam(":eid", $id);
-    $query->bindParam(":na", $name);
-    $query->bindParam(":img", $image);
-    $query->bindParam(":des", $description);
-    $result = $query->execute();
-    return $result;
+function updateAlien($dbConnect,$id,$details,$field){
+    $q = $dbConnect->prepare("UPDATE alien_races SET $field =:det WHERE id = :edid");
+    $q->bindValue(':det', $details);
+    $q->bindValue(':edid', $id);
+    if(!$q->execute()){
+        print_r($q->errorInfo());
+    }
 }
 
-function updateForce($dbConnect, $id, $name, $description){
-    $q = "UPDATE forces SET name =:na,description=:des WHERE $id = :eid;";
-    $query = $dbConnect->prepare($q);
-    $query->bindParam(":eid", $id);
-    $query->bindParam(":na", $name);
-    $query->bindParam(":des", $description);
-    $result = $query->execute();
-    return $result;
+function updateForce($dbConnect,$id,$details,$field){
+    $q = $dbConnect->prepare("UPDATE forces SET $field =:det WHERE id = :edid");
+    $q->bindValue(':det', $details);
+    $q->bindValue(':edid', $id);
+    if(!$q->execute()){
+        print_r($q->errorInfo());
+    }
 }
 
-function updateMovie($dbConnect, $id, $name, $image, $year, $duration, $rating, $description){
-    $q = "UPDATE movie SET movie_title =:na, url_img=:img, year=:ye, duration=:dur, rate=:rat, description=:des WHERE $id = :eid;";
-    $query = $dbConnect->prepare($q);
-    $query->bindParam(":eid", $id);
-    $query->bindParam(":na", $name);
-    $query->bindParam(":img", $image);
-    $query->bindParam(":ye", $year);
-    $query->bindParam(":dur", $duration);
-    $query->bindParam(":rat", $rating);
-    $query->bindParam(":des", $description);
-    $result = $query->execute();
-    return $result;
+function updateMovie($dbConnect,$id,$details,$field){
+    $q = $dbConnect->prepare("UPDATE movies SET $field =:det WHERE id = :edid");
+    $q->bindValue(':det', $details);
+    $q->bindValue(':edid', $id);
+    if(!$q->execute()){
+        print_r($q->errorInfo());
+    }
 }
 
-function updatePlanet($dbConnect, $id, $name, $image, $description){
-    $q = "UPDATE planet SET planet_name=:na, url_img=:img, description=:des WHERE $id = :eid;";
-    $query = $dbConnect->prepare($q);
-    $query->bindParam(":eid", $id);
-    $query->bindParam(":na", $name);
-    $query->bindParam(":img", $image);
-    $query->bindParam(":des", $description);
-    $result = $query->execute();
-    return $result;
+
+function updatePlanet($dbConnect,$id,$details,$field){
+    $q = $dbConnect->prepare("UPDATE planets SET $field =:det WHERE id = :edid");
+    $q->bindValue(':det', $details);
+    $q->bindValue(':edid', $id);
+    if(!$q->execute()){
+        print_r($q->errorInfo());
+    }
 }
 
-function updateShip($dbConnect, $id, $name, $image, $description){
-    $q = "UPDATE ships SET ship_name=:na, url_img=:img, description=:des WHERE $id = :eid;";
-    $query = $dbConnect->prepare($q);
-    $query->bindParam(":eid", $id);
-    $query->bindParam(":na", $name);
-    $query->bindParam(":img", $image);
-    $query->bindParam(":des", $description);
-    $result = $query->execute();
-    return $result;
+function updateShip($dbConnect,$id,$details,$field){
+    $q = $dbConnect->prepare("UPDATE ships SET $field =:det WHERE id = :edid");
+    $q->bindValue(':det', $details);
+    $q->bindValue(':edid', $id);
+    if(!$q->execute()){
+        print_r($q->errorInfo());
+    }
 }
 
 function deleteCharacter($dbConnect,$id){

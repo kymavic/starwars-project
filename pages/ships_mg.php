@@ -53,6 +53,10 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         </div>
         <hr>
         <br>
+        <?php
+         listShips($dbConnect);
+        ?>
+        <!--
         <table class="content-center">
           <tbody>
             <tr>
@@ -189,6 +193,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
             </tr>
           </tbody>
         </table>
+-->
       </section>
     </article>
   </main>

@@ -2,10 +2,9 @@
 session_start();
 include_once('../functions/function.php');
 $dbConnect = dbLink();
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-$result = deleteShip($dbConnect, $id);
-    if ($result) 
-    header("Location: ships_mg.php");
+deleteShip($dbConnect, $id);
+header("Location: ships_mg.php");
 ?>
 

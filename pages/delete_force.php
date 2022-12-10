@@ -2,10 +2,9 @@
 session_start();
 include_once('../functions/function.php');
 $dbConnect = dbLink();
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-$result = deleteForce($dbConnect, $id);
-    if ($result) 
-    header("Location: forces_mg.php");
+deleteForce($dbConnect, $id);
+header("Location: forces_mg.php");
 ?>
 

@@ -2,10 +2,9 @@
 session_start();
 include_once('../functions/function.php');
 $dbConnect = dbLink();
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-$result = deletePlanet($dbConnect, $id);
-    if ($result) 
-    header("Location: planets_mg.php");
+deletePlanet($dbConnect, $id);
+header("Location: planets_mg.php");
 ?>
 

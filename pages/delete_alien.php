@@ -2,10 +2,8 @@
 session_start();
 include_once('../functions/function.php');
 $dbConnect = dbLink();
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-$result = deleteAlien($dbConnect, $id);
-    if ($result) 
-    header("Location: aliens_mg.php");
+deleteAlien($dbConnect, $id);
+header("Location: aliens_mg.php");
 ?>
-

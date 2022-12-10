@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once('../functions/function.php');
 $dbConnect = dbLink();
 $id = $_POST['id'];
@@ -10,8 +9,13 @@ $duration = $_POST['duration'];
 $rating = $_POST['rating'];
 $description = $_POST['description'];
 
-$result = updateMovie($dbConnect, $id, $name, $image, $year, $duration, $rating, $description);
-    if ($result) 
-    header("Location: movies_mg.php");
+updateMovie($dbConnect,$id,$name,'movie_title');
+updateMovie($dbConnect,$id,$image,'url_img');
+updateMovie($dbConnect,$id,$year,'year');
+updateMovie($dbConnect,$id,$duration,'duration');
+updateMovie($dbConnect,$id,$rating,'rate');
+updateMovie($dbConnect,$id,$description,'description');
+
+header("Location: movies_mg.php");
 ?>
 
