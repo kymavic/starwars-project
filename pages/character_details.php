@@ -2,7 +2,9 @@
 session_start();
 include_once('../functions/function.php');
 $dbConnect = dbLink();
-if($dbConnect) echo '<!-- Connection Stablished -->';
+$id= $_GET['id'];
+
+//if($dbConnect) echo '<!-- Connection Stablished -->';
 ?>
 
 <!DOCTYPE html>
@@ -23,16 +25,14 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
   <!--main Content-->
   <main>
     <article>
-      <!-- 
-        - #ALIEN DETAIL
-      -->
+      <!--#DETAIL-->
       <section class="default-detail">
-        <div class="section-container">
-        <h2 class="h2 section-title">Alien Races</h2>
+        <h2 class="h2 section-title">Primary characters</h2>
+        <br />
+        
         <?php
-          readAliens($dbConnect);
-          ?>
-        </div>
+         charactersDetails($dbConnect,$id);
+         ?>
       </section>
     </article>
   </main>

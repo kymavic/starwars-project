@@ -60,6 +60,10 @@ ion-icon {
     display: block;
 }
 
+ion-icon {
+    pointer-events: none;
+}
+
 input,
 textarea {
     font: inherit;
@@ -807,6 +811,44 @@ body.active {
     font-size: 16px;
 }
 
+.forum-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+}
+
+.forum-item {
+    display: inline-flex;
+    align-items: cennter;
+}
+
+.forum-item ion-icon {
+    padding-right: 5px;
+    min-width: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.forum-email {
+    color: #FFC500;
+    font-weight: bold;
+}
+
+.forum-message  ion-icon {
+    padding-top: 5px;
+}
+
+.forum-message {
+    color: hsl(0, 0%, 74%);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.object-container-link { 
+    padding-top: 100px;
+}
 
 /*-----------------------------------*\
  * #MEDIA QUERIES

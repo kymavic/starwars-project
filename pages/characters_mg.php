@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!array_key_exists('validate', $_SESSION) || $_SESSION['validate']!=true)  {
+if (!array_key_exists('validate', $_SESSION) || $_SESSION['validate']!=true) {
   header("Location: login.php");
 }
 include_once('../functions/function.php');
@@ -30,10 +30,10 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
       <section class="default-detail">
         <h2 class="h2 section-title">Primary characters</h2>
         <br />
-        <div class="container content-center">
-          <form class="form-content">
+        <div class= "container content-center">
+          <form class="form-content" method="post" action="add_character.php">
             <label class="detail-subtitle" for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name" />
+            <input type="text" name="name" id="name" placeholder="Name" required />
             <br>
             <label class="detail-subtitle" for="image">Image URL</label>
             <input type="text" name="image" id="image" placeholder="Image" />
@@ -45,7 +45,6 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
             <br>
             <div class="inline-center">
               <button class="w-100 btn btn-lg btn-primary" type="submit" value="new">New</button>
-              <button class="w-100 btn btn-lg btn-primary" type="submit" value="save">Save</button>
             </div>
             <br>
             <br>
@@ -53,7 +52,10 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         </div>
         <hr>
         <br>
-        <table class="content-center">
+        <?php
+         listCharacters($dbConnect);
+        ?>
+       <!-- <table class="content-center">
           <tbody>
           <?php
             foreach (readCharacters($dbConnect) as $row){
@@ -66,7 +68,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
             }
           ?>
           </tbody>
-        </table>
+        </table>-->
       </section>
     </article>
   </main>

@@ -28,16 +28,9 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <div class="section-container">
           <h2 class="h2 section-title">Ships</h2>
           <?php
-          foreach (readShips($dbConnect) as $row){
-            echo '<div>';
-            echo '  <p class="detail-subtitle">'.$row['name'].'</p>';
-            echo '  <figure class="default-detail-banner">';
-            echo '    <img src="'.$row['url_img'].'" alt="'.$row['name'].'">';
-            echo '  </figure>';
-            echo '  <p class="storyline">'.$row['description'].'</p>';
-            echo '</div>';
-          }
+          readShips($dbConnect);
           ?>
+        </div>
       </section>
     </article>
   </main>

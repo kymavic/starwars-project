@@ -2,7 +2,7 @@
 session_start();
 global $msg;
 
-if (array_key_exists('validate', $_SESSION) && $_SESSION['validate']==true) {
+if (array_key_exists('validate', $_SESSION) && $_SESSION['validate'] == true) {
     header("Location: dashboard.php");
 } else {
     if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)) {

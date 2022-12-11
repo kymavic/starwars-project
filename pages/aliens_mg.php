@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!array_key_exists('validate', $_SESSION) || $_SESSION['validate']!=true)  {
+if (!array_key_exists('validate', $_SESSION) || $_SESSION['validate']!=true) {
   header("Location: login.php");
 }
 include_once('../functions/function.php');
@@ -31,9 +31,9 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <h2 class="h2 section-title">Alien Races</h2>
         <br />
         <div class="container content-center">
-          <form class="form-content">
+          <form class="form-content" method="post" action="add_alien.php">
             <label class="detail-subtitle" for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name" />
+            <input type="text" name="name" id="name" placeholder="Name" required />
             <br>
             <label class="detail-subtitle" for="image">Image URL</label>
             <input type="text" name="image" id="image" placeholder="Image" />
@@ -45,7 +45,6 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
             <br>
             <div class="inline-center">
               <button class="w-100 btn btn-lg btn-primary" type="submit" value="new">New</button>
-              <button class="w-100 btn btn-lg btn-primary" type="submit" value="save">Save</button>
             </div>
             <br>
             <br>
@@ -53,20 +52,9 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         </div>
         <hr>
         <br>
-        <table class="content-center">
-          <tbody>
-          <?php
-            foreach (readAliens($dbConnect) as $row){
-              echo '<tr>';
-              echo '  <td class="detail-subtitle">'.$row['name'].'</td>';
-              echo '  <td><a href="aliens.php" class="footer-link">View details</a></td>';
-              echo '  <td><a href="#" class="footer-link">Update</a></td>';
-              echo '  <td><a href="#" class="footer-link">Delete</a></td>';
-              echo '</tr>';
-            }
-          ?>
-          </tbody>
-        </table>
+        <?php
+         listAliens($dbConnect);
+        ?>
       </section>
     </article>
   </main>

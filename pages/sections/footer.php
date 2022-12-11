@@ -4,7 +4,7 @@
     <div class="footer-top">
         <div class="container">
             <div class="footer-brand-wrapper">
-                <a href="index.php" class="logo">
+                <a href="../../index.php" class="logo">
                     <img src="../../images/logo.svg" alt="Star Wars Logo">
                 </a>
                 <ul class="footer-list">
@@ -30,7 +30,7 @@
                         <a href="aliens.php" class="footer-link">Aliens</a>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">Forums</a>
+                        <a href="forum.php" class="footer-link">Forums</a>
                     </li>
                 </ul>
             </div>
