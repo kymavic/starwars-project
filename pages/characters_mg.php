@@ -55,20 +55,6 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <?php
          listCharacters($dbConnect);
         ?>
-       <!-- <table class="content-center">
-          <tbody>
-          <?php
-            foreach (readCharacters($dbConnect) as $row){
-              echo '<tr>';
-              echo '  <td class="detail-subtitle">'.$row['name'].'</td>';
-              echo '  <td><a href="characters.php" class="footer-link">View details</a></td>';
-              echo '  <td><a href="#" class="footer-link">Update</a></td>';
-              echo '  <td><a href="#" class="footer-link">Delete</a></td>';
-              echo '</tr>';
-            }
-          ?>
-          </tbody>
-        </table>-->
       </section>
     </article>
   </main>
