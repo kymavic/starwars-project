@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2022 at 03:13 AM
+-- Generation Time: Dec 11, 2022 at 12:55 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -98,9 +98,7 @@ CREATE TABLE `forums` (
 --
 
 INSERT INTO `forums` (`id`, `email`, `password`, `message`) VALUES
-(1, 'vicky@starwars.com.co\r\n', '1234\r\n', 'Welcome!\r\n'),
-(2, 'jhonny@test.com', '123456', 'Hello world!'),
-(3, 'jhonny2@test.com', '123', 'This is a test 2!');
+(1, 'vicky@starwars.com.co\r\n', '1234\r\n', 'Welcome!\r\n');
 
 -- --------------------------------------------------------
 
@@ -113,8 +111,8 @@ CREATE TABLE `movies` (
   `movie_title` varchar(200) NOT NULL,
   `url_img` varchar(255) NOT NULL,
   `year` int(4) NOT NULL,
-  `duration` int(4) NOT NULL,
-  `rate` int(1) NOT NULL,
+  `duration` varchar(50) NOT NULL,
+  `rate` float NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -123,7 +121,7 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`id`, `movie_title`, `url_img`, `year`, `duration`, `rate`, `description`) VALUES
-(1, 'Star Wars: Episode IV - A New Hope', 'https://lumiere-a.akamaihd.net/v1/images/Star-Wars-New-Hope-IV-Poster_c217085b.jpeg?region=49%2C43%2C580%2C914&width=480 ', 1977, 121, 4, 'Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire\'s world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.\r\n');
+(1, 'Star Wars: Episode IV - A New Hope', 'https://lumiere-a.akamaihd.net/v1/images/Star-Wars-New-Hope-IV-Poster_c217085b.jpeg?region=49%2C43%2C580%2C914&width=480 ', 1977, '121 ', 8.6, 'Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire\'s world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.');
 
 -- --------------------------------------------------------
 
