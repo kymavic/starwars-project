@@ -4,7 +4,7 @@
     <div class="footer-top">
         <div class="container">
             <div class="footer-brand-wrapper">
-                <a href="index.php" class="logo">
+                <a href="../../index.php" class="logo">
                     <img src="../../images/logo.svg" alt="Star Wars Logo">
                 </a>
                 <ul class="footer-list">
