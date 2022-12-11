@@ -11,6 +11,6 @@ $description = $_POST['description'];
 
 $result = addMovie($dbConnect, $name, $image, $year, $duration, $rating, $description);
     if ($result) 
-    header("Location: dashboard.php");
+    header("Location: movies_mg.php");
 ?>
 

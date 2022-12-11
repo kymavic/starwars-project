@@ -33,7 +33,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <div class= "container content-center">
           <form class="form-content" method="post" action="add_character.php">
             <label class="detail-subtitle" for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name" />
+            <input type="text" name="name" id="name" placeholder="Name" required />
             <br>
             <label class="detail-subtitle" for="image">Image URL</label>
             <input type="text" name="image" id="image" placeholder="Image" />
@@ -45,7 +45,6 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
             <br>
             <div class="inline-center">
               <button class="w-100 btn btn-lg btn-primary" type="submit" value="new">New</button>
-              <button class="w-100 btn btn-lg btn-primary" type="submit" value="save">Save</button>
             </div>
             <br>
             <br>

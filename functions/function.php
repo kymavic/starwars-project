@@ -2,7 +2,7 @@
 
 function dbLink(){
     $db = 'star_war';
-    $db_host = 'localhost';
+    $db_host = 'app-mysql';
     $db_user = 'mri';
     $db_pass = 'password';
     try{
@@ -36,6 +36,99 @@ function validate($dbConnect,$username,$password){
 function readForumMessages($dbConnect){
     $sql = 'SELECT * FROM forums';
     return $dbConnect->query($sql);
+}
+
+function readCharacters($dbConnect){
+    $sql = 'SELECT * FROM characters';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<div id="'.$row['id'].'" class="object-container-link">';
+        echo '  <p class="detail-subtitle">'.$row['name'].'</p>';
+        echo '  <figure class="default-detail-banner">';
+        echo '    <img src="'.$row['imgLocation'].'" alt="'.$row['name'].'">';
+        echo '  </figure>';
+        echo '  <p class="storyline">'.$row['description'].'</p>';
+        echo '</div>';
+      }
+}
+
+function readAliens($dbConnect){
+    $sql = 'SELECT * FROM alien_races';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<div id="'.$row['id'].'" class="object-container-link">';
+        echo '  <p class="detail-subtitle">'.$row['alien_races'].'</p>';
+        echo '  <figure class="default-detail-banner">';
+        echo '    <img src="'.$row['url_img'].'" alt="'.$row['alien_races'].'">';
+        echo '  </figure>';
+        echo '  <p class="storyline">'.$row['description'].'</p>';
+        echo '</div>';
+      }
+}
+
+function readShips($dbConnect){
+    $sql = 'SELECT * FROM ships';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<div id="'.$row['id'].'" class="object-container-link">';
+        echo '  <p class="detail-subtitle">'.$row['ship_name'].'</p>';
+        echo '  <figure class="default-detail-banner">';
+        echo '    <img src="'.$row['url_img'].'" alt="'.$row['ship_name'].'">';
+        echo '  </figure>';
+        echo '  <p class="storyline">'.$row['description'].'</p>';
+        echo '</div>';
+      }
+}
+
+function readPlanets($dbConnect){
+    $sql = 'SELECT * FROM planets';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<div id="'.$row['id'].'" class="object-container-link">';
+        echo '  <p class="detail-subtitle">'.$row['planet_name'].'</p>';
+        echo '  <figure class="default-detail-banner">';
+        echo '    <img src="'.$row['url_img'].'" alt="'.$row['planet_name'].'">';
+        echo '  </figure>';
+        echo '  <p class="storyline">'.$row['description'].'</p>';
+        echo '</div>';
+      }
+}
+
+function readForces($dbConnect){
+    $sql = 'SELECT * FROM forces';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<div id="'.$row['id'].'" class="object-container-link">';
+        echo '  <p class="detail-subtitle">'.$row['name'].'</p>';
+        echo '  <p class="storyline">'.$row['description'].'</p>';
+        echo '</div>';
+      }
+}
+
+function readMovies($dbConnect){
+    $sql = 'SELECT * FROM movies';
+    foreach ($dbConnect->query($sql) as $row) {
+        echo '<li id="'.$row['id'].'" class="object-container-link">';
+        echo '  <div class="movie-card">';
+        echo '    <figure class="card-banner">';
+        echo '        <img src="'.$row['url_img'].'" alt="'.$row['movie_title'].'">';
+        echo '    </figure>';
+        echo '    <div class="title-wrapper">';
+        echo '        <h3 class="card-title">'.$row['movie_title'].'</h3>';
+        echo '        <time datetime="'.$row['year'].'">'.$row['year'].'</time>';
+        echo '    </div>';
+        echo '    <div class="card-meta">';
+        echo '      <div class="badge badge-outline">2K</div>';
+        echo '      <div class="duration">';
+        echo '        <ion-icon name="time-outline"></ion-icon>';
+        echo '        <time datetime="PT'.$row['duration'].'M">'.$row['duration'].' min.</time>';
+        echo '      </div>';
+        echo '      <div class="rating">';
+        echo '        <ion-icon name="star"></ion-icon>';
+        echo '        <data>'.$row['rating'].'</data>';
+        echo '      </div>';
+        echo '    </div>';
+        echo '    <p class="movie-description">';
+        echo '      After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.';
+        echo '    </p>';
+        echo '  </div>';
+        echo '</li>';
+      }
 }
 
 //Create
@@ -118,11 +211,10 @@ function listCharacters($dbConnect)
         echo '<table class="content-center">';
         echo '<tbody>';
         echo '<tr>';
-        echo '<td class="detail-subtitle">'. $row['name'] . ' ' . '</td>';
-        echo '<td><a href="character_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
-          </td>';
-          echo '<td><a href="delete_character.php?id='. $row['id'] . '" class="footer-link">Delete</a>
-          </td>';
+        echo '<td class="detail-subtitle">'.$row['name'].' ' .'</td>';
+        echo '<td><a href="characters.php#'.$row['id'].'" class="footer-link">View</a></td>';
+        echo '<td><a href="character_details.php?id='.$row['id'].'" class="footer-link">Edit details</a></td>';
+        echo '<td><a href="delete_character.php?id='.$row['id'].'" class="footer-link">Delete</a></td>';
         echo '</tr>
          </tbody>
          </table>';
@@ -136,11 +228,10 @@ function listAliens($dbConnect)
         echo '<table class="content-center">';
         echo '<tbody>';
         echo '<tr>';
-        echo '<td class="detail-subtitle">'. $row['alien_races'] . ' ' . '</td>';
-        echo '<td><a href="alien_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
-          </td>';
-          echo '<td><a href="delete_alien.php?id='. $row['id'] . '" class="footer-link">Delete</a>
-          </td>';
+        echo '<td class="detail-subtitle">'.$row['alien_races'].' ' .'</td>';
+        echo '<td><a href="aliens.php#'.$row['id'].'" class="footer-link">View</a></td>';
+        echo '<td><a href="alien_details.php?id='.$row['id'].'" class="footer-link">Edit details</a></td>';
+        echo '<td><a href="delete_alien.php?id='.$row['id'].'" class="footer-link">Delete</a></td>';
         echo '</tr>
          </tbody>
          </table>';
@@ -154,11 +245,10 @@ function listForces($dbConnect)
         echo '<table class="content-center">';
         echo '<tbody>';
         echo '<tr>';
-        echo '<td class="detail-subtitle">'. $row['name'] . ' ' . '</td>';
-        echo '<td><a href="force_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
-          </td>';
-          echo '<td><a href="delete_force.php?id='. $row['id'] . '" class="footer-link">Delete</a>
-          </td>';
+        echo '<td class="detail-subtitle">'.$row['name'].' ' .'</td>';
+        echo '<td><a href="forces.php#'.$row['id'].'" class="footer-link">View</a></td>';
+        echo '<td><a href="force_details.php?id='.$row['id'].'" class="footer-link">Edit details</a></td>';
+        echo '<td><a href="delete_force.php?id='.$row['id'].'" class="footer-link">Delete</a></td>';
         echo '</tr>
          </tbody>
          </table>';
@@ -172,11 +262,10 @@ function listMovies($dbConnect)
         echo '<table class="content-center">';
         echo '<tbody>';
         echo '<tr>';
-        echo '<td class="detail-subtitle">'. $row['movie_title'] . ' ' . '</td>';
-        echo '<td><a href="movie_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
-          </td>';
-          echo '<td><a href="delete_movie.php?id='. $row['id'] . '" class="footer-link">Delete</a>
-          </td>';
+        echo '<td class="detail-subtitle">'.$row['movie_title'].' ' .'</td>';
+        echo '<td><a href="movies.php#'.$row['id'].'" class="footer-link">View</a></td>';
+        echo '<td><a href="movie_details.php?id='.$row['id'].'" class="footer-link">Edit details</a></td>';
+        echo '<td><a href="delete_movie.php?id='.$row['id'].'" class="footer-link">Delete</a></td>';
         echo '</tr>
          </tbody>
          </table>';
@@ -190,11 +279,10 @@ function listPlanets($dbConnect)
         echo '<table class="content-center">';
         echo '<tbody>';
         echo '<tr>';
-        echo '<td class="detail-subtitle">'. $row['planet_name'] . ' ' . '</td>';
-        echo '<td><a href="planet_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
-          </td>';
-          echo '<td><a href="delete_planet.php?id='. $row['id'] . '" class="footer-link">Delete</a>
-          </td>';
+        echo '<td class="detail-subtitle">'.$row['planet_name'].' ' .'</td>';
+        echo '<td><a href="planets.php#'.$row['id'].'" class="footer-link">View</a></td>';
+        echo '<td><a href="planet_details.php?id='.$row['id'].'" class="footer-link">Edit details</a></td>';
+        echo '<td><a href="delete_planet.php?id='.$row['id'].'" class="footer-link">Delete</a></td>';
         echo '</tr>
          </tbody>
          </table>';
@@ -208,16 +296,16 @@ function listShips($dbConnect)
         echo '<table class="content-center">';
         echo '<tbody>';
         echo '<tr>';
-        echo '<td class="detail-subtitle">'. $row['ship_name'] . ' ' . '</td>';
-        echo '<td><a href="ship_details.php?id='. $row['id']. '"  class="footer-link">Edit details</a>
-          </td>';
-          echo '<td><a href="delete_ship.php?id='. $row['id'] . '" class="footer-link">Delete</a>
-          </td>';
+        echo '<td class="detail-subtitle">'.$row['ship_name'].' ' .'</td>';
+        echo '<td><a href="ships.php#'.$row['id'].'" class="footer-link">View</a></td>';
+        echo '<td><a href="ship_details.php?id='.$row['id'].'" class="footer-link">Edit details</a></td>';
+        echo '<td><a href="delete_ship.php?id='.$row['id'].'" class="footer-link">Delete</a></td>';
         echo '</tr>
          </tbody>
          </table>';
     }
 }
+
 //display
 function charactersDetails($dbConnect, $id)
 {

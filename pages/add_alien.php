@@ -8,6 +8,6 @@ $description = $_POST['description'];
 
 $result = addAlien($dbConnect, $name, $image, $description);
     if ($result) 
-    header("Location: dashboard.php");
+    header("Location: aliens_mg.php");
 ?>
 

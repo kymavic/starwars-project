@@ -846,6 +846,10 @@ body.active {
     text-align: justify;
 }
 
+.object-container-link { 
+    padding-top: 100px;
+}
+
 /*-----------------------------------*\
  * #MEDIA QUERIES
 \*-----------------------------------*/

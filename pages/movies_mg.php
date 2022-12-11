@@ -33,7 +33,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <div class="container content-center">
           <form class="form-content" method="post" action="add_movie.php">
             <label class="detail-subtitle" for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name" />
+            <input type="text" name="name" id="name" placeholder="Name" required />
             <br>
             <label class="detail-subtitle" for="image">Image URL</label>
             <input type="text" name="image" id="image" placeholder="Image" />
@@ -54,7 +54,6 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
             <br>
             <div class="inline-center">
               <button class="w-100 btn btn-lg btn-primary" type="submit" value="new">New</button>
-              <button class="w-100 btn btn-lg btn-primary" type="submit" value="save">Save</button>
             </div>
             <br>
             <br>
@@ -65,108 +64,7 @@ if($dbConnect) echo '<!-- Connection Stablished -->';
         <?php
          listMovies($dbConnect);
         ?>
-        <!--
-        <table class="content-center">
-          <tbody>
-            <tr>
-              <td class="detail-subtitle">Movie 1</td>
-              <td>
-                <a href="movies.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Movie 2</td>
-              <td>
-              <a href="movies.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Movie 3</td>
-              <td>
-              <a href="movies.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Movie 4</td>
-              <td>
-              <a href="movies.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Movie 5</td>
-              <td>
-              <a href="movies.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Movie 6</td>
-              <td>
-                <a href="movies.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Movie 7</td>
-              <td>
-              <a href="movies.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="detail-subtitle">Movie 8</td>
-              <td>
-              <a href="movies.php" class="footer-link">View details</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Update</a>
-              </td>
-              <td>
-                <a href="#" class="footer-link">Delete</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
--->
+
       </section>
     </article>
   </main>

@@ -8,6 +8,6 @@ $description = $_POST['description'];
 
 $result = addCharacter($dbConnect, $name, $image, $description);
     if ($result) 
-    header("Location: dashboard.php");
+    header("Location: characters_mg.php");
 ?>
 

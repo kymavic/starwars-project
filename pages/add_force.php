@@ -7,6 +7,6 @@ $description = $_POST['description'];
 
 $result = addForce($dbConnect, $name, $description);
     if ($result) 
-    header("Location: dashboard.php");
+    header("Location: forces_mg.php");
 ?>
 

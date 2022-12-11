@@ -8,6 +8,6 @@ $description = $_POST['description'];
 
 $result = addShip($dbConnect, $name, $image, $description);
     if ($result) 
-    header("Location: dashboard.php");
+    header("Location: ships_mg.php");
 ?>
 
