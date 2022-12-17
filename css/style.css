@@ -850,6 +850,18 @@ body.active {
     padding-top: 100px;
 }
 
+
+.object-container-link ul{ 
+    text-align: initial;
+    color: #b3b0b3;
+    margin-left: 15px;
+}
+
+
+.object-container-link li{ 
+    list-style: initial;
+}
+
 /*-----------------------------------*\
  * #MEDIA QUERIES
 \*-----------------------------------*/
@@ -1195,7 +1207,7 @@ body.active {
     /* MOVIE CARD */
 
     .movies-list {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .default-detail {
