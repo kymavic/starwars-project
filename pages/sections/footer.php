@@ -9,28 +9,28 @@
                 </a>
                 <ul class="footer-list">
                     <li>
-                        <a href="index.php" class="footer-link">Home</a>
+                        <a href="../../index.php" class="footer-link">Home</a>
                     </li>
                     <li>
-                        <a href="movies.php" class="footer-link">Movies</a></a>
+                        <a href="../pages/movies.php" class="footer-link">Movies</a></a>
                     </li>
                     <li>
-                        <a href="characters.php" class="footer-link">Characters</a></a>
+                        <a href="../pages/characters.php" class="footer-link">Characters</a></a>
                     </li>
                     <li>
-                        <a href="ships.php" class="footer-link">Ships</a>
+                        <a href="../pages/ships.php" class="footer-link">Ships</a>
                     </li>
                     <li>
-                        <a href="planets.php" class="footer-link">Planets</a>
+                        <a href="../pages/planets.php" class="footer-link">Planets</a>
                     </li>
                     <li>
-                        <a href="forces.php" class="footer-link">Force</a>
+                        <a href="../pages/forces.php" class="footer-link">Force</a>
                     </li>
                     <li>
-                        <a href="aliens.php" class="footer-link">Aliens</a>
+                        <a href="../pages/aliens.php" class="footer-link">Aliens</a>
                     </li>
                     <li>
-                        <a href="forum.php" class="footer-link">Forums</a>
+                        <a href="../pages/forum.php" class="footer-link">Forums</a>
                     </li>
                 </ul>
             </div>
@@ -52,22 +52,22 @@
                 </ul>
                 <ul class="social-list">
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="https://www.facebook.com/" class="social-link">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="https://twitter.com/i/flow/login" class="social-link">
                             <ion-icon name="logo-twitter"></ion-icon>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="https://www.pinterest.com.au/" class="social-link">
                             <ion-icon name="logo-pinterest"></ion-icon>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="https://www.instagram.com/" class="social-link">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
